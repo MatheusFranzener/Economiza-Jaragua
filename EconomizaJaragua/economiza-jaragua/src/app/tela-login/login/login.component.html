@@ -1,3 +1,20 @@
-<p>
-  login works!
-</p>
+<div class="telaLogin">
+  <div class="caixaLogin">
+    
+    <h1 class="tituloCaixaLogin">Login</h1>
+
+    <div class="loginNome">
+      <span>Nome: </span>
+      <br>
+      <input [(ngModel)]="user" class="inputNome">
+    </div>
+
+    <div class="loginSenha">
+      <span>Senha: </span>
+      <br>
+      <input [(ngModel)]="password" type="password" class="inputSenha">
+    </div>
+
+    <button (click)="logar()" class="botaoEntrar">Entrar</button>
+  </div>
+</div>

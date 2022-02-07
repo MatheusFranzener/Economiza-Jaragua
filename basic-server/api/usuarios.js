@@ -16,18 +16,18 @@ function name(dados,resposta){
         return resposta({erro: 'É necessário preencher o nome'})
     }
 
-    if(!dados.nickname){
-        return resposta({erro: 'É necessário preencher o nickname'})
+    if(!dados.senha){
+        return resposta({erro: 'É necessário preencher a senha'})
     }
 
     database(`INSERT INTO USER 
     (
         NOME,
-        NICKNAME
+        SENHA
         ) 
         VALUES (
             "${dados.nome}",
-            "${dados.nickname}"
+            "${dados.senha}"
         )`)
         .then(result => {
         console.log('Usuário inserido com sucesso');

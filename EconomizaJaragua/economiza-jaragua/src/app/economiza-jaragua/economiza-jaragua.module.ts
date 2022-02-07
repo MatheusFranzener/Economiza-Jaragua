@@ -7,6 +7,7 @@ import { EntreEmContatoComponent } from './entre-em-contato/entre-em-contato.com
   imports: [
     CommonModule
   ],
-  declarations: [SobreEconomizeComponent, EntreEmContatoComponent]
+  declarations: [SobreEconomizeComponent, EntreEmContatoComponent],
+  exports: [SobreEconomizeComponent, EntreEmContatoComponent]
 })
 export class EconomizaJaraguaModule { }
