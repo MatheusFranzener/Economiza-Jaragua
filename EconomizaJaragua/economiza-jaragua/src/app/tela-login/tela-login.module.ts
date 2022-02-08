@@ -50,7 +50,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  declarations: [CadastrarUsuarioComponent],
-  exports: [CadastrarUsuarioComponent]
+  declarations: [CadastrarUsuarioComponent,LoginComponent],
+  exports: [CadastrarUsuarioComponent,LoginComponent]
 })
 export class TelaLoginModule { }

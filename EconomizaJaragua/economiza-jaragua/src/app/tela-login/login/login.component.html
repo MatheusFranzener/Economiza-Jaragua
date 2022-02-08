@@ -15,6 +15,10 @@
       <input [(ngModel)]="password" type="password" class="inputSenha">
     </div>
 
-    <button (click)="logar()" class="botaoEntrar">Entrar</button>
+    <button  (click)="logarUser()" class="botaoUser">Entrar como Usuário</button>
+    
+    <button (click)="logar()" class="botaoEntrar">Entrar como Administrador</button>
+
+    <button (click)="criarConta()" class="botaoCriar">Fazer cadastro</button>
   </div>
 </div>

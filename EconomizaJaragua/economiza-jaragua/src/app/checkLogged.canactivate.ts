@@ -21,11 +21,13 @@ class CheckLogged implements CanActivate {
         state: RouterStateSnapshot
     ): Observable<boolean> | Promise<boolean> | boolean {
 
+        //* teste do checkLogged 
+
         let contadorLogin = 0;
 
         let userName = localStorage.getItem('USER');
         let senha = localStorage.getItem('PASSWORD');
-
+        
         let usuarios = [
             { user: "Matheus Franzener", password: "matheus123" }, 
             { user: "Felipe Vieira", password: "felipe123" }, 

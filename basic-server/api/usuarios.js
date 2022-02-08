@@ -1,12 +1,25 @@
 inserirRota('/buscar_usuario',
-function(dados,resposta){
-    console.log(dados);
+    function (dados, resposta) {
+        console.log(dados);
+        database('SELECT * FROM USER').then(result => {
+            resposta({ list: result });
+        }).catch(erro => {
+            resposta({ erro: "Erro ao buscar os usuários!" });
+        });
+    });
 
-    resposta({
-        ok:"Requisição efetuada com sucesso!"
-    })
-    
-})
+// inserirRota('/login',
+//     function (dados, resposta) {
+//         console.log(dados);
+
+//         database(`SELECT * FROM USER WHERE NOME = "${dados.nome}" AND SENHA = "${dados.senha}" LIMIT 1`)
+//         .then(result => {
+//             console.log('result:',result);
+//             resposta({ user: result[0] });
+//         }).catch(erro => {
+//             resposta({ erro: "Erro ao buscar os usuários!" });
+//         });
+//     });
 
 inserirRota('/criar_usuario',
 function name(dados,resposta){
@@ -38,3 +51,6 @@ function name(dados,resposta){
     });
 }
 )
+
+
+

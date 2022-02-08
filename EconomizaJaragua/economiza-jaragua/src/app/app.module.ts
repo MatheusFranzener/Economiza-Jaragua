@@ -16,7 +16,7 @@ import { TelaLoginModule } from './tela-login/tela-login.module';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    
   ],
   imports: [
       RouterModule.forRoot([

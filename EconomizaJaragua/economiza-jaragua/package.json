@@ -1,9 +1,10 @@
 {
   "name": "economiza-jaragua",
   "version": "0.0.0",
+  "proxy":"https://localhost:3000",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
