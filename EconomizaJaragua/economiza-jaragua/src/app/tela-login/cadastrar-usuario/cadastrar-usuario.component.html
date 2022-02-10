@@ -1,5 +1,26 @@
 <div>
-  <input type="text" placeholder="Nome" [(ngModel)]="nome"> <br />
-  <input type="text" placeholder="Senha" [(ngModel)]="senha"> <br />
-  <button (click)="cadastrar()">Cadastrar</button>
+  <h1>Cadastro Dono de Empresa</h1>
+  <div>
+    <div>
+      <span>Nome: </span>
+      <br>
+      <input type="text" placeholder="Nome" [(ngModel)]="nome"> <br />
+    </div>
+    <div>
+      <span>Telefone: </span>
+      <br>
+      <input type="text" placeholder="Telefone" [(ngModel)]="telefone"> <br />
+    </div>
+    <div>
+      <span>Email: </span>
+      <br>
+      <input type="text" placeholder="Email" [(ngModel)]="email"> <br />
+    </div>
+    <div>
+      <span>Senha: </span>
+      <br>
+      <input type="password" placeholder="Senha" [(ngModel)]="senha"> <br />
+    </div>    
+    <button (click)="cadastrar()">Cadastrar</button>
+  </div>
 </div>

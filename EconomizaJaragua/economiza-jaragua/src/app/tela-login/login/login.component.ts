@@ -28,9 +28,21 @@ export class LoginComponent implements OnInit {
   }
 
   logar(){
-    localStorage.setItem('USER',this.user);
-    localStorage.setItem('PASSWORD',this.password);
-    this.router.navigate(['/home/'])
+
+    var self = this;
+
+    fetch('http://localhost:3000/api/login', { method: 'POST', body: JSON.stringify({ nome: this.user, senha: this.password}), headers: {"Content-Type": "application/json"}}).then(function (e) {
+      console.log(e)
+
+      e.json().then(function (data) {
+
+        console.log(data)
+
+        if(data.user) {
+          self.router.navigate(['/home/'])
+        } 
+      })
+    })
   }
 
   logarUser(){
@@ -40,5 +52,6 @@ export class LoginComponent implements OnInit {
   criarConta(){
     this.router.navigate(['/login/cadastro'])
   }
+
 
 }

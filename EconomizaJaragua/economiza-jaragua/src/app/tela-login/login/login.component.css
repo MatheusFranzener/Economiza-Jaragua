@@ -1,0 +1,19 @@
+.caixaPrincipal{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.caixaBemVindo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.caixaLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

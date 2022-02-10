@@ -1,24 +1,27 @@
-<div class="telaLogin">
-  <div class="caixaLogin">
-    
-    <h1 class="tituloCaixaLogin">Login</h1>
+<div class="caixaPrincipal">
+  
+  <div class="caixaBemVindo">
+    <span>Bem vindo bla bla</span>
 
-    <div class="loginNome">
-      <span>Nome: </span>
-      <br>
-      <input [(ngModel)]="user" class="inputNome">
-    </div>
+    <button (click)="logarUser()" class="botaoUser">Entrar como Usuário</button>
 
-    <div class="loginSenha">
-      <span>Senha: </span>
-      <br>
-      <input [(ngModel)]="password" type="password" class="inputSenha">
-    </div>
-
-    <button  (click)="logarUser()" class="botaoUser">Entrar como Usuário</button>
-    
-    <button (click)="logar()" class="botaoEntrar">Entrar como Administrador</button>
-
-    <button (click)="criarConta()" class="botaoCriar">Fazer cadastro</button>
   </div>
+
+  <div class="caixaLogin">
+    <span class="tituloCaixaLogin">Login</span>
+    <span>Nome: </span>
+    <br>
+    <input [(ngModel)]="user" class="inputNome">
+  
+
+  <div class="loginSenha">
+    <span>Senha: </span>
+    <br>
+    <input [(ngModel)]="password" type="password" class="inputSenha">
+  </div>
+
+  <button (click)="logar()" class="botaoEntrar">Entrar como Administrador</button>
+
+  <button (click)="criarConta()" class="botaoCriar">Fazer cadastro</button>
+
 </div>
