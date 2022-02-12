@@ -1,27 +1,47 @@
-<div class="caixaPrincipal">
+
+  <div class="caixaPrincipal">
   
-  <div class="caixaBemVindo">
-    <span>Bem vindo bla bla</span>
-
-    <button (click)="logarUser()" class="botaoUser">Entrar como Usuário</button>
-
+    <div class="caixaBemVindo">
+      <h1>Bem vindo!</h1>
+      <br>
+      <span>ao Economiza-Jaraguá</span>
+      <span>o lugar perfeito para economizar</span>
+      <br>
+      <span>Se não possuir cadastro escolha uma das opções</span>
+      <br>
+      <div class="botoesLogin">
+        <button (click)="logarUser()" class="botaoUser">Entrar como Usuário</button>
+        <button (click)="criarConta()" class="botaoCriar">Fazer cadastro</button>  
+      </div>
+    </div>
+      
+    
+  
+    <div class="caixaLogin">
+      <h1>Login</h1>
+      <br>
+      <div class="inputLogin">
+        <div class="icones">
+          <img src="https://cdn-icons-png.flaticon.com/512/74/74472.png" alt="" class="icone" >
+        </div>
+        <input  [(ngModel)]="user" class="inputNome" placeholder="Nome">
+      </div>
+      
+      <div class="inputLogin">
+        <br>
+        <div class="icones">
+          <img src="https://cdn-icons-png.flaticon.com/512/2089/2089795.png" alt="" class="icone">
+        </div>
+        <input [(ngModel)]="password" type="password" class="inputSenha" placeholder="Senha">
+      </div>
+  
+    <br>
+    
+    <button (click)="logar()" class="botaoEntrar">Entrar</button>
+    
+    
   </div>
 
-  <div class="caixaLogin">
-    <span class="tituloCaixaLogin">Login</span>
-    <span>Nome: </span>
-    <br>
-    <input [(ngModel)]="user" class="inputNome">
-  
 
-  <div class="loginSenha">
-    <span>Senha: </span>
-    <br>
-    <input [(ngModel)]="password" type="password" class="inputSenha">
-  </div>
 
-  <button (click)="logar()" class="botaoEntrar">Entrar como Administrador</button>
 
-  <button (click)="criarConta()" class="botaoCriar">Fazer cadastro</button>
-
-</div>

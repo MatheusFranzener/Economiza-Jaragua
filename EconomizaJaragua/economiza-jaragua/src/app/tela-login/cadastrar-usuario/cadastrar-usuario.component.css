@@ -1,0 +1,69 @@
+.caixaPrincipal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #ecf0f1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.caixaBemVindo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 150px;
+    width: 350px;
+    height: 380px;
+    background-color: #58af9b;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.caixaLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 480px;
+    height: 550px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+
+.inputNome{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 0.5px black;
+}
+
+.icone{
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 220px;
+    width: 25px;
+    height: 23px;
+}
+
+.botaoEntrar{
+    background-color: #58af9b;
+    border: none;
+    border-radius: 5px;
+    width: 140px;
+    height: 30px;
+}
+
+.botaoUser{
+    margin-right: 5px;
+    border: solid white 0.5px;
+    background-color: #58af9b;
+    color: white;
+    border-radius: 5px;
+    width: 140px;
+    height: 30px;
+    opacity: 0.99;
+}

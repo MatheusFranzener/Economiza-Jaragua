@@ -1,26 +1,48 @@
-<div>
-  <h1>Cadastro Dono de Empresa</h1>
-  <div>
-    <div>
-      <span>Nome: </span>
-      <br>
-      <input type="text" placeholder="Nome" [(ngModel)]="nome"> <br />
+<div class="caixaPrincipal">
+  <div class="caixaBemVindo">
+    <h1>Já possui cadastro?</h1>
+    <br>
+    <span>clique no botão</span>
+    <br>
+    <span>para fazer login</span>
+    <br>
+    <div class="botoesLogin">
+      <button (click)="telaLogin()" class="botaoUser">Fazer Login</button>
     </div>
-    <div>
-      <span>Telefone: </span>
-      <br>
-      <input type="text" placeholder="Telefone" [(ngModel)]="telefone"> <br />
-    </div>
-    <div>
-      <span>Email: </span>
-      <br>
-      <input type="text" placeholder="Email" [(ngModel)]="email"> <br />
-    </div>
-    <div>
-      <span>Senha: </span>
-      <br>
-      <input type="password" placeholder="Senha" [(ngModel)]="senha"> <br />
-    </div>    
-    <button (click)="cadastrar()">Cadastrar</button>
   </div>
+
+  <div class="caixaLogin">
+    <h1>Cadastro Administrador</h1>
+    <div>
+      <br>
+      <div class="icones">
+        <img src="https://cdn-icons-png.flaticon.com/512/74/74472.png" alt="" class="icone">
+      </div>
+      <input type="text" placeholder="Nome" class="inputNome" [(ngModel)]="nome"> <br />
+    </div>
+    <div>
+      <br>
+      <div class="icones">
+        <img src="https://cdn-icons-png.flaticon.com/512/126/126341.png" alt="" class="icone">
+      </div>
+      <input type="text" placeholder="Telefone" class="inputNome" [(ngModel)]="telefone"> <br />
+    </div>
+    <div>
+      <br>
+      <div class="icones">
+        <img src="https://cdn.icon-icons.com/icons2/2131/PNG/512/email_mesasge_envelope_icon_131541.png" alt="" class="icone">
+      </div>
+      <input type="text" placeholder="Email" class="inputNome" [(ngModel)]="email"> <br />
+    </div>
+    <div>
+      <br>
+      <div class="icones">
+        <img src="https://cdn-icons-png.flaticon.com/512/2089/2089795.png" alt="" class="icone">
+      </div>
+      <input type="password" placeholder="Senha" class="inputNome" [(ngModel)]="senha"> <br />
+    </div>
+    <br>
+    <button (click)="cadastrar()" class="botaoEntrar">Cadastrar</button>
+  </div>
+
 </div>

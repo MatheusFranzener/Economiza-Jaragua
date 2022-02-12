@@ -23,4 +23,8 @@ export class CadastrarUsuarioComponent implements OnInit {
     this.router.navigate(['login'])
   }
 
+  telaLogin(){
+    this.router.navigate(['login'])
+  }
+
 }

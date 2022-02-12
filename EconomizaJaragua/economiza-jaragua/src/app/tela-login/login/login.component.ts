@@ -28,9 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   logar(){
-
     var self = this;
-
     fetch('http://localhost:3000/api/login', { method: 'POST', body: JSON.stringify({ nome: this.user, senha: this.password}), headers: {"Content-Type": "application/json"}}).then(function (e) {
       console.log(e)
 
