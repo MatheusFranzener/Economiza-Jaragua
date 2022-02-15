@@ -40,11 +40,12 @@
 .botaoUser{
     margin-right: 5px;
     border: solid white 0.5px;
+    font-size: 15px;
     background-color: #58af9b;
     color: white;
     border-radius: 5px;
-    width: 140px;
-    height: 30px;
+    width: 150px;
+    height: 50px;
     opacity: 0.99;
 }
 
@@ -53,9 +54,10 @@
     border: solid white 0.5px;
     background-color: #58af9b;
     border-radius: 5px;
+    font-size: 15px;
     color: white;
-    width: 140px;
-    height: 30px;
+    width: 150px;
+    height: 50px;
     opacity: 0.99;
 }
 

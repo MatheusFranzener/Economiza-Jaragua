@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 
 import { UsuarioService } from '../../services/usuario.service';
@@ -17,8 +18,10 @@ export class LoginComponent implements OnInit {
 
   user: "";
   password: "";
+  
 
   ngOnInit() {
+   
     this.usuarioService.buscarUsuarios()
     .then(resultado => {
       console.log('RESULTADO:',resultado)
@@ -26,6 +29,7 @@ export class LoginComponent implements OnInit {
       console.log('ERRO AO BUSCAR USUARIOS: ',erro)
     })
   }
+
 
   logar(){
     var self = this;
@@ -37,19 +41,26 @@ export class LoginComponent implements OnInit {
         console.log(data)
 
         if(data.user) {
+          localStorage.setItem('administrador',data.user)
           self.router.navigate(['/home/'])
+          localStorage.setItem('user', '')
         } 
       })
     })
   }
 
   logarUser(){
+    localStorage.setItem('user','usuario')
+    localStorage.setItem('administrador','')
     this.router.navigate(['/home'])
   }
 
   criarConta(){
     this.router.navigate(['/login/cadastro'])
   }
+
+
+  
 
 
 }

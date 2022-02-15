@@ -16,15 +16,31 @@ import { Observable } from "rxjs";
 class CheckLogged implements CanActivate {
     constructor(private router: Router) { }
 
+    teste(){
+        alert('É necessário fazer login para mais acessos!')
+      }
+
     canActivate(
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ): Observable<boolean> | Promise<boolean> | boolean {
+ 
 
-        //* teste do checkLogged 
+       if(localStorage.getItem('administrador')!= null && localStorage.getItem('administrador')!= ''){
+        return true;
+       }
 
-        return true
-    }
+       if(localStorage.getItem('user')!= null && localStorage.getItem('user')!= '' ){
+           if(location.pathname == '/home/cadastrar-promocao' || location.pathname == '/mercados/cadastrar' ){
+            this.teste();
+            this.router.navigate(['/login'])
+            return false;
+           } else {
+               return true;
+           }
+       } this.router.navigate(['/login'])
+    } 
 }
+
 
 export default CheckLogged;

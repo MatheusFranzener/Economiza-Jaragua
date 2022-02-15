@@ -1,7 +1,7 @@
 {
   "name": "economiza-jaragua",
   "version": "0.0.0",
-  "proxy":"https://localhost:3000",
+  "proxy": "https://localhost:3000",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
@@ -21,7 +21,11 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@ng-bootstrap/ng-bootstrap": "^3.3.1",
+    "bootstrap": "^4.6.1",
     "core-js": "^2.5.4",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },

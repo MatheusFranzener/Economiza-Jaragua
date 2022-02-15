@@ -1,0 +1,45 @@
+.divPrincipal{
+    background-color: #ecf0f1 ;
+    width: 100vw;
+    height: 100vh;
+}
+
+.barraTarefa{
+    width: 100vw;
+    height: 80px;
+    background-color: #58af9b;
+}
+
+.dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.ofertasBotao{
+    border: none;
+    background-color: #58af9b;
+}
+
+.ofertasBotao:hover{
+    text-decoration: underline;
+}
+
+#alertaHome{
+    background-color: #58af9b;
+    width: 258px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 81%;
+    margin-top: 39%;
+}
+
+.close{
+    width: 5px;
+    border: none;
+    margin-left: 35px;
+    background-color: #58af9b;
+}
