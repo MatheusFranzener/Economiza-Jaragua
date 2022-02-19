@@ -21,7 +21,7 @@ import { TelaLoginModule } from './tela-login/tela-login.module';
   imports: [
       RouterModule.forRoot([
         {
-        path: "login",
+        path: "",
         component: LoginComponent,
         canActivate: [CheckLogged]
       }
