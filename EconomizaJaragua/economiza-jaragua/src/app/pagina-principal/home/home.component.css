@@ -34,7 +34,8 @@
     align-items: center;
     justify-content: center;
     margin-left: 80%;
-   margin-top: 34%;
+    margin-top: 34%;
+    position: fixed;
 }
 
 .close{

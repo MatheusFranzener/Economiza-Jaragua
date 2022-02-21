@@ -15,10 +15,19 @@ export class HomeComponent implements OnInit {
 
   deslogar(){
     this.router.navigate(['/login'])
+    localStorage.clear()
   }
 
   ofertas(){
     this.router.navigate(['home/melhores-ofertas'])
+  }
+
+  sobre(){
+    this.router.navigate(['economiza-jaragua/sobre'])
+  }
+
+  mercados(){
+    this.router.navigate(['mercados/informacoes'])
   }
 
 }
