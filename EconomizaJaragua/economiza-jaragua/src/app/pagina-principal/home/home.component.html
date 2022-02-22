@@ -2,11 +2,12 @@
   <div class="barraTarefa">
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        Configurações
+        Bem vindo, {{nome}}
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         <li><a class="dropdown-item" (click)="mercados()">Mercados</a></li>
         <li><a class="dropdown-item" (click)="sobre()">Sobre-Economiza</a></li>
+        <li><a class="dropdown-item" (click)="contato()">Entre em Contato</a></li>
         <li><a class="dropdown-item" (click)="deslogar()">Deslogar</a></li>
       </ul>
     </div>

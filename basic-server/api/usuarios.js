@@ -2,7 +2,7 @@ inserirRota('/buscar_usuario',
     function (dados, resposta) {
         console.log(dados);
         database('SELECT * FROM USER').then(result => {
-            resposta({ list: result });
+            resposta( result );
         }).catch(erro => {
             resposta({ erro: "Erro ao buscar os usuários!" });
         });

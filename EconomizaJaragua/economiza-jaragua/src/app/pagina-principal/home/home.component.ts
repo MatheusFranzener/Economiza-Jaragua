@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Data, Router } from '@angular/router';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,38 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(
+  ) {
+    this.pegarUser();
+  }
+
+  user="";
+  password="";
+  usuario="Usuário!";
+  nome="";
+
+  local_nome = localStorage.getItem('administrador')
+  local_senha = localStorage.getItem('administrador_senha')
+
+  
+  pegarUser(){
+    var self = this
+    fetch('http://localhost:3000/api/login', { method: 'POST', body: JSON.stringify({ nome: this.local_nome, senha: this.local_senha}), headers: {"Content-Type": "application/json"}}).then(function (e) {
+
+      e.json().then(function (data) {
+
+      console.log("teste2: ",data)
+
+      if(localStorage.getItem('administrador')){
+        self.nome = data.user.NOME;
+      } else {
+        self.nome = "Usuário";
+      }
+
+      
+
+      })
+    })
   }
 
   deslogar(){
@@ -30,4 +62,7 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['mercados/informacoes'])
   }
 
+  contato(){
+    this.router.navigate(['economiza-jaragua/entre-em-contato'])
+  }
 }
