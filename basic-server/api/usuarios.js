@@ -1,7 +1,7 @@
 inserirRota('/buscar_usuario',
     function (dados, resposta) {
         console.log(dados);
-        database('SELECT * FROM USER').then(result => {
+        database('SELECT * FROM ADMINISTRADOR').then(result => {
             resposta( result );
         }).catch(erro => {
             resposta({ erro: "Erro ao buscar os usuários!" });
@@ -12,7 +12,7 @@ inserirRota('/login',
     function (dados, resposta) {
         console.log(dados);
 
-        database(`SELECT * FROM USER WHERE NOME = "${dados.nome}" AND SENHA = "${dados.senha}" LIMIT 1`)
+        database(`SELECT * FROM ADMINISTRADOR WHERE NOME = "${dados.nome}" AND SENHA = "${dados.senha}" LIMIT 1`)
         .then(result => {
             console.log('result:',result);
             resposta({ user: result[0] });
@@ -41,7 +41,7 @@ function name(dados,resposta){
         return resposta({erro: 'É necessário preencher o telefone'})
     }
 
-    database(`INSERT INTO USER 
+    database(`INSERT INTO ADMINISTRADOR 
     (
         NOME,
         SENHA,

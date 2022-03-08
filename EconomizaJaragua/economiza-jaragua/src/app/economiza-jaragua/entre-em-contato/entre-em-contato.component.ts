@@ -13,4 +13,8 @@ export class EntreEmContatoComponent implements OnInit {
   ngOnInit() {
   }
 
+  voltarContato(){
+    this.router.navigate(['home'])
+  }
+
 }

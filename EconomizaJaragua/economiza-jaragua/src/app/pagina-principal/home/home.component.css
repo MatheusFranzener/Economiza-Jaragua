@@ -5,37 +5,72 @@
 }
 
 .barraTarefa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 80px;
     background-color: #58af9b;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgLupa{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -45px;
+}
+
+.logoEconomiza{
+    width: 40px;
+    height: 40px;
+}
+
+.textoLogo{
+    color: white;
+    font-size: 16px;
+    margin: 2px;
+}
+
+.pesquisa{
+    width: 600px;
+    height: 35px;
+    color: #6C7B8B;
+    border: solid 2px white;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.botaoAjuda{
+    width: 180px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #6C7B8B;
+    margin: 15px;
 }
 
 .dropdown{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    background-color: #6C7B8B;
+    margin: 15px;
+}
+
+#dropdownMenuButton1{
+    background-color: #6C7B8B;
 }
 
 .ofertasBotao{
     border: none;
     background-color: #58af9b;
-}
-
-.ofertasBotao:hover{
-    text-decoration: underline;
-}
-
-#alertaHome{
-    background-color: #58af9b;
-    width: 258px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 80%;
-    margin-top: 34%;
-    position: fixed;
 }
 
 .close{
@@ -44,3 +79,47 @@
     margin-left: 35px;
     background-color: #58af9b;
 }
+
+/* .imgCarrosel{
+    width: 70vw;
+    height: 70vh;
+}
+
+.carrosel{
+    width: 100vw;
+    height: 100vh;
+}
+
+.imagensCarrosel{
+    width: 500px;
+    height: 300px;
+} */
+
+.principaisOfertas{
+   width: 100vw;
+}
+
+.ofertas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.oferta2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 410px;
+    height: 400px;
+    border: solid 1px black;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.classe{
+    display: flex;
+    flex-direction: row;
+}
+
+

@@ -10,14 +10,34 @@
       <span> Se não possuir cadastro </span> 
       <span> escolha uma das opções </span> 
       <br>
-      <div class="botoesLogin">
-        <button (click)="logarUser()" class="botaoUser">Entrar como Usuário</button>
-        <button (click)="criarConta()" class="botaoCriar">Fazer cadastro</button>  
-      </div>
-    </div>
-      
-    
   
+    <div class="botoesLogin">
+      <button  class="botaoUser" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Entrar como usuário
+      </button>
+    
+      <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel"> Economiza-Jaraguá!</h5>
+              <button (click)="logarUser()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <span>Informe seu email para receber promoções!</span>
+              <br>
+              <input class="inputEmail" type="text" placeholder="Informe seu email">
+            </div>
+            <div class="parte3Modal">
+              <button  (click)="logarUser()" type="button" class="botaoEntrar" data-bs-dismiss="modal">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button (click)="criarConta()" class="botaoCriar">Fazer cadastro</button>  
+    </div>
+  </div>
+      
     <div class="caixaLogin">
       <h1>Login</h1>
       <br>

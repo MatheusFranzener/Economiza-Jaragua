@@ -100,3 +100,23 @@
     height: 23px;
 }
 
+.inputEmail{
+    width: 470px;
+    height: 30px;
+}
+
+.parte2Modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.parte3Modal{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+    height: 50px;
+}
+
