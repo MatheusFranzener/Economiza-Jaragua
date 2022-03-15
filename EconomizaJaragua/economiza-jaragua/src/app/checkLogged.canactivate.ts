@@ -16,9 +16,7 @@ import { Observable } from "rxjs";
 class CheckLogged implements CanActivate {
     constructor(private router: Router) { }
 
-    teste(){
-        alert('É necessário fazer login para mais acessos!')
-      }
+    
 
     canActivate(
         route: ActivatedRouteSnapshot,
@@ -32,7 +30,7 @@ class CheckLogged implements CanActivate {
 
        if(localStorage.getItem('user')!= null && localStorage.getItem('user')!= '' ){
            if(location.pathname == '/home/cadastrar-promocao' || location.pathname == '/mercados/cadastrar' ){
-            this.teste();
+          
             this.router.navigate(['/login'])
             return false;
            } else {

@@ -1,0 +1,22 @@
+.divPrincipal1{
+    width: 100vw;
+}
+
+.inputDados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputCadastro{
+    width: 450px;
+    height: 50px;
+    margin: 5px;
+}
+
+.inputProblema{
+    width: 450px;
+    height: 150px;
+    margin: 5px;
+}

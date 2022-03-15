@@ -1,14 +1,10 @@
 <div class="divPrincipal">
-  
-
   <div class="barraTarefa">
     <div class="logo">
-      <!-- <span class="textoLogo">Economiza - </span> -->
       <img class="logoEconomiza" src="https://cdn-icons-png.flaticon.com/512/584/584093.png" alt="">
-      <!-- <span class="textoLogo">- Jaraguá</span> -->
     </div>
     <div class="barraPesquisa">
-      <input type="text" class="pesquisa" placeholder="Digite a categoria de preferência: ">
+      <input type="text" class="pesquisa" placeholder="Pesquise por categorias: ">
       <img class="imgLupa" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png"
         alt="">
     </div>
@@ -27,8 +23,47 @@
         <li><a class="dropdown-item" (click)="deslogar()">Deslogar</a></li>
       </ul>
     </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Opções Administrador
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" (click)="cadastrarMercados()">Cadastrar Mercado</a></li>
+        <li><a class="dropdown-item" (click)="cadastrarPromocao()">Cadastrar Promoção</a></li>
+      </ul>
+    </div>
   </div>
 
+  <div class="principaisOfertas">
+    <ul class="ofertas" >
+      <div class="classe">
+        <li class="oferta2">
+
+        </li>
+        <li class="oferta2">
+
+        </li>
+        <li class="oferta2">
+
+        </li>
+      </div>
+    
+      <div class="classe">
+        <li class="oferta2">
+
+        </li>
+        <li class="oferta2">
+
+        </li>
+        <li class="oferta2">
+
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>
+  
    <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -50,21 +85,9 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div> -->
-    
-<div class="principaisOfertas">
-    <ul class="ofertas" >
-      <div class="classe">
-        <li class="oferta2">Oferta 1</li>
-        <li class="oferta2">Oferta 2</li>
-        <li class="oferta2">Oferta 3</li>
-      </div>
-    
-      <div class="classe">
-        <li class="oferta2">Oferta 1</li>
-        <li class="oferta2">Oferta 2</li>
-        <li class="oferta2">Oferta 3</li>
-      </div>
-    </ul>
-  </div>
-</div>
+
+
+
+
+
   

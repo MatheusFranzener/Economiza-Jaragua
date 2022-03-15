@@ -23,10 +23,10 @@ database(`CREATE TABLE IF NOT EXISTS ENDERECO (
     CODIGO INTEGER PRIMARY KEY AUTOINCREMENT,
     UF_ESTADO char(2),
     NOME_CIDADE varchar(100),
-    RUA varchar(50),
-    BAIRRO varchar(100),
-    NUMERO int(5),
-    COMPLEMENTO varchar(100)
+    RUA varchar(100),
+    BAIRRO varchar(50),
+    NUMERO int(4),
+    COMPLEMENTO varchar(150)
     )`).then(result => {
     console.log('Tabela Endereco criada com sucesso');
 }).catch(erro => {
@@ -44,7 +44,7 @@ database(`CREATE TABLE IF NOT EXISTS CATEGORIA (
 });
 
 database(`CREATE TABLE IF NOT EXISTS MERCADO (
-    CNPJ INTEGER(14) PRIMARY KEY AUTOINCREMENT,
+    CNPJ INTEGER(14) PRIMARY KEY,
     NOME_MERCADO varchar(100),
     TELEFONE int(11),
     ID_ADMINISTRADOR int,
@@ -65,7 +65,7 @@ database(`CREATE TABLE IF NOT EXISTS MERCADO (
 
 database(`CREATE TABLE IF NOT EXISTS PROMOCAO (
     CODIGO INTEGER PRIMARY KEY AUTOINCREMENT,
-    NOME_PRODUTO varchar(45),
+    NOME_PRODUTO varchar(100),
     VALOR double,
     DATA_VALIDA date,
     DESCRICAO varchar(200),

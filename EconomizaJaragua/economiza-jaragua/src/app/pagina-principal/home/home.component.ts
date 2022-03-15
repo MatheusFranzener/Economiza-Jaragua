@@ -38,9 +38,6 @@ export class HomeComponent implements OnInit {
       } else {
         self.nome = "Usuário";
       }
-
-      
-
       })
     })
   }
@@ -64,5 +61,13 @@ export class HomeComponent implements OnInit {
 
   contato(){
     this.router.navigate(['economiza-jaragua/entre-em-contato'])
+  }
+
+  cadastrarMercados(){
+    this.router.navigate(['mercados/cadastrar'])
+  }
+
+  cadastrarPromocao(){
+    this.router.navigate(['home/cadastrar-promocao'])
   }
 }

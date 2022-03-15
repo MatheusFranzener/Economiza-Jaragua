@@ -1,3 +1,18 @@
-<p>
-  cadastrar-promocao works!
-</p>
+<div class="divPrincipal">
+  <div class="inputDados">
+    <h1>Cadastrar Promoção</h1> 
+    <input [(ngModel)]="nome_produto" class="inputCadastro" type="text" placeholder="Nome do Produto">
+    <input class="inputCadastro" type="text" placeholder="Categoria">
+    <input [(ngModel)]="valor" class="inputCadastro" type="text" placeholder="Preço">
+    <select class="form-select" aria-label="Default select example">
+      <option selected> </option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <input [(ngModel)]="data_valida" type="date" placeholder="Data válida">
+    <textarea [(ngModel)]="descricao" name="text" rows="14" cols="20" wrap="soft" maxlength="500" class="inputCadastro"
+        placeholder="Informe a descrição do produto"></textarea>
+    <button (click)="cadastrarPromocao()" >Cadastrar Oferta</button>
+  </div>
+</div>

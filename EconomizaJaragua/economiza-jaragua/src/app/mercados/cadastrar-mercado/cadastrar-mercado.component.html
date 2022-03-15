@@ -1,3 +1,22 @@
-<p>
-  cadastrar-mercado works!
-</p>
+<div class="divPrincipal1">
+  <div class="inputs">
+    <div class="inputDados">
+      <h1>Cadastrar Mercado</h1> 
+      <input [(ngModel)]="uf_estado" class="inputCadastro" type="text" placeholder="UF">
+      <input [(ngModel)]="nome_cidade" class="inputCadastro" type="text" placeholder="Cidade">
+      <input [(ngModel)]="bairro" class="inputCadastro" type="text" placeholder="Bairro">
+      <input [(ngModel)]="rua" class="inputCadastro" type="text" placeholder="Rua">
+      <input [(ngModel)]="numero" class="inputCadastro" type="text" placeholder="Número">
+     <input [(ngModel)]="complemento" type="text" class="inputCadastro" placeholder="Complemento">
+     <button (click)="cadastrarEndereco()" >Validar Endereço</button>
+     <div class="linhaDiv"></div>
+     <input [(ngModel)]="cnpj" class="inputCadastro" type="text" placeholder="CNPJ" >
+     <input [(ngModel)]="nome_mercado" class="inputCadastro" type="text" placeholder="Nome institucional">
+     <input [(ngModel)]="telefone" class="inputCadastro" type="text" placeholder="Telefone">
+      <button (click)="cadastrarMercado()" >Cadastrar Mercado</button>
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,20 @@
+.divPrincipal{
+    width: 100vw;
+}
+
+.inputDados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputCadastro{
+    width: 400px;
+    margin: 5px;
+}
+
+.form-select{
+    width: 400px;
+    margin: 5px;
+}

@@ -22,4 +22,46 @@ export class UsuarioService {
     })
   }
 
+  buscarMercados(){
+    return new Promise((resolvido,rejeitado) => {
+
+      fetch('/api/buscar_mercado',{
+        method: 'POST',
+        headers: {
+          'Content-Type':'application/json'
+        }
+      }).then(resultado => resultado.json())
+      .then(resolvido)
+      .catch(rejeitado);
+    })
+  }
+
+  buscarEndereco(){
+    return new Promise((resolvido,rejeitado) => {
+
+      fetch('/api/buscar_endereco',{
+        method: 'POST',
+        headers: {
+          'Content-Type':'application/json'
+        }
+      }).then(resultado => resultado.json())
+      .then(resolvido)
+      .catch(rejeitado);
+    })
+  }
+
+  buscarPromocao(){
+    return new Promise((resolvido,rejeitado) => {
+
+      fetch('/api/buscar_promocao',{
+        method: 'POST',
+        headers: {
+          'Content-Type':'application/json'
+        }
+      }).then(resultado => resultado.json())
+      .then(resolvido)
+      .catch(rejeitado);
+    })
+  }
+
 }
