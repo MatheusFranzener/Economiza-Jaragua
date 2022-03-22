@@ -49,17 +49,15 @@
         conosco!
       </h1>
       <br>
-      <input type="text" placeholder="Informe seu nome" class="inputContato">
+      
+      <input [(ngModel)]="nome" type="text" placeholder="Informe seu nome" class="inputContato" >
       <br>
-      <input type="text" placeholder="Informe seu email" class="inputContato">
+      <input [(ngModel)]="email"  placeholder="Informe seu email" class="inputContato">
       <br>
-      <textarea name="text" rows="14" cols="20" wrap="soft" maxlength="500" class="inputProblema"
+      <textarea  [(ngModel)]="campo_texto" name="text" rows="14" cols="20" wrap="soft" maxlength="500" class="inputProblema"
         placeholder="Informe seu problema ou dúvida!"></textarea>
       <br>
-      <button class="botaoContato">Enviar</button>
+      <button (click)="cadastrarContato()" class="botaoContato">Enviar</button>
     </div>
-  
-    
-  
   </div>
 </body>

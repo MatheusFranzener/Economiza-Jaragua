@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
 
   user= "";
   password= "";
+  emailUser = "";
 
 
   ngOnInit() {
@@ -56,6 +57,10 @@ export class LoginComponent implements OnInit {
     localStorage.setItem('user', 'usuario')
     localStorage.setItem('administrador', '')
     this.router.navigate(['/home'])
+  }
+
+  notificacoes(){
+    fetch('http://localhost:3000/api/cadastrar_notificacao', { method: 'POST', body: JSON.stringify({ emailUser:this.emailUser }), headers: { "Content-Type": "application/json" } })
   }
 
   criarConta() {

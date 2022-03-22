@@ -8,6 +8,17 @@ inserirRota('/buscar_usuario',
         });
     });
 
+inserirRota('/validar_endereco',
+    function (dados, resposta) {
+        console.log(dados);
+        database(`SELECT * FROM ENDERECO WHERE RUA = "${dados.rua}" AND NUMERO = "${dados.numero}" LIMIT 1`).then(result => {
+            console.log("resultado:",result)
+            resposta({endereco:result[0]});
+        }).catch(erro => {
+            resposta({ erro: "Erro ao buscar os endereco!" });
+        });
+    });
+
 inserirRota('/login',
     function (dados, resposta) {
         console.log(dados);
@@ -73,12 +84,14 @@ function(dados,resposta){
     (
         CNPJ,
         NOME_MERCADO,
-        TELEFONE
+        TELEFONE,
+        CODIGO_ENDERECO
         ) 
         VALUES (
             "${dados.cnpj}",
             "${dados.nome_mercado}",
-            "${dados.telefone}"
+            "${dados.telefone}",
+            "${dados.codigo}"
         )`)
 
         .then(result => {
@@ -104,6 +117,7 @@ function(dados,resposta){
         COMPLEMENTO
         ) 
         VALUES (
+
             "${dados.uf_estado}",
             "${dados.nome_cidade}",
             "${dados.rua}",
@@ -115,7 +129,8 @@ function(dados,resposta){
 
         .then(result => {
         console.log('Endereco cadastrado com sucesso');
-        resposta({message: 'Endereco cadastrado com sucesso!'})
+        // resposta({message: 'Endereco cadastrado com sucesso!'})
+        resposta(dados)
     }).catch(erro => {
         console.log('Erro ao cadastrar Endereco');
         resposta({erro: 'Erro ao cadastrar Endereco'})
@@ -151,6 +166,52 @@ function(dados,resposta){
     })
 })
 
+inserirRota('/cadastrar_contato',
+function(dados,resposta){
+    console.log(dados);
+
+    database(`INSERT INTO CONTATO 
+    (
+        NOME,
+        EMAIL,
+        CAMPO_TEXTO
+        ) 
+        VALUES (
+            "${dados.nome}",
+            "${dados.email}",
+            "${dados.campo_texto}"
+        )`)
+
+        .then(result => {
+        console.log('Contato cadastrado com sucesso');
+        resposta({message: 'Contato cadastrado com sucesso!'})
+    }).catch(erro => {
+        console.log('Erro ao cadastrar contato');
+        resposta({erro: 'Erro ao cadastrar contato'})
+    })
+})
+
+inserirRota('/cadastrar_notificacao',
+function(dados,resposta){
+    console.log(dados);
+
+    database(`INSERT INTO USUARIO 
+    (
+        EMAIl
+        ) 
+        VALUES (
+            "${dados.email}"
+        )`)
+
+        .then(result => {
+        console.log('Notificacao cadastrado com sucesso');
+        resposta({message: 'Notificacao cadastrado com sucesso!'})
+    }).catch(erro => {
+        console.log('Erro ao cadastrar Notificacao');
+        resposta({erro: 'Erro ao cadastrar Notificacao'})
+    })
+})
+
 
 inserirRota('/buscar_mercado',
     function (dados, resposta) {
@@ -179,6 +240,16 @@ function (dados, resposta) {
         resposta( result );
     }).catch(erro => {
         resposta({ erro: "Erro ao buscar promocao!" });
+    });
+});
+
+inserirRota('/buscar_contato',
+function (dados, resposta) {
+    console.log(dados);
+    database('SELECT * FROM CONTATO').then(result => {
+        resposta( result );
+    }).catch(erro => {
+        resposta({ erro: "Erro ao buscar contato!" });
     });
 });
 

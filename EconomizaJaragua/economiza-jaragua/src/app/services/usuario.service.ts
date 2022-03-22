@@ -64,4 +64,20 @@ export class UsuarioService {
     })
   }
 
+  buscarContato(){
+    return new Promise((resolvido,rejeitado) => {
+
+      fetch('/api/buscar_contato',{
+        method: 'POST',
+        headers: {
+          'Content-Type':'application/json'
+        }
+      }).then(resultado => resultado.json())
+      .then(resolvido)
+      .catch(rejeitado);
+    })
+  }
+
+
+
 }

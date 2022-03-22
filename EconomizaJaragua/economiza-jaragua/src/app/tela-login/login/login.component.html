@@ -2,7 +2,7 @@
   <div class="caixaPrincipal">
   
     <div class="caixaBemVindo">
-      <h1>Bem vindo!</h1>
+      <h1 class="titulo">Bem vindo!</h1>
       <br>
       <span>ao Economiza-Jaraguá</span>
       <span>o lugar perfeito para economizar</span>
@@ -24,9 +24,9 @@
               <button (click)="logarUser()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <span>Informe seu email para receber promoções!</span>
+              <span>Informe seu email para receber promoções! (Opcional) </span>
               <br>
-              <input class="inputEmail" type="text" placeholder="Informe seu email">
+              <input class="inputEmail" type="text" placeholder="Informe seu email" [(ngModel)]="emailUser">
             </div>
             <div class="parte3Modal">
               <button  (click)="logarUser()" type="button" class="botaoEntrar" data-bs-dismiss="modal">Enviar</button>

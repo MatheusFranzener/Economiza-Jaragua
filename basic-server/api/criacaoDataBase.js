@@ -2,7 +2,7 @@ database(`CREATE TABLE IF NOT EXISTS ADMINISTRADOR (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     NOME varchar(45),
     SENHA varchar(100),
-    TELEFONE int(11),
+    TELEFONE char(11),
     EMAIL varchar(100)
     )`).then(result => {
     console.log('Tabela Administrador criada com sucesso');
@@ -19,13 +19,24 @@ database(`CREATE TABLE IF NOT EXISTS USUARIO (
     console.log('Tabela Usuario com erro na criação');
 });
 
+database(`CREATE TABLE IF NOT EXISTS CONTATO (
+    CODIGO_USUARIO INTEGER PRIMARY KEY AUTOINCREMENT,
+    NOME varchar(50) not null,
+    EMAIL varchar(100) not null,
+    CAMPO_TEXTO varchar(500) not null
+    )`).then(result => {
+    console.log('Tabela Contato criada com sucesso');
+}).catch(erro => {
+    console.log('Tabela Contato com erro na criação');
+});
+
 database(`CREATE TABLE IF NOT EXISTS ENDERECO (
     CODIGO INTEGER PRIMARY KEY AUTOINCREMENT,
     UF_ESTADO char(2),
     NOME_CIDADE varchar(100),
     RUA varchar(100),
     BAIRRO varchar(50),
-    NUMERO int(4),
+    NUMERO char(5),
     COMPLEMENTO varchar(150)
     )`).then(result => {
     console.log('Tabela Endereco criada com sucesso');
@@ -44,9 +55,9 @@ database(`CREATE TABLE IF NOT EXISTS CATEGORIA (
 });
 
 database(`CREATE TABLE IF NOT EXISTS MERCADO (
-    CNPJ INTEGER(14) PRIMARY KEY,
+    CNPJ char(14) PRIMARY KEY,
     NOME_MERCADO varchar(100),
-    TELEFONE int(11),
+    TELEFONE char(11),
     ID_ADMINISTRADOR int,
     CODIGO_ENDERECO int,
     FOREIGN KEY(ID_ADMINISTRADOR)
@@ -70,7 +81,7 @@ database(`CREATE TABLE IF NOT EXISTS PROMOCAO (
     DATA_VALIDA date,
     DESCRICAO varchar(200),
     NOME_IMAGEM varchar(100),
-    CNPJ_MERCADO int(14),
+    CNPJ_MERCADO char(14),
     CODIGO_CATEGORIA int,
     FOREIGN KEY(CNPJ_MERCADO)
     REFERENCES MERCADO(CNPJ)

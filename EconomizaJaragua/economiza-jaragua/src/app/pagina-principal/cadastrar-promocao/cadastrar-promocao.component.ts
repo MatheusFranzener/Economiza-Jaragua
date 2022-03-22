@@ -22,6 +22,8 @@ export class CadastrarPromocaoComponent implements OnInit {
     })
   }
 
+teste = [1,2,3]
+
  nome_produto = ""
  valor = ""
  data_valida = ""
