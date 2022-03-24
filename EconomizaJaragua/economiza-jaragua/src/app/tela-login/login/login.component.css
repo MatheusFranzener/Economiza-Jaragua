@@ -15,7 +15,7 @@
     flex-direction: column;
     width: 350px;
     height: 380px;
-    background-color: #58af9b;
+    background-color: #0064af;
     border: 1px solid white;
     border-radius: 5px;
 }
@@ -27,9 +27,25 @@
     flex-direction: column;
     width: 480px;
     height: 380px;
-    background-color: white;
-    border: 1px solid white;
+    background-color: #f5f2ee;
+    border: 1px solid #f5f2ee;
     border-radius: 5px;
+}
+
+.titulo{
+    font-size: 56px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #0064af;
+}
+
+.tituloLogin{
+    font-size: 56px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#f5f2ee;
+}
+
+.textoLogin{
+    color: #f5f2ee;
 }
 
 .botoesLogin{
@@ -41,8 +57,8 @@
     margin-right: 5px;
     border: solid white 0.5px;
     font-size: 15px;
-    background-color: #58af9b;
-    color: white;
+    background-color: #2ac196;
+    color: #f5f2ee;
     border-radius: 5px;
     width: 150px;
     height: 50px;
@@ -52,7 +68,7 @@
 .botaoCriar{
     margin-left: 3px;
     border: solid white 0.5px;
-    background-color: #58af9b;
+    background-color: #2ac196;
     border-radius: 5px;
     font-size: 15px;
     color: white;
@@ -62,8 +78,9 @@
 }
 
 .botaoEntrar{
-    background-color: #58af9b;
+    background-color: #2ac196;
     border: none;
+    color: #f5f2ee;
     border-radius: 5px;
     width: 140px;
     height: 30px;
@@ -77,7 +94,7 @@
 }
 
 .inputNome{
-    width: 250px;
+    width: 280px;
     height: 40px;
     border-radius: 5px;
     border: solid 0.5px black;
@@ -85,7 +102,7 @@
 
 .inputSenha{
     margin-top: 5px;
-    width: 250px;
+    width: 280px;
     height: 40px;
     border-radius: 5px;
     border: solid 0.5px black;
@@ -95,7 +112,7 @@
 .icone{
     position: absolute;
     margin-top: -10px;
-    margin-left: 220px;
+    margin-left: 245px;
     width: 25px;
     height: 23px;
 }

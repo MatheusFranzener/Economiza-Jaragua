@@ -14,23 +14,23 @@
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
         aria-expanded="false">
-        Bem vindo, {{nome}}
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" (click)="mercados()">Mercados</a></li>
-        <li><a class="dropdown-item" (click)="sobre()">Sobre-Economiza</a></li>
-        <li><a class="dropdown-item" (click)="contato()">Entre em Contato</a></li>
-        <li><a class="dropdown-item" (click)="deslogar()">Deslogar</a></li>
-      </ul>
-    </div>
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-        aria-expanded="false">
         Opções Administrador
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         <li><a class="dropdown-item" (click)="cadastrarMercados()">Cadastrar Mercado</a></li>
         <li><a class="dropdown-item" (click)="cadastrarPromocao()">Cadastrar Promoção</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+        Bem vindo, {{nome}}
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+        <li><a class="dropdown-item" (click)="mercados()">Mercados</a></li>
+        <li><a class="dropdown-item" (click)="sobre()">Sobre-Economiza</a></li>
+        <li><a class="dropdown-item" (click)="contato()">Entre em Contato</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" (click)="deslogar()">Deslogar</a></li>
       </ul>
     </div>
   </div>

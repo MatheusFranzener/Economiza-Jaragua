@@ -1,22 +1,19 @@
-<body>
-  <div class="voltarPag">
-    <button (click)="voltarContato()" class="botaoVoltar"> Voltar </button>
-  </div>
-  
+<body> 
   <div class="divPrincipal">
     <div class="caixasContato">
       <div class="caixinhas">
         <div class="telefone">
           <img class="iconeCaixinha" src="data:image/png;base64,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" alt="">
-          <h2>Telefone</h2>
+          <h2 class="tituloCx">Telefone</h2>
           <span>(47) 9 9128-4989</span>
+          <span>(47) 3370-8552</span>
         </div>
       </div>
   
       <div class="caixinhas">
         <div class="instagram">
           <img class="iconeCaixinha" src="data:image/png;base64,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" alt="">
-          <h2>Instagram</h2>
+          <h2 class="tituloCx">Instagram</h2>
           <span>@Economiza.Jaragua</span>
         </div>
       </div>
@@ -26,7 +23,7 @@
       <div class="caixinhas">
         <div class="endereco">
           <img class="iconeCaixinha" src="data:image/png;base64,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" alt="">
-          <h2>Endereço</h2>
+          <h2 class="tituloCx">Endereço</h2>
           <span>Rua dos Antes, 301</span>
           <span>Jaraguá do Sul - SC</span>
         </div>
@@ -35,19 +32,19 @@
       <div class="caixinhas">
         <div class="email">
           <img class="iconeCaixinha" src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="">
-          <h2>Email</h2>
+          <h2 class="tituloCx">Email</h2>
           <span>economiza.jaragua@gmail.com</span>
         </div>
       </div>
     </div>
   
     <div class="caixaContato">
-      <h1>
+       <span class="tituloContato">
         Entre em contato
-      </h1>
-      <h1>
+      </span>
+      <span class="tituloContato">
         conosco!
-      </h1>
+      </span>
       <br>
       
       <input [(ngModel)]="nome" type="text" placeholder="Informe seu nome" class="inputContato" >

@@ -200,7 +200,7 @@ function(dados,resposta){
         EMAIl
         ) 
         VALUES (
-            "${dados.email}"
+            "${dados.emailUser}"
         )`)
 
         .then(result => {
@@ -250,6 +250,16 @@ function (dados, resposta) {
         resposta( result );
     }).catch(erro => {
         resposta({ erro: "Erro ao buscar contato!" });
+    });
+});
+
+inserirRota('/buscar_notificacao',
+function (dados, resposta) {
+    console.log(dados);
+    database('SELECT * FROM USUARIO').then(result => {
+        resposta( result );
+    }).catch(erro => {
+        resposta({ erro: "Erro ao buscar Notificacao!" });
     });
 });
 

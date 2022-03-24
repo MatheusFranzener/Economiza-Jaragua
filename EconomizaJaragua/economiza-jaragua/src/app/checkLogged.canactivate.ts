@@ -22,23 +22,15 @@ class CheckLogged implements CanActivate {
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ): Observable<boolean> | Promise<boolean> | boolean {
- 
-
-       if(localStorage.getItem('administrador')!= null && localStorage.getItem('administrador')!= ''){
-        return true;
-       }
-
-       if(localStorage.getItem('user')!= null && localStorage.getItem('user')!= '' ){
-           if(location.pathname == '/home/cadastrar-promocao' || location.pathname == '/mercados/cadastrar' ){
-          
-            this.router.navigate(['/login'])
-            return false;
+        if(localStorage.getItem('administrador')!= null && localStorage.getItem('administrador')!= ''){
+            return true;
            } else {
-               return true;
+               this.router.navigate(['/login'])
+               return false;
            }
-       } this.router.navigate(['/login'])
+       }
     } 
-}
+
 
 
 export default CheckLogged;

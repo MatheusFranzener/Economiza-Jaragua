@@ -2,13 +2,13 @@
   <div class="caixaPrincipal">
   
     <div class="caixaBemVindo">
-      <h1 class="titulo">Bem vindo!</h1>
+      <span class="tituloLogin">Bem vindo!</span>
       <br>
-      <span>ao Economiza-Jaraguá</span>
-      <span>o lugar perfeito para economizar</span>
+      <span class="textoLogin">ao Economiza-Jaraguá</span>
+      <span class="textoLogin">o lugar perfeito para economizar</span>
       <br>
-      <span> Se não possuir cadastro </span> 
-      <span> escolha uma das opções </span> 
+      <span class="textoLogin"> Se não possuir cadastro </span> 
+      <span class="textoLogin"> escolha uma das opções </span> 
       <br>
   
     <div class="botoesLogin">
@@ -29,7 +29,7 @@
               <input class="inputEmail" type="text" placeholder="Informe seu email" [(ngModel)]="emailUser">
             </div>
             <div class="parte3Modal">
-              <button  (click)="logarUser()" type="button" class="botaoEntrar" data-bs-dismiss="modal">Enviar</button>
+              <button  (click)="notificacoes()" type="button" class="botaoEntrar" data-bs-dismiss="modal">Enviar</button>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@
   </div>
       
     <div class="caixaLogin">
-      <h1>Login</h1>
+      <span class="titulo">Login</span>
       <br>
       <div class="inputLogin">
         <div class="icones">

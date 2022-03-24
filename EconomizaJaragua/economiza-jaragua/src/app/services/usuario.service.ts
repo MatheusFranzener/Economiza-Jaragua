@@ -78,6 +78,19 @@ export class UsuarioService {
     })
   }
 
+  buscarNotificacao(){
+    return new Promise((resolvido,rejeitado) => {
+
+      fetch('/api/buscar_notificacao',{
+        method: 'POST',
+        headers: {
+          'Content-Type':'application/json'
+        }
+      }).then(resultado => resultado.json())
+      .then(resolvido)
+      .catch(rejeitado);
+    })
+  }
 
 
 }

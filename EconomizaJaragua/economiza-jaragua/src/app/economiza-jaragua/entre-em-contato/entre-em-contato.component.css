@@ -1,16 +1,10 @@
-.botaoVoltar{
-   width: 100px;
-   margin: 5px;
-   background-color: #87cefa;
-   border: none;
-   border-radius: 5px;
-}
 
 .divPrincipal{
     display: flex;
     justify-content: center;
     align-items:center;
-   
+    height: 100vh;
+    width: 100vw;
 }
 
 .caixaContato{
@@ -20,23 +14,38 @@
     flex-direction: column;
     width: 650px;
     height: 650px;
-    background-color: #87cefa;
+    background-color: #0064af;
+    border-radius: 10px;
+}
+
+.tituloContato{
+    font-size: 56px;
+    color: #f5f2ee;
+}
+
+.tituloCx{
+    color: #0064af;
 }
 
 .inputContato{
     width: 400px;
-    height: 30px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 1px black;
 }
 
 .inputProblema{
     height: 250px;
     width: 480px;
+    border: solid 1px black;
+    border-radius: 10px;
 }
 
 .botaoContato{
     width: 150px;
     border: solid white 1px;
-    background-color: transparent;
+    background-color: #2ac196;
+    color: #f5f2ee;
     border-radius: 5px;
 }
 
@@ -44,9 +53,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: solid 2px #0064af;
+    border-radius: 10px;
     width: 300px;
     height: 260px;
-    margin-top: -200px;
     margin: 10px;
     background-color: white;
 }

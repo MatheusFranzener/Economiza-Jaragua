@@ -29,6 +29,8 @@ export class LoginComponent implements OnInit {
       }).catch(erro => {
         console.log('ERRO AO BUSCAR USUARIOS: ', erro)
       })
+
+      
   }
 
 
@@ -61,6 +63,9 @@ export class LoginComponent implements OnInit {
 
   notificacoes(){
     fetch('http://localhost:3000/api/cadastrar_notificacao', { method: 'POST', body: JSON.stringify({ emailUser:this.emailUser }), headers: { "Content-Type": "application/json" } })
+    localStorage.setItem('user', 'usuario')
+    localStorage.setItem('administrador', '')
+    this.router.navigate(['/home'])
   }
 
   criarConta() {

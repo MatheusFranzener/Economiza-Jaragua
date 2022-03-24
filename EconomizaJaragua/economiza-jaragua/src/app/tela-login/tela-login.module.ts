@@ -17,21 +17,21 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
-    path:"home", canActivate: [CheckLogged], children: [
+    path:"home", children: [
       {path:"", component: HomeComponent},
-      {path:"cadastrar-promocao", component: CadastrarPromocaoComponent},
+      {path:"cadastrar-promocao", canActivate: [CheckLogged], component: CadastrarPromocaoComponent},
       {path:"melhores-ofertas", component: MelhoresOfertasComponent},
     ]
   },
   {
-    path:"mercados", canActivate: [CheckLogged], children: [
-      {path:"cadastrar", component: CadastrarMercadoComponent},
+    path:"mercados", children: [
+      {path:"cadastrar", canActivate: [CheckLogged], component: CadastrarMercadoComponent},
       {path:"informacoes", component: InformacoesMercadosComponent},
       {path:"promocoes", component: PromocoesMercadosComponent},
     ]
   },
   {
-    path:"economiza-jaragua", canActivate: [CheckLogged], children :[
+    path:"economiza-jaragua", children :[
       {path:"entre-em-contato", component: EntreEmContatoComponent},
       {path:"sobre", component: SobreEconomizeComponent},
     ]
@@ -51,6 +51,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   declarations: [CadastrarUsuarioComponent,LoginComponent],
-  exports: [CadastrarUsuarioComponent,LoginComponent]
+  exports: [CadastrarUsuarioComponent,LoginComponent],
+  providers: [CheckLogged]
 })
 export class TelaLoginModule { }

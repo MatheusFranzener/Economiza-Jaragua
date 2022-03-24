@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { UsuarioService } from '../../services/usuario.service';
 
 
 @Component({
@@ -10,11 +11,16 @@ import { Router } from '@angular/router';
 })
 export class EntreEmContatoComponent implements OnInit {
 
-  constructor(
+  constructor(private usuarioService: UsuarioService,
     private router: Router) { }
 
   ngOnInit() {
-
+    this.usuarioService.buscarContato()
+      .then(resultado => {
+        console.log('CONTATO:', resultado)
+      }).catch(erro => {
+        console.log('ERRO AO BUSCAR CONTATOS: ', erro)
+      })
   }
 
   nome = "";

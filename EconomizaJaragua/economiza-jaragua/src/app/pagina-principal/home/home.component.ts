@@ -9,11 +9,19 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private usuarioService: UsuarioService,
+    private router: Router) { }
 
   ngOnInit(
   ) {
     this.pegarUser();
+    
+    this.usuarioService.buscarNotificacao()
+      .then(resultado => {
+        console.log('NOTIFICACAO:', resultado)
+      }).catch(erro => {
+        console.log('ERRO AO BUSCAR NOTIFICACAO: ', erro)
+      })
   }
 
   user="";
@@ -64,10 +72,10 @@ export class HomeComponent implements OnInit {
   }
 
   cadastrarMercados(){
-    this.router.navigate(['mercados/cadastrar'])
+    this.router.navigate(['/mercados/cadastrar'])
   }
 
   cadastrarPromocao(){
-    this.router.navigate(['home/cadastrar-promocao'])
+    this.router.navigate(['/home/cadastrar-promocao'])
   }
 }
