@@ -147,14 +147,16 @@ function(dados,resposta){
         VALOR,
         DATA_VALIDA,
         DESCRICAO,
-        NOME_IMAGEM
+        NOME_IMAGEM,
+        CNPJ_MERCADO
         ) 
         VALUES (
             "${dados.nome_produto}",
             "${dados.valor}",
             "${dados.data_valida}",
             "${dados.descricao}",
-            "${dados.nome_imagem}"
+            "${dados.nome_imagem}",
+            "${dados.cnpj_mercado}"
         )`)
 
         .then(result => {
@@ -263,6 +265,14 @@ function (dados, resposta) {
     });
 });
 
+inserirRota('/cadastro_categoria',
+function (dados, resposta) {
+    database('INSERT INTO CATEGORIA VALUES (NULL,"CARNES","TODOS OS MAIS VARIADOS TIPOS DE CARNES") (NULL,"FRUTAS","TODOS OS MAIS VARIADOS TIPOS DE CARNES"').then(result => {
+        resposta( result );
+    }).catch(erro => {
+        resposta({ erro: "Erro ao inserir promoções!" });
+    });
+});
 
 
 

@@ -42,6 +42,61 @@ export class CadastrarMercadoComponent implements OnInit {
   complemento = ""
   codigo: number
 
+  user="";
+  password="";
+  usuario="Usuário!";
+  nome="";
+
+  local_nome = localStorage.getItem('administrador')
+  local_senha = localStorage.getItem('administrador_senha')
+
+  
+  pegarUser(){
+    var self = this
+    fetch('http://localhost:3000/api/login', { method: 'POST', body: JSON.stringify({ nome: this.local_nome, senha: this.local_senha}), headers: {"Content-Type": "application/json"}}).then(function (e) {
+
+      e.json().then(function (data) {
+
+      console.log("teste2: ",data)
+
+      if(localStorage.getItem('administrador')){
+        self.nome = data.user.NOME;
+      } else {
+        self.nome = "Usuário";
+      }
+      })
+    })
+  }
+
+  deslogar(){
+    this.router.navigate(['/login'])
+    localStorage.clear()
+  }
+
+  ofertas(){
+    this.router.navigate(['home/melhores-ofertas'])
+  }
+
+  sobre(){
+    this.router.navigate(['economiza-jaragua/sobre'])
+  }
+
+  mercados(){
+    this.router.navigate(['mercados/informacoes'])
+  }
+
+  contato(){
+    this.router.navigate(['economiza-jaragua/entre-em-contato'])
+  }
+
+  cadastrarMercados(){
+    this.router.navigate(['/mercados/cadastrar'])
+  }
+
+  cadastrarPromocao(){
+    this.router.navigate(['/home/cadastrar-promocao'])
+  }
+
   cadastrarEndereco() {
     var rua2 = this.rua;
     var numero2 = this.numero;

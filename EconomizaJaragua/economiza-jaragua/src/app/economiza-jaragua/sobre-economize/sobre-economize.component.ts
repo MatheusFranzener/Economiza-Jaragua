@@ -13,4 +13,8 @@ export class SobreEconomizeComponent implements OnInit {
   ngOnInit() {
   }
 
+  duvida(){
+    this.router.navigate(['economiza-jaragua/entre-em-contato'])
+  }
+
 }

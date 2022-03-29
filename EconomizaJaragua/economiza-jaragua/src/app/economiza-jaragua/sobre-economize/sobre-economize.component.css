@@ -1,0 +1,176 @@
+.divPrincipal{
+    width: 98vw;
+    height: 100vh;
+}
+
+.campoTitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quadroAzul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8px;
+    background-color: #0064af;
+    height: 126px;
+    width: 586px;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+.titulo{
+    color: #f5f2ee;
+    font-size: 45px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.sobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.economiza{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    width: 700px;
+    height: 544px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: #f5f2ee;
+}
+
+.valores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+.textoValores{
+    color:#0064af;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.caixa1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 245px;
+    height: 53px;
+    background-color: #d22538;
+    border-radius: 10px;
+    margin: 8px;
+}
+
+.caixa2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 308px;
+    height: 67px;
+    background-color: #d22538;
+    border-radius: 10px;
+    margin: 8px;
+}
+
+.caixa3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 399px;
+    height: 82px;
+    background-color: #d22538;
+    border-radius: 10px;
+    margin: 8px;
+}
+
+.textoCaixa{
+    color: #f5f2ee;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.campoDuvida{
+    width: 500px;
+    height: 200px;
+    border: solid 2px black;
+    border-radius: 10px;
+    margin-top: 35px;
+    background-color: #f5f2ee;
+}
+
+.campoDuvida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textoAjuda{
+    color: #0064af;
+    font-size: 20px;
+    margin: 1px;
+}
+
+.botaoAjuda{
+    color: #f5f2ee;
+    background-color: #2ac196;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+}
+
+.escritorio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 90px;
+    margin-top: 50px;
+    width: 700px;
+    height: 60px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: #d22538;
+}
+
+.textoEscritorio{
+    color: #f5f2ee;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.imagensEscritorio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.img1{
+    margin: 20px;
+    margin-right: 39px;
+    width: 700px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.img2{
+    width: 500px;
+    height: 350px;
+    margin: 5px;
+    border-radius: 5px;
+}
