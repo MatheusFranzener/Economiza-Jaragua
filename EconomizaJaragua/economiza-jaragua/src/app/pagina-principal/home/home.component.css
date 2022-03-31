@@ -1,7 +1,6 @@
-.divPrincipal{
-    background-color: #ecf0f1 ;
+.divNavBar{
     width: 100vw;
-    height: 100vh;
+    height: 98vh;
 }
 
 .barraTarefa{
@@ -68,10 +67,15 @@
     background-color: #d22538;
 }
 
+#dropdownMenu{
+    background-color: #d22538;
+}
+
 .ofertasBotao{
     border: none;
     background-color: #d22538;
 }
+
 
 /* .imgCarrosel{
     width: 70vw;
@@ -88,37 +92,14 @@
     height: 300px;
 } */
 
-.principaisOfertas{
-   width: 100vw;
-}
-
-.ofertas{
+.footer{
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0px;
-    margin: 0px;
+    height: 300px;
+    background-color: #0064af;
 }
 
-.oferta2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 400px;
-    border: solid 1px black;
-    border-radius: 8px;
-    margin: 5px;
-}
 
-.classe{
-    display: flex;
-}
 
-#dropdownMenu{
-    background-color: #d22538;
-}
+
 
 

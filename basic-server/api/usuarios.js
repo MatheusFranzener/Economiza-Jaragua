@@ -148,7 +148,8 @@ function(dados,resposta){
         DATA_VALIDA,
         DESCRICAO,
         NOME_IMAGEM,
-        CNPJ_MERCADO
+        CNPJ_MERCADO,
+        CODIGO_CATEGORIA
         ) 
         VALUES (
             "${dados.nome_produto}",
@@ -156,7 +157,8 @@ function(dados,resposta){
             "${dados.data_valida}",
             "${dados.descricao}",
             "${dados.nome_imagem}",
-            "${dados.cnpj_mercado}"
+            "${dados.cnpj_mercado}",
+            "${dados.categoria_mercado}"
         )`)
 
         .then(result => {
@@ -267,12 +269,24 @@ function (dados, resposta) {
 
 inserirRota('/cadastro_categoria',
 function (dados, resposta) {
-    database('INSERT INTO CATEGORIA VALUES (NULL,"CARNES","TODOS OS MAIS VARIADOS TIPOS DE CARNES") (NULL,"FRUTAS","TODOS OS MAIS VARIADOS TIPOS DE CARNES"').then(result => {
+    database('INSERT INTO CATEGORIA VALUES (NULL,"Carnes","Todos os mais variados tipos de carnes!"),(NULL,"Frutas","Todos os mais variados tipos de frutas!"),(NULL,"Verduras","Todos os mais variados tipos de verduras!")').then(result => {
         resposta( result );
     }).catch(erro => {
         resposta({ erro: "Erro ao inserir promoções!" });
     });
 });
+
+inserirRota('/buscar_categoria',
+    function (dados, resposta) {
+        console.log(dados);
+        database('SELECT * FROM CATEGORIA').then(result => {
+            resposta( result );
+        }).catch(erro => {
+            resposta({ erro: "Erro ao buscar categoria!" });
+        });
+    });
+
+
 
 
 

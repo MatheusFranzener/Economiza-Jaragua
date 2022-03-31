@@ -1,5 +1,83 @@
-.divPrincipal{
+.divNavBar{
     width: 100vw;
+    height: 98vh;
+}
+
+.barraTarefa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background-color: #0064af;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgLupa{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -45px;
+}
+
+.logoEconomiza{
+    width: 40px;
+    height: 40px;
+}
+
+.textoLogo{
+    color: white;
+    font-size: 16px;
+    margin: 2px;
+}
+
+.pesquisa{
+    width: 530px;
+    height: 35px;
+    color: #6C7B8B;
+    border: solid 2px white;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.botaoAjuda{
+    width: 180px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #d22538; 
+    margin: 15px;
+}
+
+.dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d22538;
+    margin: 15px;
+}
+
+#dropdownMenuButton1{
+    background-color: #d22538;
+}
+
+.ofertasBotao{
+    border: none;
+    background-color: #d22538;
+}
+
+.classe{
+    display: flex;
+}
+
+#dropdownMenu{
+    background-color: #d22538;
 }
 
 .inputDados{
@@ -7,6 +85,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 50px;
 }
 
 .inputCadastro{
@@ -18,3 +97,5 @@
     width: 400px;
     margin: 5px;
 }
+
+

@@ -92,5 +92,21 @@ export class UsuarioService {
     })
   }
 
+  buscarCategoria(){
+    return new Promise((resolvido,rejeitado) => {
+
+      fetch('/api/buscar_categoria',{
+        method: 'POST',
+        headers: {
+          'Content-Type':'application/json'
+        }
+      }).then(resultado => resultado.json())
+      .then(resolvido)
+      .catch(rejeitado);
+    })
+  }
+
+
+
 
 }

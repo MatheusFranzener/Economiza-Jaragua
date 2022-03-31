@@ -28,6 +28,8 @@ export class CadastrarMercadoComponent implements OnInit {
       }).catch(erro => {
         console.log('ERRO AO BUSCAR USUARIOS: ', erro)
       })
+
+      this.pegarUser();
   }
 
   cnpj = ""

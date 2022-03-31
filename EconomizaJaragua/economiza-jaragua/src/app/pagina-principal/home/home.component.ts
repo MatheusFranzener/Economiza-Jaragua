@@ -14,6 +14,18 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(
   ) {
+
+    fetch('/api/buscar_categoria', { method: 'POST' }).then(function (result) {
+
+      result.json().then(function (data) {
+
+        if (data.length < 1) {
+          fetch('/api/cadastro_categoria', { method: 'POST' });
+        }
+      })
+
+    })
+
     this.pegarUser();
     
     this.usuarioService.buscarNotificacao()
@@ -32,7 +44,7 @@ export class HomeComponent implements OnInit {
   local_nome = localStorage.getItem('administrador')
   local_senha = localStorage.getItem('administrador_senha')
 
-  
+
   pegarUser(){
     var self = this
     fetch('http://localhost:3000/api/login', { method: 'POST', body: JSON.stringify({ nome: this.local_nome, senha: this.local_senha}), headers: {"Content-Type": "application/json"}}).then(function (e) {
