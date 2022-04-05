@@ -81,6 +81,8 @@
 }
 
 .divPrincipal{
+   width: 100vw;
+   height: 86vh;
    margin-top: 30px;
 }
 
@@ -101,4 +103,69 @@
     width: 450px;
     height: 150px;
     margin: 5px;
+}
+
+.inputEstado{
+    width: 180px;
+    height: 50px;
+}
+
+.inputNumero{
+    width: 180px;
+    height: 50px;
+}
+
+.mercado{
+    width: 400px;
+    height: 90px;
+    border: solid 2px black ;
+    border-radius: 10px;
+    background-color: #d22538;
+}
+
+.textoMercado{
+    color: #f5f2ee;
+    font-size: 45px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.divisao{
+    width: 0px;
+    height: 50px;
+    border: solid 2px #d22538;
+    margin: 45px;
+}
+
+.parte1{
+    margin: 5px;
+}
+
+.cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teste{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 490px;
+    margin-top: -30px;
+}
+
+.cadastro3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-left: 30px;
 }

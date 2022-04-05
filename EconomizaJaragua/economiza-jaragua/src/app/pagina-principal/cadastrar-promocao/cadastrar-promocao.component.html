@@ -32,25 +32,36 @@
         <li><hr class="dropdown-divider"></li>
         <li><a class="dropdown-item" (click)="deslogar()">Deslogar</a></li>
       </ul>
+    </div> 
+</div>
+
+<div class="divPrincipal">
+  <div class="inputDados">
+    <div class="promocao">
+      <span class="textoPromocao">Cadastrar Promoção</span> 
     </div>
+    <input [(ngModel)]="nome_produto" class="inputCadastro" type="text" placeholder="Nome do Produto">
+    <input [(ngModel)]="valor" class="inputCadastro2" type="text" placeholder="Preço">
+    <input [(ngModel)]="data_valida" class="inputCadastro2" type="date" placeholder="Data válida">
+    <select class="form-select1" aria-label="Default select example" #a (change)="addCategoria(a.value)">
+      <option selected> Selecionar Categoria </option>
+    </select>
+    <select class="form-select2" aria-label="Default select example" #t (change)="addCnpj(t.value)">
+      <option selected> Selecionar Mercado </option>
+    </select>
+    <textarea [(ngModel)]="descricao" name="text" rows="14" cols="20" wrap="soft" maxlength="500" class="inputCadastro"
+        placeholder="Informe a descrição do produto"></textarea>
+    
+    <div class="botoes">
+      <button class="botaoCancelar">Cancelar</button>
+      <button class="botaoCadastro" (click)="cadastrarPromocao()">Cadastrar Oferta</button>
+    </div>
+   
+  </div>
+
 </div>
 
-<div class="inputDados">
-  <h1>Cadastrar Promoção</h1> 
-  <input [(ngModel)]="nome_produto" class="inputCadastro" type="text" placeholder="Nome do Produto">
-  <select class="form-select1" aria-label="Default select example" #a (change)="addCategoria(a.value)">
-    <option selected> Selecionar Categoria </option>
-  </select>
-  <input [(ngModel)]="valor" class="inputCadastro" type="text" placeholder="Preço">
-  <select class="form-select2" aria-label="Default select example" #t (change)="addCnpj(t.value)">
-    <option selected> Selecionar Mercado </option>
-  </select>
-  <input [(ngModel)]="data_valida" type="date" placeholder="Data válida">
-  <textarea [(ngModel)]="descricao" name="text" rows="14" cols="20" wrap="soft" maxlength="500" class="inputCadastro"
-      placeholder="Informe a descrição do produto"></textarea>
-  <button (click)="cadastrarPromocao()" >Cadastrar Oferta</button>
-</div>
 
-<footer>
 
-</footer>
+
+

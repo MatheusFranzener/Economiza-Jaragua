@@ -1,6 +1,11 @@
 .divNavBar{
+    width: 98vw;
+    height: 100vh;
+}
+
+.divPrincipal{
     width: 100vw;
-    height: 98vh;
+    height: 82vh;
 }
 
 .barraTarefa{
@@ -89,13 +94,58 @@
 }
 
 .inputCadastro{
-    width: 400px;
+    width: 450px;
+    height: 40px;
     margin: 5px;
 }
 
-.form-select{
-    width: 400px;
+.inputCadastro2{
+    width: 240px;
+    height: 40px;
     margin: 5px;
+}
+
+.form-select1{
+    width: 450px;
+    height: 40px;
+    margin: 5px;
+}
+
+.form-select2{
+    width: 450px;
+    height: 40px;
+}
+
+.textoPromocao{
+    color: #f5f2ee;
+    font-size: 45px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.promocao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d22538;
+    width: 450px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.botaoCancelar{
+    color: #f5f2ee;
+    background-color: #d22538;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+
+
+.botaoCadastro{
+    color: #f5f2ee;
+    background-color:#2ac196 ;
+    border: solid 1px black;
+    border-radius: 5px;
 }
 
 
