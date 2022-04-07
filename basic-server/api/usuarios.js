@@ -75,7 +75,6 @@ function name(dados,resposta){
 }
 )
 
-
 inserirRota('/cadastrar_mercado',
 function(dados,resposta){
     console.log(dados);
@@ -85,13 +84,15 @@ function(dados,resposta){
         CNPJ,
         NOME_MERCADO,
         TELEFONE,
-        CODIGO_ENDERECO
+        CODIGO_ENDERECO,
+        IMAGEM_MERCADO
         ) 
         VALUES (
             "${dados.cnpj}",
             "${dados.nome_mercado}",
             "${dados.telefone}",
-            "${dados.codigo}"
+            "${dados.codigo}",
+            "${dados.logo64}"
         )`)
 
         .then(result => {
@@ -269,7 +270,7 @@ function (dados, resposta) {
 
 inserirRota('/cadastro_categoria',
 function (dados, resposta) {
-    database('INSERT INTO CATEGORIA VALUES (NULL,"Carnes","Todos os mais variados tipos de carnes!"),(NULL,"Frutas","Todos os mais variados tipos de frutas!"),(NULL,"Verduras","Todos os mais variados tipos de verduras!")').then(result => {
+    database('INSERT INTO CATEGORIA VALUES (NULL,"Carnes","Todos os mais variados tipos de carnes!"),(NULL,"Frutas","Todos os mais variados tipos de frutas!"),(NULL,"Verduras","Todos os mais variados tipos de verduras!"),(NULL,"Bebidas","Todos os mais variados tipos de bebidas!"),(NULL,"Padaria","Todos os mais variados tipos de produto da padaria!"),(NULL,"Frios e Laticínios","Todos os mais variados tipos de frios e laticínios!")').then(result => {
         resposta( result );
     }).catch(erro => {
         resposta({ erro: "Erro ao inserir promoções!" });

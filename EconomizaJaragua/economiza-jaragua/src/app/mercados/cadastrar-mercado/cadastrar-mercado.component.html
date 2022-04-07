@@ -50,7 +50,7 @@
       <input [(ngModel)]="numero" class="inputNumero" type="text" placeholder="Número">
 
       <div class="cadastro3">
-        <input type="text" class="inputCadastro" placeholder="Logo do mercado">
+        <input [(ngModel)]="logo" type="file" placeholder="Escolha a logo do mercado" (change)="mudanca($event.target.files[0])">
         <input [(ngModel)]="cnpj" class="inputCadastro" type="text" placeholder="CNPJ" >
         <input [(ngModel)]="nome_mercado" class="inputCadastro" type="text" placeholder="Nome institucional">
         <input [(ngModel)]="telefone" class="inputCadastro" type="text" placeholder="Telefone">
@@ -65,7 +65,9 @@
       <input [(ngModel)]="complemento" type="text" class="inputCadastro" placeholder="Complemento">
     </div>
 
-    
+    <div class="teste">
+      <img [src]=img>
+    </div>
     
   </div>
 

@@ -30,6 +30,7 @@ export class CadastrarMercadoComponent implements OnInit {
       })
 
       this.pegarUser();
+      this.buscarMercado();
   }
 
   cnpj = ""
@@ -38,6 +39,8 @@ export class CadastrarMercadoComponent implements OnInit {
 
   uf_estado = ""
   nome_cidade = ""
+  logo = undefined
+  logo64 = undefined
   rua = ""
   bairro = ""
   numero = ""
@@ -51,6 +54,7 @@ export class CadastrarMercadoComponent implements OnInit {
 
   local_nome = localStorage.getItem('administrador')
   local_senha = localStorage.getItem('administrador_senha')
+  
 
   
   pegarUser(){
@@ -66,6 +70,19 @@ export class CadastrarMercadoComponent implements OnInit {
       } else {
         self.nome = "Usuário";
       }
+      })
+    })
+  }
+
+  buscarMercado(){
+    fetch('http://localhost:3000/api/buscar_mercado', { method: 'POST'}).then(function (e) {
+
+      e.json().then(function (dados) {
+
+      console.log("AAA: ",dados)
+
+      localStorage.setItem("img: ",dados[1].IMAGEM_MERCADO);
+      
       })
     })
   }
@@ -127,10 +144,21 @@ export class CadastrarMercadoComponent implements OnInit {
     fetch('http://localhost:3000/api/cadastrar_mercado', {
       method: 'POST', body: JSON.stringify({
 
-        cnpj: self.cnpj, nome_mercado: self.nome_mercado, telefone: self.telefone, codigo: codigo
+        cnpj: self.cnpj, nome_mercado: self.nome_mercado, telefone: self.telefone, codigo: codigo, logo64: self.logo64
       }), headers: { "Content-Type": "application/json" }
     });
     self.router.navigate(['home'])
+  }
+
+  mudanca(file) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      this.logo64 = reader.result;
+    };
+    reader.onerror = (error) => {
+      console.log('Error: ', error);
+    };
   }
 }
 
