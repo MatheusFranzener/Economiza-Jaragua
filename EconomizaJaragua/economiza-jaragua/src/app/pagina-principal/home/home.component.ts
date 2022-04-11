@@ -26,8 +26,10 @@ export class HomeComponent implements OnInit {
 
     })
 
+    this.buscarPromocoes();
+
     this.pegarUser();
-    
+
     this.usuarioService.buscarNotificacao()
       .then(resultado => {
         console.log('NOTIFICACAO:', resultado)
@@ -36,58 +38,98 @@ export class HomeComponent implements OnInit {
       })
   }
 
-  user="";
-  password="";
-  usuario="Usuário!";
-  nome="";
+  listaPromocoes = []
+  barraPesquisa = "";
+  user = "";
+  password = "";
+  usuario = "Usuário!";
+  nome = "";
 
   local_nome = localStorage.getItem('administrador')
   local_senha = localStorage.getItem('administrador_senha')
 
 
-  pegarUser(){
+  pegarUser() {
     var self = this
-    fetch('http://localhost:3000/api/login', { method: 'POST', body: JSON.stringify({ nome: this.local_nome, senha: this.local_senha}), headers: {"Content-Type": "application/json"}}).then(function (e) {
+    fetch('http://localhost:3000/api/login', { method: 'POST', body: JSON.stringify({ nome: this.local_nome, senha: this.local_senha }), headers: { "Content-Type": "application/json" } }).then(function (e) {
 
       e.json().then(function (data) {
 
-      console.log("teste2: ",data)
+        console.log("teste2: ", data)
 
-      if(localStorage.getItem('administrador')){
-        self.nome = data.user.NOME;
-      } else {
-        self.nome = "Usuário";
-      }
+        if (localStorage.getItem('administrador')) {
+          self.nome = data.user.NOME;
+        } else {
+          self.nome = "Usuário";
+        }
       })
     })
   }
 
-  deslogar(){
+  deslogar() {
     this.router.navigate(['/login'])
     localStorage.clear()
   }
 
-  ofertas(){
+  ofertas() {
     this.router.navigate(['home/melhores-ofertas'])
   }
 
-  sobre(){
+  sobre() {
     this.router.navigate(['economiza-jaragua/sobre'])
   }
 
-  mercados(){
+  mercados() {
     this.router.navigate(['mercados/informacoes'])
   }
 
-  contato(){
+  contato() {
     this.router.navigate(['economiza-jaragua/entre-em-contato'])
   }
 
-  cadastrarMercados(){
+  cadastrarMercados() {
     this.router.navigate(['/mercados/cadastrar'])
   }
 
-  cadastrarPromocao(){
+  cadastrarPromocao() {
     this.router.navigate(['/home/cadastrar-promocao'])
+  }
+
+  buscarPromocoes() {
+    var self = this
+    fetch('http://localhost:3000/api/buscar_promocao', { method: 'POST' }).then(function (e) {
+
+      e.json().then(function (dados) {
+        self.listaPromocoes = dados
+      })
+    })
+  }
+
+  criarDivFiltro(filtro){
+    let divOfertas1 = document.querySelector(".divOfertas1")
+    let divOfertas =  document.querySelector(".divOfertas")
+
+    if(divOfertas){
+      divOfertas.remove()
+    }
+    
+    let divNova = document.createElement("div")
+    divOfertas1.appendChild(divNova)
+    filtro.forEach(e => {
+      let div = document.createElement("div")
+      divNova.appendChild(div)
+      let divNome = document.createElement("div")
+      div.appendChild(divNome)
+      divNome.innerText = e.NOME_PRODUTO
+    });
+  }
+
+
+  filtroPromocao() {
+    var self = this;
+    let filtro = this.listaPromocoes.filter(function (element) {
+      return element.NOME_PRODUTO.startsWith(self.barraPesquisa);
+    });
+    this.criarDivFiltro(filtro);
   }
 }
