@@ -33,7 +33,6 @@ export class CadastrarPromocaoComponent implements OnInit {
     this.dropBox2();
   }
 
-
  nome_produto = ""
  valor = ""
  data_valida = ""
@@ -41,6 +40,9 @@ export class CadastrarPromocaoComponent implements OnInit {
  nome_imagem =""
  cnpj_mercado=""
  categoria_mercado=""
+ 
+ logoPromocao = undefined
+ logo64 = undefined
 
  
  usuario="Usuário!";
@@ -106,13 +108,29 @@ export class CadastrarPromocaoComponent implements OnInit {
   }
 
   cadastrarPromocao() {
-    fetch('http://localhost:3000/api/cadastrar_promocao', { method: 'POST', body: JSON.stringify({ nome_produto: this.nome_produto, valor: this.valor, data_valida: this.data_valida, descricao: this.descricao, nome_imagem: this.nome_imagem, cnpj_mercado:this.cnpj_mercado, categoria_mercado:this.categoria_mercado}), headers: {"Content-Type": "application/json"}});
+    var self = this;
+    fetch('http://localhost:3000/api/cadastrar_promocao', { method: 'POST', body: JSON.stringify({ nome_produto: this.nome_produto, valor: this.valor, data_valida: this.data_valida, descricao: this.descricao, nome_imagem: this.nome_imagem, cnpj_mercado:this.cnpj_mercado, categoria_mercado:this.categoria_mercado, logo64:self.logo64}), headers: {"Content-Type": "application/json"}});
     this.router.navigate(['home'])
+  }
+
+  mudanca(file) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      this.logo64 = reader.result;
+    };
+    reader.onerror = (error) => {
+      console.log('Error: ', error);
+    };
   }
 
   deslogar(){
     this.router.navigate(['/login'])
     localStorage.clear()
+  }
+
+  home(){
+    this.router.navigate(['home'])
   }
 
   ofertas(){
@@ -138,4 +156,6 @@ export class CadastrarPromocaoComponent implements OnInit {
   cadastrarPromo(){
     this.router.navigate(['/home/cadastrar-promocao'])
   }
+
+  
 }

@@ -1,7 +1,7 @@
 <div class="divNavBar">
   <div class="barraTarefa">
     <div class="logo">
-      <img class="logoEconomiza" src="https://cdn-icons-png.flaticon.com/512/584/584093.png" alt="">
+      <img (click)="home()" class="logoEconomiza" src="https://cdn-icons-png.flaticon.com/512/584/584093.png" alt="">
     </div>
     <div class="barraPesquisa">
       <input type="text" class="pesquisa" placeholder="Pesquise por categorias: ">
@@ -65,9 +65,7 @@
       <input [(ngModel)]="complemento" type="text" class="inputCadastro" placeholder="Complemento">
     </div>
 
-    <div class="teste">
-      <img [src]=img>
-    </div>
+    
     
   </div>
 

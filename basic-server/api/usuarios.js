@@ -157,7 +157,7 @@ function(dados,resposta){
             "${dados.valor}",
             "${dados.data_valida}",
             "${dados.descricao}",
-            "${dados.nome_imagem}",
+            "${dados.logo64}",
             "${dados.cnpj_mercado}",
             "${dados.categoria_mercado}"
         )`)
@@ -221,7 +221,7 @@ function(dados,resposta){
 inserirRota('/buscar_mercado',
     function (dados, resposta) {
         console.log(dados);
-        database('SELECT * FROM MERCADO').then(result => {
+        database('SELECT MERCADO.NOME_MERCADO, MERCADO.CNPJ,MERCADO.TELEFONE,MERCADO.IMAGEM_MERCADO,ENDERECO.BAIRRO,ENDERECO.RUA,ENDERECO.NUMERO,ENDERECO.BAIRRO FROM MERCADO INNER JOIN ENDERECO ON MERCADO.CODIGO_ENDERECO = ENDERECO.CODIGO').then(result => {
             resposta( result );
         }).catch(erro => {
             resposta({ erro: "Erro ao buscar mercado!" });
@@ -241,7 +241,7 @@ function (dados, resposta) {
 inserirRota('/buscar_promocao',
 function (dados, resposta) {
     console.log(dados);
-    database('SELECT * FROM PROMOCAO').then(result => {
+    database('SELECT PROMOCAO.NOME_PRODUTO,PROMOCAO.VALOR,PROMOCAO.DATA_VALIDA,PROMOCAO.DESCRICAO,PROMOCAO.NOME_IMAGEM,PROMOCAO.CODIGO_CATEGORIA,MERCADO.IMAGEM_MERCADO FROM PROMOCAO INNER JOIN MERCADO ON PROMOCAO.CNPJ_MERCADO = MERCADO.CNPJ').then(result => {
         resposta( result );
     }).catch(erro => {
         resposta({ erro: "Erro ao buscar promocao!" });

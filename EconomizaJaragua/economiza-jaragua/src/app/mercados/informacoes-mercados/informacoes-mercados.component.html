@@ -1,11 +1,11 @@
 <div class="divNavBar">
   <div class="barraTarefa">
     <div class="logo">
-      <img class="logoEconomiza" src="https://cdn-icons-png.flaticon.com/512/584/584093.png" alt="">
+      <img (click)="home()" class="logoEconomiza" src="https://cdn-icons-png.flaticon.com/512/584/584093.png" alt="">
     </div>
     <div class="barraPesquisa">
-      <input type="text" class="pesquisa" placeholder="Pesquise por categorias: ">
-      <img class="imgLupa" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png"
+      <input [(ngModel)]="barraPesquisa" type="text" class="pesquisa" placeholder="Pesquise por categorias: ">
+      <img (click)="filtroPromocao()" class="imgLupa" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png"
         alt="">
     </div>
     <div class="ajuda">
@@ -35,6 +35,15 @@
     </div>
   </div>
 
-  <div class="divMercados">
-
+  <div class="divMercados1">
+    <div class="divMercados">
+      <div *ngFor='let mercado of listaMercados'>
+        {{mercado.NOME_MERCADO}}
+        {{mercado.CNPJ}}
+        <img src="{{mercado.IMAGEM_MERCADO}}" alt="">
+        {{mercado.BAIRRO}}
+        {{mercado.RUA}}
+        {{mercado.NUMERO}}
+      </div>
+    </div>
   </div>

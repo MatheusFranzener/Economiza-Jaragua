@@ -76,6 +76,12 @@
     background-color: #d22538;
 }
 
+.carousel-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* .imgCarrosel{
     width: 70vw;

@@ -12,8 +12,11 @@ export class InformacoesMercadosComponent implements OnInit {
 
   ngOnInit() {
     this.pegarUser();
+    this.buscarMercados();
   }
 
+  listaMercados = [ ]
+  barraPesquisa ="";
   user="";
   password="";
   usuario="Usuário!";
@@ -67,6 +70,49 @@ export class InformacoesMercadosComponent implements OnInit {
 
   cadastrarPromocao(){
     this.router.navigate(['/home/cadastrar-promocao'])
+  }
+
+  home(){
+    this.router.navigate(['home'])
+  }
+
+  buscarMercados() {
+    var self = this
+    fetch('http://localhost:3000/api/buscar_mercado', { method: 'POST' }).then(function (e) {
+
+      e.json().then(function (dados) {
+        self.listaMercados = dados
+      })
+    })
+  }
+
+
+  criarDivFiltro(filtro){
+    let divMercados1 = document.querySelector(".divMercados1")
+    let divMercados =  document.querySelector(".divMercados")
+
+    if(divMercados){
+      divMercados.remove()
+    }
+    
+    let divNova = document.createElement("div")
+    divMercados1.appendChild(divNova)
+    filtro.forEach(e => {
+      let div = document.createElement("div")
+      divNova.appendChild(div)
+      let divNome = document.createElement("div")
+      div.appendChild(divNome)
+      divNome.innerText = e.NOME_MERCADO
+    });
+  }
+
+
+  filtroPromocao() {
+    var self = this;
+    let filtro = this.listaMercados.filter(function (element) {
+      return element.NOME_MERCADO.startsWith(self.barraPesquisa);
+    });
+    this.criarDivFiltro(filtro);
   }
 
 }

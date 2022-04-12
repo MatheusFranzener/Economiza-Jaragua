@@ -1,7 +1,7 @@
 <div class="divNavBar">
   <div class="barraTarefa">
     <div class="logo">
-      <img class="logoEconomiza" src="https://cdn-icons-png.flaticon.com/512/584/584093.png" alt="">
+      <img (click)="home()" class="logoEconomiza" src="https://cdn-icons-png.flaticon.com/512/584/584093.png" alt="">
     </div>
     <div class="barraPesquisa">
       <input type="text" class="pesquisa" placeholder="Pesquise por categorias: ">
@@ -22,46 +22,55 @@
       </ul>
     </div>
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown"
+        aria-expanded="false">
         Bem vindo, {{nome}}
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
         <li><a class="dropdown-item" (click)="mercados()">Mercados</a></li>
         <li><a class="dropdown-item" (click)="sobre()">Sobre-Economiza</a></li>
         <li><a class="dropdown-item" (click)="contato()">Entre em Contato</a></li>
-        <li><hr class="dropdown-divider"></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
         <li><a class="dropdown-item" (click)="deslogar()">Deslogar</a></li>
       </ul>
-    </div> 
-</div>
-
-<div class="divPrincipal">
-  <div class="inputDados">
-    <div class="promocao">
-      <span class="textoPromocao">Cadastrar Promoção</span> 
     </div>
-    <input [(ngModel)]="nome_produto" class="inputCadastro" type="text" placeholder="Nome do Produto">
-    <input [(ngModel)]="valor" class="inputCadastro2" type="text" placeholder="Preço">
-    <input [(ngModel)]="data_valida" class="inputCadastro2" type="date" placeholder="Data válida">
-    <select class="form-select1" aria-label="Default select example" #a (change)="addCategoria(a.value)">
-      <option selected> Selecionar Categoria </option>
-    </select>
-    <select class="form-select2" aria-label="Default select example" #t (change)="addCnpj(t.value)">
-      <option selected> Selecionar Mercado </option>
-    </select>
-    <textarea [(ngModel)]="descricao" name="text" rows="14" cols="20" wrap="soft" maxlength="500" class="inputCadastro"
-        placeholder="Informe a descrição do produto"></textarea>
-    
-    <div class="botoes">
-      <button class="botaoCancelar">Cancelar</button>
-      <button class="botaoCadastro" (click)="cadastrarPromocao()">Cadastrar Oferta</button>
-    </div>
-   
   </div>
 
-</div>
+  <div class="divPrincipal">
+    <div class="inputDados">
+      <div class="promocao">
+        <span class="textoPromocao">Cadastrar Promoção</span>
+      </div>
+      <br>
+      <div class="promocao1">
+        <div class="quadroLogo">
+          <label for="arquivo">Imagem promoção</label>
+          <input [(ngModel)]="logoPromocao" id="arquivo" type="file" placeholder="Escolha a imagem da promoção"
+            (change)="mudanca($event.target.files[0])">
+        </div>
+        <div class="promocao2">
+          <input [(ngModel)]="nome_produto" class="inputCadastro" type="text" placeholder="Nome do Produto">
+          <input [(ngModel)]="valor" class="inputCadastro2" type="text" placeholder="Preço">
+          <input [(ngModel)]="data_valida" class="inputCadastro2" type="date" placeholder="Data válida">
+          <select class="form-select1" aria-label="Default select example" #a (change)="addCategoria(a.value)">
+            <option selected> Selecionar Categoria </option>
+          </select>
+          <select class="form-select2" aria-label="Default select example" #t (change)="addCnpj(t.value)">
+            <option selected> Selecionar Mercado </option>
+          </select>
+          <textarea [(ngModel)]="descricao" name="text" rows="14" cols="20" wrap="soft" maxlength="500"
+            class="inputCadastro" placeholder="Informe a descrição do produto"></textarea>
+
+          <div class="botoes">
+            <button class="botaoCancelar">Cancelar</button>
+            <button class="botaoCadastro" (click)="cadastrarPromocao()">Cadastrar Oferta</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
-
-
+  </div>

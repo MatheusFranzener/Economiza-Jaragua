@@ -81,7 +81,7 @@ database(`CREATE TABLE IF NOT EXISTS PROMOCAO (
     VALOR double,
     DATA_VALIDA date,
     DESCRICAO varchar(200),
-    NOME_IMAGEM varchar(100),
+    NOME_IMAGEM varchar(9999999999),
     CNPJ_MERCADO char(14),
     CODIGO_CATEGORIA int,
     FOREIGN KEY(CNPJ_MERCADO)

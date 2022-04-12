@@ -30,7 +30,6 @@ export class CadastrarMercadoComponent implements OnInit {
       })
 
       this.pegarUser();
-      this.buscarMercado();
   }
 
   cnpj = ""
@@ -54,9 +53,7 @@ export class CadastrarMercadoComponent implements OnInit {
 
   local_nome = localStorage.getItem('administrador')
   local_senha = localStorage.getItem('administrador_senha')
-  
 
-  
   pegarUser(){
     var self = this
     fetch('http://localhost:3000/api/login', { method: 'POST', body: JSON.stringify({ nome: this.local_nome, senha: this.local_senha}), headers: {"Content-Type": "application/json"}}).then(function (e) {
@@ -70,19 +67,6 @@ export class CadastrarMercadoComponent implements OnInit {
       } else {
         self.nome = "Usuário";
       }
-      })
-    })
-  }
-
-  buscarMercado(){
-    fetch('http://localhost:3000/api/buscar_mercado', { method: 'POST'}).then(function (e) {
-
-      e.json().then(function (dados) {
-
-      console.log("AAA: ",dados)
-
-      localStorage.setItem("img: ",dados[1].IMAGEM_MERCADO);
-      
       })
     })
   }
@@ -116,14 +100,16 @@ export class CadastrarMercadoComponent implements OnInit {
     this.router.navigate(['/home/cadastrar-promocao'])
   }
 
+  home(){
+    this.router.navigate(['home'])
+  }
+
   cadastrarEndereco() {
     var rua2 = this.rua;
     var numero2 = this.numero;
     var self = this;
     fetch('http://localhost:3000/api/cadastrar_endereco', { method: 'POST', body: JSON.stringify({ uf_estado: this.uf_estado, nome_cidade: this.nome_cidade, rua: this.rua, bairro: this.bairro, numero: this.numero, complemento: this.complemento }), headers: { "Content-Type": "application/json" } }).then(function (e) {
-
       console.log("Segundo fetch: ", e)
-
 
       e.json().then(function (data) {
         console.log("Terceiro fetch: ", data)

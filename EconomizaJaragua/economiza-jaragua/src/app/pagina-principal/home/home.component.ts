@@ -75,6 +75,10 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['home/melhores-ofertas'])
   }
 
+  home(){
+    this.router.navigate(['home'])
+  }
+
   sobre() {
     this.router.navigate(['economiza-jaragua/sobre'])
   }
