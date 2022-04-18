@@ -44,29 +44,100 @@
         <span class="textoMercado">Cadastrar Mercado</span>
       </div>
     </div>
-    <div class="cadastro">
-      <input [(ngModel)]="uf_estado" class="inputEstado" type="text" placeholder="UF">
-      <div class="divisao"></div>
-      <input [(ngModel)]="numero" class="inputNumero" type="text" placeholder="Número">
 
+    <div class="cadastro">
+      <div class="cadastro1">
+        <div class="cadastro2">
+          <input [(ngModel)]="uf_estado" class="inputEstado" type="text" placeholder="UF">
+          <div class="divisao"></div>
+          <input [(ngModel)]="numero" class="inputNumero" type="text" placeholder="Número">
+        </div> 
+        <input [(ngModel)]="nome_cidade" class="inputCidade" type="text" placeholder="Cidade">
+        <input [(ngModel)]="bairro" class="inputCadastro" type="text" placeholder="Bairro">
+        <input [(ngModel)]="rua" class="inputCadastro" type="text" placeholder="Rua">
+        <textarea  [(ngModel)]="complemento" name="text" rows="20" cols="30" wrap="soft" maxlength="500" class="inputComplemento"
+        placeholder="Complemento">
+        </textarea>
+        <!-- <input [(ngModel)]="complemento" type="text" class="inputComplemento" placeholder="Complemento"> -->
+      </div>
+      
       <div class="cadastro3">
-        <input [(ngModel)]="logo" type="file" placeholder="Escolha a logo do mercado" (change)="mudanca($event.target.files[0])">
+        <div class="quadroLogo">
+          <label for="arquivo">Logo do Mercado</label>
+          <input [(ngModel)]="logo" id="arquivo" type="file" placeholder="Escolha a logo do mercado"
+            (change)="mudanca($event.target.files[0])">
+        </div>
+        <!-- <input [(ngModel)]="logo" type="file" placeholder="Escolha a logo do mercado" (change)="mudanca($event.target.files[0])"> -->
         <input [(ngModel)]="cnpj" class="inputCadastro" type="text" placeholder="CNPJ" >
         <input [(ngModel)]="nome_mercado" class="inputCadastro" type="text" placeholder="Nome institucional">
+        <input type="text" class="inputCadastro" placeholder="Email">
         <input [(ngModel)]="telefone" class="inputCadastro" type="text" placeholder="Telefone">
-        <button (click)="cadastrarEndereco()">Confirmar Cadastro</button>
+        <div class="botoes">
+          <button (click)="cancelarCadastro()" class="botaoCancelar">Cancelar</button>
+          <button (click)="cadastrarEndereco()" class="botaoConfirmar">Confirmar Cadastro</button>
+        </div>
+      </div>
+    </div> 
+
+    <div class="footer">
+      <span class="tema">
+        Institucional
+      </span>
+      <span class="tema">
+        Políticas
+      </span>
+      <span class="tema">
+        Baixe nosso App!
+      </span>
+      <span class="tema">
+        Social
+      </span>
+      <div class="divisor">
+        <div class="linha"></div>
+      </div>
+      <div class="footer2">
+        <div class="institucional">
+          <span class="tema2">
+            Sobre
+          </span>
+          <span class="tema2">
+            Fale Conosco
+          </span>
+          <span class="tema2">
+            Trabalhe Conosco
+          </span>
+        </div>
+        <div class="politicas">
+          <span class="tema2">
+            Preços
+          </span>
+          <span class="tema2">
+            Privacidade
+          </span>
+          <span class="tema2">
+            Segurança
+          </span>
+        </div>
+        <div class="app">
+          <img class="imgFooter"
+            src="https://logodownload.org/wp-content/uploads/2017/04/disponivel-google-play-badge-1.png" alt="">
+          <img class="imgFooter"
+            src="https://logodownload.org/wp-content/uploads/2017/05/disponivel-na-app-store-botao.png" alt="">
+        </div>
+        <div class="social">
+          <img class="logos" src="https://cdn-icons-png.flaticon.com/512/39/39552.png" alt="">
+          <img class="logos" src="https://www.mktvirtual.com.br/wp-content/uploads/2016/12/instagram-logo-preto.png"
+            alt="">
+          <img class="logos" src="https://cdn-icons-png.flaticon.com/512/59/59439.png" alt="">
+        </div>
+      </div>
+      <div class="divisor">
+        <div class="linha2"></div>
+      </div>
+      <div class="copy">
+        <span class="textoCopy">©Copyright 2021 - Economiza-Jaraguá - Todos os direitos reservados Economiza</span>
       </div>
     </div>
-    
-    <div class = "cadastro2">
-      <input [(ngModel)]="nome_cidade" class="inputCadastro" type="text" placeholder="Cidade">
-      <input [(ngModel)]="bairro" class="inputCadastro" type="text" placeholder="Bairro">
-      <input [(ngModel)]="rua" class="inputCadastro" type="text" placeholder="Rua">
-      <input [(ngModel)]="complemento" type="text" class="inputCadastro" placeholder="Complemento">
-    </div>
-
-    
-    
   </div>
 
 

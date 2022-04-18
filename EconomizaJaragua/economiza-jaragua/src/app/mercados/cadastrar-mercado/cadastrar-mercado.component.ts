@@ -100,6 +100,10 @@ export class CadastrarMercadoComponent implements OnInit {
     this.router.navigate(['/home/cadastrar-promocao'])
   }
 
+  cancelarCadastro(){
+    this.router.navigate(['/home'])
+  }
+
   home(){
     this.router.navigate(['home'])
   }

@@ -61,16 +61,74 @@
             <option selected> Selecionar Mercado </option>
           </select>
           <textarea [(ngModel)]="descricao" name="text" rows="14" cols="20" wrap="soft" maxlength="500"
-            class="inputCadastro" placeholder="Informe a descrição do produto"></textarea>
-
+            class="inputCadastro" placeholder="Informe a descrição do produto">
+          </textarea>
           <div class="botoes">
-            <button class="botaoCancelar">Cancelar</button>
+            <button class="botaoCancelar"(click)="cancelarPromocao()">Cancelar</button>
             <button class="botaoCadastro" (click)="cadastrarPromocao()">Cadastrar Oferta</button>
           </div>
         </div>
       </div>
     </div>
 
-
+    <div class="footer">
+      <span class="tema">
+        Institucional
+      </span>
+      <span class="tema">
+        Políticas
+      </span>
+      <span class="tema">
+        Baixe nosso App!
+      </span>
+      <span class="tema">
+        Social
+      </span>
+      <div class="divisor">
+        <div class="linha"></div>
+      </div>
+      <div class="footer2">
+        <div class="institucional">
+          <span class="tema2">
+            Sobre
+          </span>
+          <span class="tema2">
+            Fale Conosco
+          </span>
+          <span class="tema2">
+            Trabalhe Conosco
+          </span>
+        </div>
+        <div class="politicas">
+          <span class="tema2">
+            Preços
+          </span>
+          <span class="tema2">
+            Privacidade
+          </span>
+          <span class="tema2">
+            Segurança
+          </span>
+        </div>
+        <div class="app">
+          <img class="imgFooter"
+            src="https://logodownload.org/wp-content/uploads/2017/04/disponivel-google-play-badge-1.png" alt="">
+          <img class="imgFooter"
+            src="https://logodownload.org/wp-content/uploads/2017/05/disponivel-na-app-store-botao.png" alt="">
+        </div>
+        <div class="social">
+          <img class="logos" src="https://cdn-icons-png.flaticon.com/512/39/39552.png" alt="">
+          <img class="logos" src="https://www.mktvirtual.com.br/wp-content/uploads/2016/12/instagram-logo-preto.png"
+            alt="">
+          <img class="logos" src="https://cdn-icons-png.flaticon.com/512/59/59439.png" alt="">
+        </div>
+      </div>
+      <div class="divisor">
+        <div class="linha2"></div>
+      </div>
+      <div class="copy">
+        <span class="textoCopy">©Copyright 2021 - Economiza-Jaraguá - Todos os direitos reservados Economiza</span>
+      </div>
+    </div>
 
   </div>

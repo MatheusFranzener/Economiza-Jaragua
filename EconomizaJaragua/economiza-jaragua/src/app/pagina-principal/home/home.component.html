@@ -59,121 +59,282 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div> -->
-  
+  <div class="alinhamento">
+    <div class="linhaCategoria">
+      <div class="quadradoCategoria">
+        <span class="categoria">CARNES</span>
+      </div>
+    </div>
+  </div>
   <div class="carnes">
-    <h1>CARNES</h1>
     <div class="divOfertas1">
       <div class="divOfertas">
-        <div *ngFor='let promocao of listaPromocoes'>
+        <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
           <div *ngIf="promocao.CODIGO_CATEGORIA == 1">
-            <span>Codigo: {{promocao.CODIGO_CATEGORIA}} </span>
-            {{promocao.NOME_PRODUTO}}
-            {{promocao.VALOR}}
-            <img src="{{promocao.NOME_IMAGEM}}" alt="">
-            {{promocao.DESCRICAO}}
-            {{promocao.DATA_VALIDA}}
-            <img src="{{promocao.IMAGEM_MERCADO}}" alt="">
+            <div class="campoOferta">
+              <div class="headerOferta">
+                <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+                <div class="precoOferta">
+                  <span>R$</span> {{promocao.VALOR}} <span>KG</span>
+                </div>
+              </div>
+              <div class="mainOferta">
+                <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+                <div class="descricaoOferta">
+                  <div class="campoDescricao">
+                    {{promocao.DESCRICAO}}
+                  </div>
+                </div>
+                <div class="dataOferta">
+                  <div class="relogio">
+                    <img
+                      src="https://images.vexels.com/media/users/3/155826/isolated/lists/71b6db7185dfc25bb9fab870a37863a0-icone-de-cronometro.png"
+                      alt="" class="imgRelogio">
+                  </div>
+                  <div class="campoData">
+                    <div class="data">
+                      {{promocao.DATA_VALIDA}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="alinhamento">
+    <div class="linhaCategoria">
+      <div class="quadradoCategoria">
+        <span class="categoria">FRUTAS</span>
+      </div>
+    </div>
+  </div>
   <div class="frutas">
-    <h1>FRUTAS</h1>
     <div class="divOfertas1">
       <div class="divOfertas">
         <div *ngFor='let promocao of listaPromocoes'>
           <div *ngIf="promocao.CODIGO_CATEGORIA == 2">
-            <span>Codigo: {{promocao.CODIGO_CATEGORIA}} </span>
-            {{promocao.NOME_PRODUTO}}
-            {{promocao.VALOR}}
-            <img src="{{promocao.NOME_IMAGEM}}" alt="">
-            {{promocao.DESCRICAO}}
-            {{promocao.DATA_VALIDA}}
-            <img src="{{promocao.IMAGEM_MERCADO}}" alt="">
+            <div class="campoOferta">
+              <div class="headerOferta">
+                <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+                <div class="precoOferta">
+                  <b> <span>R$</span>{{promocao.VALOR}} <span>KG</span></b>
+                </div>
+              </div>
+              <div class="mainOferta">
+                <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+                <div class="descricaoOferta">
+                  <div class="campoDescricao">
+                    {{promocao.DESCRICAO}}
+                  </div>
+                </div>
+                <div class="dataOferta">
+                  <div class="relogio">
+                    <img
+                      src="https://images.vexels.com/media/users/3/155826/isolated/lists/71b6db7185dfc25bb9fab870a37863a0-icone-de-cronometro.png"
+                      alt="" class="imgRelogio">
+                  </div>
+                  <div class="campoData">
+                    <div class="data">
+                      {{promocao.DATA_VALIDA}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="alinhamento">
+    <div class="linhaCategoria">
+      <div class="quadradoCategoria">
+        <span class="categoria">VERDURAS</span>
+      </div>
+    </div>
+  </div>
   <div class="verduras">
-    <h1>VERDURAS</h1>
     <div class="divOfertas1">
       <div class="divOfertas">
         <div *ngFor='let promocao of listaPromocoes'>
           <div *ngIf="promocao.CODIGO_CATEGORIA == 3">
-            <span>Codigo: {{promocao.CODIGO_CATEGORIA}} </span>
-            {{promocao.NOME_PRODUTO}}
-            {{promocao.VALOR}}
-            <img src="{{promocao.NOME_IMAGEM}}" alt="">
-            {{promocao.DESCRICAO}}
-            {{promocao.DATA_VALIDA}}
-            <img src="{{promocao.IMAGEM_MERCADO}}" alt="">
+            <div class="campoOferta">
+              <div class="headerOferta">
+                <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+                <div class="precoOferta">
+                  <b> <span>R$</span>{{promocao.VALOR}} <span>KG</span></b>
+                </div>
+              </div>
+              <div class="mainOferta">
+                <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+                <div class="descricaoOferta">
+                  <div class="campoDescricao">
+                    {{promocao.DESCRICAO}}
+                  </div>
+                </div>
+                <div class="dataOferta">
+                  <div class="relogio">
+                    <img
+                      src="https://images.vexels.com/media/users/3/155826/isolated/lists/71b6db7185dfc25bb9fab870a37863a0-icone-de-cronometro.png"
+                      alt="" class="imgRelogio">
+                  </div>
+                  <div class="campoData">
+                    <div class="data">
+                      {{promocao.DATA_VALIDA}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="alinhamento">
+    <div class="linhaCategoria">
+      <div class="quadradoCategoria">
+        <span class="categoria">BEBIDAS</span>
+      </div>
+    </div>
+  </div>
   <div class="bebidas">
-    <h1>BEBIDAS</h1>
     <div class="divOfertas1">
       <div class="divOfertas">
         <div *ngFor='let promocao of listaPromocoes'>
           <div *ngIf="promocao.CODIGO_CATEGORIA == 4">
-            <span>Codigo: {{promocao.CODIGO_CATEGORIA}} </span>
-            {{promocao.NOME_PRODUTO}}
-            {{promocao.VALOR}}
-            <img src="{{promocao.NOME_IMAGEM}}" alt="">
-            {{promocao.DESCRICAO}}
-            {{promocao.DATA_VALIDA}}
-            <img src="{{promocao.IMAGEM_MERCADO}}" alt="">
+            <div class="campoOferta">
+              <div class="headerOferta">
+                <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+                <div class="precoOferta">
+                  <b> <span>R$</span>{{promocao.VALOR}} <span>KG</span></b>
+                </div>
+              </div>
+              <div class="mainOferta">
+                <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+                <div class="descricaoOferta">
+                  <div class="campoDescricao">
+                    {{promocao.DESCRICAO}}
+                  </div>
+                </div>
+                <div class="dataOferta">
+                  <div class="relogio">
+                    <img
+                      src="https://images.vexels.com/media/users/3/155826/isolated/lists/71b6db7185dfc25bb9fab870a37863a0-icone-de-cronometro.png"
+                      alt="" class="imgRelogio">
+                  </div>
+                  <div class="campoData">
+                    <div class="data">
+                      {{promocao.DATA_VALIDA}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="alinhamento">
+    <div class="linhaCategoria">
+      <div class="quadradoCategoria">
+        <span class="categoria">PADARIA</span>
+      </div>
+    </div>
+  </div>
   <div class="padaria">
-    <h1>PADARIA</h1>
     <div class="divOfertas1">
       <div class="divOfertas">
         <div *ngFor='let promocao of listaPromocoes'>
           <div *ngIf="promocao.CODIGO_CATEGORIA == 5">
-            <span>Codigo: {{promocao.CODIGO_CATEGORIA}} </span>
-            {{promocao.NOME_PRODUTO}}
-            {{promocao.VALOR}}
-            <img src="{{promocao.NOME_IMAGEM}}" alt="">
-            {{promocao.DESCRICAO}}
-            {{promocao.DATA_VALIDA}}
-            <img src="{{promocao.IMAGEM_MERCADO}}" alt="">
+            <div class="campoOferta">
+              <div class="headerOferta">
+                <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+                <div class="precoOferta">
+                  <b> <span>R$</span>{{promocao.VALOR}} <span>KG</span></b>
+                </div>
+              </div>
+              <div class="mainOferta">
+                <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+                <div class="descricaoOferta">
+                  <div class="campoDescricao">
+                    {{promocao.DESCRICAO}}
+                  </div>
+                </div>
+                <div class="dataOferta">
+                  <div class="relogio">
+                    <img
+                      src="https://images.vexels.com/media/users/3/155826/isolated/lists/71b6db7185dfc25bb9fab870a37863a0-icone-de-cronometro.png"
+                      alt="" class="imgRelogio">
+                  </div>
+                  <div class="campoData">
+                    <div class="data">
+                      {{promocao.DATA_VALIDA}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="alinhamento">
+    <div class="linhaCategoria">
+      <div class="quadradoCategoria">
+        <span class="categoria">FRIOS</span>
+      </div> 
+    </div>
+  </div>
   <div class="frios">
-    <h1>FRIOS E LATICÍNIOS</h1>
     <div class="divOfertas1">
       <div class="divOfertas">
         <div *ngFor='let promocao of listaPromocoes'>
           <div *ngIf="promocao.CODIGO_CATEGORIA == 6">
-            <span>Codigo: {{promocao.CODIGO_CATEGORIA}} </span>
-            {{promocao.NOME_PRODUTO}}
-            {{promocao.VALOR}}
-            <img src="{{promocao.NOME_IMAGEM}}" alt="">
-            {{promocao.DESCRICAO}}
-            {{promocao.DATA_VALIDA}}
-            <img src="{{promocao.IMAGEM_MERCADO}}" alt="">
+            <div class="campoOferta">
+              <div class="headerOferta">
+                <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+                <div class="precoOferta">
+                  <b> <span>R$</span>{{promocao.VALOR}} <span>KG</span></b>
+                </div>
+              </div>
+              <div class="mainOferta">
+                <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+                <div class="descricaoOferta">
+                  <div class="campoDescricao">
+                    {{promocao.DESCRICAO}}
+                  </div>
+                </div>
+                <div class="dataOferta">
+                  <div class="relogio">
+                    <img
+                      src="https://images.vexels.com/media/users/3/155826/isolated/lists/71b6db7185dfc25bb9fab870a37863a0-icone-de-cronometro.png"
+                      alt="" class="imgRelogio">
+                  </div>
+                  <div class="campoData">
+                    <div class="data">
+                      {{promocao.DATA_VALIDA}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+
   <div class="footer">
     <span class="tema">
       Institucional

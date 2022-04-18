@@ -1,13 +1,9 @@
-.divNavBar{
-    width: 100vw;
-    height: 98vh;
-}
 
 .barraTarefa{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 80px;
     background-color: #0064af;
 }
@@ -80,23 +76,22 @@
     background-color: #d22538;
 }
 
-.divPrincipal{
-   width: 100vw;
-   height: 86vh;
-   margin-top: 30px;
-}
-
-.inputDados{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 .inputCadastro{
     width: 450px;
     height: 50px;
     margin: 5px;
+}
+
+.inputComplemento{
+    width: 450px;
+    height: 200px;
+}
+
+.inputCidade{
+    margin-top: -10px;
+    width: 450px;
+    height: 50px;
 }
 
 .inputProblema{
@@ -116,10 +111,14 @@
 }
 
 .mercado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 400px;
     height: 90px;
     border: solid 2px black ;
-    border-radius: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
     background-color: #d22538;
 }
 
@@ -144,6 +143,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
 
 .teste{
@@ -152,13 +152,18 @@
     align-items: center;
 }
 
-.cadastro2{
+.cadastro1{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-right: 490px;
-    margin-top: -30px;
+}
+
+.cadastro2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .cadastro3{
@@ -166,6 +171,136 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 60px;
-    margin-left: 30px;
 }
+
+.botoes{
+    display: flex;
+    flex-direction: row;
+}
+
+.quadroLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: #0064af;
+    margin: 10px;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+label{
+    color: white;
+    background-color: #0064af;
+}
+
+.botaoCancelar{
+    margin: 5px;
+}
+
+.botaoConfirmar{
+    margin: 5px;
+}
+
+.footer{
+    width: 100%;   
+    height: 280px;
+    background-color: #0064af;
+}
+
+.footer2{
+    display: flex;
+    flex-direction: row;
+}
+
+.tema{
+    color: #f5f2ee;
+    font-size: 23px;
+    margin: 100px;
+}
+
+.divisor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linha{
+    width: 95vw;
+    border: solid 1px #f5f2ee;
+    margin-top: 15px;
+}
+
+.institucional{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 80px;
+}
+
+.politicas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 185px;
+}
+
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 215px;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 130px;
+}
+
+.tema2{
+    color: #f5f2ee;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.imgFooter{
+    margin: 10px;
+    width: 150px;
+    height: 45px;
+}
+
+.logos{
+    width: 80px;
+    height: 60px;
+    margin: 5px;
+}
+
+.linha2{
+    width: 85vw;
+    border: solid 1px #f5f2ee;
+    margin-top: 30px;
+}
+
+.copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoCopy{
+    color: #f5f2ee;
+    font-size: 16px;
+    margin-top: 15px;
+}
+

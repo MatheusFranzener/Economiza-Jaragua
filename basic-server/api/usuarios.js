@@ -217,7 +217,6 @@ function(dados,resposta){
     })
 })
 
-
 inserirRota('/buscar_mercado',
     function (dados, resposta) {
         console.log(dados);

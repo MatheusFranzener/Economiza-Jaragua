@@ -149,6 +149,10 @@ export class CadastrarPromocaoComponent implements OnInit {
     this.router.navigate(['economiza-jaragua/entre-em-contato'])
   }
 
+  cancelarPromocao(){
+    this.router.navigate(['home'])
+  }
+
   cadastrarMercados(){
     this.router.navigate(['/mercados/cadastrar'])
   }
