@@ -53,8 +53,8 @@
           <input [(ngModel)]="numero" class="inputNumero" type="text" placeholder="Número">
         </div> 
         <input [(ngModel)]="nome_cidade" class="inputCidade" type="text" placeholder="Cidade">
-        <input [(ngModel)]="bairro" class="inputCadastro" type="text" placeholder="Bairro">
-        <input [(ngModel)]="rua" class="inputCadastro" type="text" placeholder="Rua">
+        <input [(ngModel)]="bairro" class="inputBairro" type="text" placeholder="Bairro">
+        <input [(ngModel)]="rua" class="inputRua" type="text" placeholder="Rua">
         <textarea  [(ngModel)]="complemento" name="text" rows="20" cols="30" wrap="soft" maxlength="500" class="inputComplemento"
         placeholder="Complemento">
         </textarea>
@@ -68,9 +68,9 @@
             (change)="mudanca($event.target.files[0])">
         </div>
         <!-- <input [(ngModel)]="logo" type="file" placeholder="Escolha a logo do mercado" (change)="mudanca($event.target.files[0])"> -->
-        <input [(ngModel)]="cnpj" class="inputCadastro" type="text" placeholder="CNPJ" >
+        <input [(ngModel)]="cnpj" class="inputCnpj" type="text" placeholder="CNPJ" >
         <input [(ngModel)]="nome_mercado" class="inputCadastro" type="text" placeholder="Nome institucional">
-        <input type="text" class="inputCadastro" placeholder="Email">
+        <input [(ngModel)]="email"  type="text" class="inputCadastro" placeholder="Email">
         <input [(ngModel)]="telefone" class="inputCadastro" type="text" placeholder="Telefone">
         <div class="botoes">
           <button (click)="cancelarCadastro()" class="botaoCancelar">Cancelar</button>

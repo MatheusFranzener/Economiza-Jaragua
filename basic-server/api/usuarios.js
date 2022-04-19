@@ -84,12 +84,14 @@ function(dados,resposta){
         CNPJ,
         NOME_MERCADO,
         TELEFONE,
+        EMAIL,
         CODIGO_ENDERECO,
         IMAGEM_MERCADO
         ) 
         VALUES (
             "${dados.cnpj}",
             "${dados.nome_mercado}",
+            "${dados.email}",
             "${dados.telefone}",
             "${dados.codigo}",
             "${dados.logo64}"
@@ -220,7 +222,7 @@ function(dados,resposta){
 inserirRota('/buscar_mercado',
     function (dados, resposta) {
         console.log(dados);
-        database('SELECT MERCADO.NOME_MERCADO, MERCADO.CNPJ,MERCADO.TELEFONE,MERCADO.IMAGEM_MERCADO,ENDERECO.BAIRRO,ENDERECO.RUA,ENDERECO.NUMERO,ENDERECO.BAIRRO FROM MERCADO INNER JOIN ENDERECO ON MERCADO.CODIGO_ENDERECO = ENDERECO.CODIGO').then(result => {
+        database('SELECT MERCADO.NOME_MERCADO, MERCADO.CNPJ,MERCADO.EMAIL,MERCADO.TELEFONE,MERCADO.IMAGEM_MERCADO,ENDERECO.BAIRRO,ENDERECO.RUA,ENDERECO.NUMERO,ENDERECO.BAIRRO FROM MERCADO INNER JOIN ENDERECO ON MERCADO.CODIGO_ENDERECO = ENDERECO.CODIGO').then(result => {
             resposta( result );
         }).catch(erro => {
             resposta({ erro: "Erro ao buscar mercado!" });

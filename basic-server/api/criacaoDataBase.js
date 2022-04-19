@@ -58,6 +58,7 @@ database(`CREATE TABLE IF NOT EXISTS MERCADO (
     CNPJ char(14) PRIMARY KEY,
     NOME_MERCADO varchar(100),
     TELEFONE char(11),
+    EMAIL varchar(100),
     IMAGEM_MERCADO varchar(9999999999),
     ID_ADMINISTRADOR int,
     CODIGO_ENDERECO int,

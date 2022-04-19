@@ -81,33 +81,71 @@
     width: 450px;
     height: 50px;
     margin: 5px;
+    border-radius: 5px;
+    border: solid 1px black;
 }
 
 .inputComplemento{
     width: 450px;
-    height: 200px;
+    height: 150px;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+.inputCnpj{
+    width: 450px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+.inputBairro{
+    width: 450px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+.inputRua{
+    width: 450px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 5px;
+    border: solid 1px black;
 }
 
 .inputCidade{
-    margin-top: -10px;
+    margin: 5px;
     width: 450px;
     height: 50px;
+    border-radius: 5px;
+    border: solid 1px black;
 }
 
 .inputProblema{
     width: 450px;
     height: 150px;
     margin: 5px;
+    border-radius: 5px;
+    border: solid 1px black;
 }
 
 .inputEstado{
     width: 180px;
     height: 50px;
+    margin: 5px;
+    border-radius: 5px;
+    border: solid 1px black;
 }
 
 .inputNumero{
     width: 180px;
     height: 50px;
+    margin: 5px;
+    border-radius: 5px;
+    border: solid 1px black;
 }
 
 .mercado{
@@ -157,6 +195,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 5px;
 }
 
 .cadastro2{
@@ -164,6 +203,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    margin: 5px;
 }
 
 .cadastro3{
@@ -171,6 +211,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 5px;
 }
 
 .botoes{
@@ -187,7 +228,7 @@
     border: solid 2px black;
     border-radius: 10px;
     background-color: #0064af;
-    margin: 10px;
+    margin-top: 50px;
 }
 
 input[type="file"]{
@@ -200,11 +241,21 @@ label{
 }
 
 .botaoCancelar{
+    width: 130px;
+    border: none;
+    color: #f5f2ee;
+    background-color: #d22538;
     margin: 5px;
+    border-radius: 5px;
 }
 
 .botaoConfirmar{
+    border: none;
+    background-color: #2ac196;
+    color: #f5f2ee;
+    width: 200px;
     margin: 5px;
+    border-radius: 5px;
 }
 
 .footer{
@@ -303,4 +354,6 @@ label{
     font-size: 16px;
     margin-top: 15px;
 }
+
+
 

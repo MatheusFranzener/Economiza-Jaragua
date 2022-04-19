@@ -35,6 +35,7 @@ export class CadastrarMercadoComponent implements OnInit {
   cnpj = ""
   nome_mercado = ""
   telefone = ""
+  email = ""
 
   uf_estado = ""
   nome_cidade = ""
@@ -134,7 +135,7 @@ export class CadastrarMercadoComponent implements OnInit {
     fetch('http://localhost:3000/api/cadastrar_mercado', {
       method: 'POST', body: JSON.stringify({
 
-        cnpj: self.cnpj, nome_mercado: self.nome_mercado, telefone: self.telefone, codigo: codigo, logo64: self.logo64
+        cnpj: self.cnpj, nome_mercado: self.nome_mercado, telefone: self.telefone, email: self.email, codigo: codigo, logo64: self.logo64
       }), headers: { "Content-Type": "application/json" }
     });
     self.router.navigate(['home'])

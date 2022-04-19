@@ -78,20 +78,14 @@
 }
 
 
-/* .imgCarrosel{
-    width: 70vw;
-    height: 70vh;
+#imgCarrosel{
+    width: 200px;
+    height: 400px;
 }
 
-.carrosel{
-    width: 100vw;
-    height: 100vh;
+#carouselExampleFade{
+    margin-top: 30px;
 }
-
-.imagensCarrosel{
-    width: 500px;
-    height: 300px;
-} */
 
 .footer{
     width: 100%;   
