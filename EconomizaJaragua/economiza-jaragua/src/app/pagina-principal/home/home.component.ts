@@ -184,7 +184,7 @@ export class HomeComponent implements OnInit {
 
   filtroPromocao() {
     var self = this;
-    let filtro = this.listaPromocoes.filter(function (element) {
+    let filtro = this.listaPromocoesBackup.filter(function (element) {
       return element.DESCRICAO.startsWith(self.barraPesquisa);
     });
     if(this.barraPesquisa == ""){
@@ -198,6 +198,7 @@ export class HomeComponent implements OnInit {
   }
 
   redirecionar(codigo){
+    console.log(codigo)
     this.router.navigate(['/home/'+codigo])
   }
 

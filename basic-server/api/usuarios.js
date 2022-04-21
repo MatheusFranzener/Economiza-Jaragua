@@ -239,10 +239,20 @@ function (dados, resposta) {
     });
 });
 
+inserirRota('/buscar_promocao_especifica',
+function (dados, resposta) {
+    console.log(dados);
+    database(`SELECT PROMOCAO.CODIGO,PROMOCAO.NOME_PRODUTO,PROMOCAO.VALOR,PROMOCAO.DATA_VALIDA,PROMOCAO.DESCRICAO,PROMOCAO.NOME_IMAGEM,PROMOCAO.CODIGO_CATEGORIA,MERCADO.IMAGEM_MERCADO FROM PROMOCAO INNER JOIN MERCADO ON PROMOCAO.CNPJ_MERCADO = MERCADO.CNPJ AND PROMOCAO.CODIGO = ${dados.codigo}`).then(result => {
+        resposta( result );
+    }).catch(erro => {
+        resposta({ erro: "Erro ao buscar promocao!" });
+    });
+});
+
 inserirRota('/buscar_promocao',
 function (dados, resposta) {
     console.log(dados);
-    database('SELECT PROMOCAO.NOME_PRODUTO,PROMOCAO.VALOR,PROMOCAO.DATA_VALIDA,PROMOCAO.DESCRICAO,PROMOCAO.NOME_IMAGEM,PROMOCAO.CODIGO_CATEGORIA,MERCADO.IMAGEM_MERCADO FROM PROMOCAO INNER JOIN MERCADO ON PROMOCAO.CNPJ_MERCADO = MERCADO.CNPJ').then(result => {
+    database('SELECT PROMOCAO.CODIGO,PROMOCAO.NOME_PRODUTO,PROMOCAO.VALOR,PROMOCAO.DATA_VALIDA,PROMOCAO.DESCRICAO,PROMOCAO.NOME_IMAGEM,PROMOCAO.CODIGO_CATEGORIA,MERCADO.IMAGEM_MERCADO FROM PROMOCAO INNER JOIN MERCADO ON PROMOCAO.CNPJ_MERCADO = MERCADO.CNPJ').then(result => {
         resposta( result );
     }).catch(erro => {
         resposta({ erro: "Erro ao buscar promocao!" });

@@ -10,7 +10,6 @@ import { EntreEmContatoComponent } from '../economiza-jaragua/entre-em-contato/e
 import { SobreEconomizeComponent } from '../economiza-jaragua/sobre-economize/sobre-economize.component';
 import { CadastrarMercadoComponent } from '../mercados/cadastrar-mercado/cadastrar-mercado.component';
 import { InformacoesMercadosComponent } from '../mercados/informacoes-mercados/informacoes-mercados.component';
-import { PromocoesMercadosComponent } from '../mercados/promocoes-mercados/promocoes-mercados.component';
 import { CadastrarPromocaoComponent } from '../pagina-principal/cadastrar-promocao/cadastrar-promocao.component';
 import { MelhoresOfertasComponent } from '../pagina-principal/melhores-ofertas/melhores-ofertas.component';
 import { LoginComponent } from './login/login.component';
@@ -20,14 +19,13 @@ const routes: Routes = [
     path:"home", children: [
       {path:"", component: HomeComponent},
       {path:"cadastrar-promocao", canActivate: [CheckLogged], component: CadastrarPromocaoComponent},
-      {path:"melhores-ofertas", component: MelhoresOfertasComponent},
+      {path:":codigo", component: MelhoresOfertasComponent},
     ]
   },
   {
     path:"mercados", children: [
       {path:"cadastrar", canActivate: [CheckLogged], component: CadastrarMercadoComponent},
-      {path:"informacoes", component: InformacoesMercadosComponent},
-      {path:"promocoes", component: PromocoesMercadosComponent},
+      {path:"informacoes", component: InformacoesMercadosComponent}
     ]
   },
   {

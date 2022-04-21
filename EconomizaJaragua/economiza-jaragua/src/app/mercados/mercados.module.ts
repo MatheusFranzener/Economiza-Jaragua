@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { InformacoesMercadosComponent } from './informacoes-mercados/informacoes-mercados.component';
-import { PromocoesMercadosComponent } from './promocoes-mercados/promocoes-mercados.component';
 import { CadastrarMercadoComponent } from './cadastrar-mercado/cadastrar-mercado.component';
 
 @NgModule({
@@ -11,7 +10,7 @@ import { CadastrarMercadoComponent } from './cadastrar-mercado/cadastrar-mercado
     CommonModule,
     FormsModule
   ],
-  declarations: [InformacoesMercadosComponent, PromocoesMercadosComponent, CadastrarMercadoComponent],
-  exports: [InformacoesMercadosComponent, PromocoesMercadosComponent, CadastrarMercadoComponent]
+  declarations: [InformacoesMercadosComponent,  CadastrarMercadoComponent],
+  exports: [InformacoesMercadosComponent,  CadastrarMercadoComponent]
 })
 export class MercadosModule { }
