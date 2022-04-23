@@ -15,9 +15,10 @@ export class MelhoresOfertasComponent implements OnInit {
     DATA_VALIDA: "",
     DESCRICAO: "",
     IMAGEM_MERCADO: "",
-    NOME_IMAGEM: "undefined",
+    NOME_IMAGEM: "",
     NOME_PRODUTO: "",
-    VALOR: 0}]
+    VALOR: 0,
+    VALOR_ANTIGO:0}]
 
   constructor(private route: ActivatedRoute,private usuarioService: UsuarioService,
     private router: Router) { 

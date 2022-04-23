@@ -139,11 +139,19 @@ main{
     align-items: center;
 }
 
-.linhaEscritorio{
-    width: 81vw;
+.Escritorio{
+    margin-top: 50px;
+    margin-bottom: 20px;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.linhaDivisaoEscritorio{
+    width: 450px;
+    height: 2px;
+    background-color: #d22538;
 }
 
 .escritorio{
@@ -158,8 +166,40 @@ main{
     background-color: #d22538;
 }
 
+.parteCima{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloPagina{
+    width: 90vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.divisaoTitulo{
+    width: 330px;
+    height: 2px;
+    background-color: #d22538;
+}
+
+.titulo{
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.textoTitulo{
+    font-size: 40px;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 .textoEscritorio{
-    color: #f5f2ee;
     font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -201,7 +241,6 @@ main{
 footer{
     background-color: #0064af;
 }
-
 
 .textoSobre{
     padding: 10px;

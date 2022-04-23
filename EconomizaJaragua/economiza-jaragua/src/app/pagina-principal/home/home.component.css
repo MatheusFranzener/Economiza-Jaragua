@@ -120,11 +120,11 @@
     height: 30px;
 }
 
+
 footer{
     background-color: #0064af;
+    margin-top: 100px;
 }
-
-
 
 .divOfertas{
     display: flex;
@@ -189,6 +189,7 @@ footer{
 
 .textoDescricao{
     color: #0064af;
+    text-align: center;
 }
 
 .textoPrecoAntigo{

@@ -40,40 +40,48 @@
   </div>
 </nav>
 
-  <div class="divPrincipal">
+ 
     <div class="inputDados">
-      <div class="promocao">
-        <span class="textoPromocao">Cadastrar Promoção</span>
-      </div>
-      <br>
-      <div class="promocao1">
-        <div class="quadroLogo">
-          <label for="arquivo">Imagem promoção</label>
-          <input [(ngModel)]="logoPromocao" id="arquivo" type="file" placeholder="Escolha a imagem da promoção"
-            (change)="mudanca($event.target.files[0])">
+      <div class="parteCima">
+        <div class="tituloPagina">
+          <div class="titulo">
+            <span class="textoTitulo">
+              Cadastrar Promoção
+            </span>
+            <div class="divisaoTitulo"></div>
+          </div>
         </div>
-        <div class="promocao2">
-          <input [(ngModel)]="nome_produto" class="inputCadastro" type="text" placeholder="Nome do Produto">
-          <input [(ngModel)]="valor_antigo" class="inputCadastro2" type="text" placeholder="Preço Antigo">
-          <input [(ngModel)]="valor" class="inputCadastro2" type="text" placeholder="Novo Preço">
-          <input [(ngModel)]="data_valida" class="inputCadastro2" type="date" placeholder="Data válida">
-          <select class="form-select1" aria-label="Default select example" #a (change)="addCategoria(a.value)">
-            <option selected> Selecionar Categoria </option>
-          </select>
-          <select class="form-select2" aria-label="Default select example" #t (change)="addCnpj(t.value)">
-            <option selected> Selecionar Mercado </option>
-          </select>
-          <textarea [(ngModel)]="descricao" name="text" rows="14" cols="20" wrap="soft" maxlength="500"
-            class="inputCadastro" placeholder="Informe a descrição do produto">
-          </textarea>
-          <div class="botoes">
-            <button class="botaoCancelar"(click)="cancelarPromocao()">Cancelar</button>
-            <button class="botaoCadastro" (click)="cadastrarPromocao()">Cadastrar Oferta</button>
+      </div>
+      <div class="cadastroPromocoes">
+        <div class="promocao1">
+          <div class="quadroLogo">
+            <label for="arquivo">Imagem promoção</label>
+            <input [(ngModel)]="logoPromocao" id="arquivo" type="file" placeholder="Escolha a imagem da promoção"
+              (change)="mudanca($event.target.files[0])">
+          </div>
+          <div class="promocao2">
+            <input [(ngModel)]="nome_produto" class="inputCadastro" type="text" placeholder="Nome do Produto">
+            <input [(ngModel)]="valor_antigo" class="inputCadastro2" type="text" placeholder="Preço Antigo">
+            <input [(ngModel)]="valor" class="inputCadastro2" type="text" placeholder="Novo Preço">
+            <input [(ngModel)]="data_valida" class="inputCadastro2" type="date" placeholder="Data válida">
+            <select class="form-select1" aria-label="Default select example" #a (change)="addCategoria(a.value)">
+              <option selected> Selecionar Categoria </option>
+            </select>
+            <select class="form-select2" aria-label="Default select example" #t (change)="addCnpj(t.value)">
+              <option selected> Selecionar Mercado </option>
+            </select>
+            <textarea [(ngModel)]="descricao" name="text" rows="14" cols="20" wrap="soft" maxlength="500"
+              class="inputCadastro" placeholder="Informe a descrição do produto">
+            </textarea>
+            <div class="botoes">
+              <button class="botaoCancelar"(click)="cancelarPromocao()">Cancelar</button>
+              <button class="botaoCadastro" (click)="cadastrarPromocao()">Cadastrar Oferta</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
 
   <footer class=" text-center ">
     <div class="container p-4">

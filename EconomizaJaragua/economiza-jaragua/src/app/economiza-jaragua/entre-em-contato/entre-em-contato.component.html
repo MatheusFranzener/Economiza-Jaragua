@@ -45,16 +45,14 @@
       <span class="tituloContato">
         conosco!
       </span>
-      <br>
-      
       <input [(ngModel)]="nome" type="text" placeholder="Informe seu nome" class="inputContato" >
-      <br>
       <input [(ngModel)]="email"  placeholder="Informe seu email" class="inputContato">
-      <br>
       <textarea  [(ngModel)]="campo_texto" name="text" rows="14" cols="20" wrap="soft" maxlength="500" class="inputProblema"
         placeholder="Informe seu problema ou dúvida!"></textarea>
-      <br>
-      <button (click)="cadastrarContato()" class="botaoContato">Enviar</button>
+      <div class="botoes">
+        <button (click)="voltarHome()" class="botaoVoltar">Cancelar</button>
+        <button (click)="cadastrarContato()" class="botaoContato">Enviar</button>
+      </div>
     </div>
   </div>
 </body>

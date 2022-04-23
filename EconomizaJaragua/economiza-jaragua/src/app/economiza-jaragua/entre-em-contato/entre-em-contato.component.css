@@ -12,8 +12,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 650px;
-    height: 650px;
+    width: 600px;
+    height: 600px;
     background-color: #0064af;
     border-radius: 10px;
 }
@@ -21,6 +21,7 @@
 .tituloContato{
     font-size: 56px;
     color: #f5f2ee;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .tituloCx{
@@ -32,13 +33,15 @@
     height: 40px;
     border-radius: 10px;
     border: solid 1px black;
+    margin: 5px;
 }
 
 .inputProblema{
-    height: 250px;
-    width: 480px;
+    height: 200px;
+    width: 450px;
     border: solid 1px black;
     border-radius: 10px;
+    margin: 5px;
 }
 
 .botaoContato{
@@ -47,6 +50,23 @@
     background-color: #2ac196;
     color: #f5f2ee;
     border-radius: 5px;
+    margin: 5px;
+}
+
+.botaoVoltar{
+    width: 150px;
+    border: solid 1px white;
+    color: #f5f2ee;
+    border-radius: 5px;
+    background-color: #d22538;
+    margin: 5px;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .caixinhas{

@@ -40,20 +40,72 @@
   </div>
 </nav>
 
-<div>
-  a: {{produto[0].DATA_VALIDA}}
-  <br>
-  Desconto de %: {{desconto}}
-  <br>
-  <img src="{{produto[0].IMAGEM_MERCADO}}" alt="">
-  <ul>
-    <h5>Tempo para oferta: </h5>
-    <li>Dias: {{days}} </li>
-    <li>Horas: {{hours}} </li>
-    <li>Minutos: {{mins}} </li>
-    <li>Segundos: {{secs}} </li>
-  </ul>
+<div class="parteCima">
+  <div class="tituloPagina">
+    <div class="titulo">
+      <span class="textoTitulo">
+        Oferta da Semana
+      </span>
+      <div class="divisaoTitulo"></div>
+    </div>
+  </div>
 </div>
+
+<div class="ofertaEspecifica">
+  <div class="divOfertaProduto">
+    <div class="imagemOferta">
+      <img class="imgOferta" src="{{produto[0].NOME_IMAGEM}}" alt="">
+    </div>
+    <div class="infoOferta">
+      <div class="headerOferta">
+        <div class="campoNome">
+          <span class="nomeOferta">{{produto[0].NOME_PRODUTO}}</span>
+        </div>
+        <div class="porcentagem">
+          <div class="quadroPorcentagem">
+            <span class="textoPorcentagem">{{desconto}}%</span>
+            <span class="off">OFF</span>
+          </div>
+        </div>
+      </div>
+      <div class="mainOferta">
+        <div class="mainOferta2">
+          <div class="campoDescricao">
+            <span class="textoDescricao">{{produto[0].DESCRICAO}}</span>
+          </div>
+        </div>
+        <div class="precos">
+          <div class="precoAntigo">
+            <s class="preco1">de {{produto[0].VALOR_ANTIGO}} por </s>
+          </div>
+          <div class="novoPreco">
+            <span class="preco2">R${{produto[0].VALOR}}</span>
+          </div>
+        </div>
+        <div class="linhaDivisao"></div>
+        <div class="tempoOferta">
+          <span class="textoTempo">Tempo Restante</span>
+        </div>
+        <div class="cronometro">
+          <div class="quadros">
+            {{days}}
+          </div>
+          <div class="quadros">
+            {{hours}}
+          </div>
+          <div class="quadros">
+            {{mins}}
+          </div>
+          <div class="quadros">
+            {{secs}}
+          </div>
+        </div>
+          <img class="imgMercado" src="{{produto[0].IMAGEM_MERCADO}}" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <footer class=" text-center ">
   <div class="container p-4">

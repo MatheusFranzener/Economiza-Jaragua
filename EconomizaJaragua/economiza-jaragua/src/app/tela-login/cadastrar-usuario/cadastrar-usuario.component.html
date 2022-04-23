@@ -2,11 +2,8 @@
   <div class="caixaBemVindo">
     <span class="tituloCaixaBemVindo">Já possui</span>
     <span class="tituloCaixaBemVindo">cadastro?</span>
-    <br>
     <span class="textoCadastro">clique no botão</span>
-    <br>
     <span class="textoCadastro">para fazer login</span>
-    <br>
     <div class="botoesLogin">
       <button (click)="telaLogin()" class="botaoUser">Fazer Login</button>
     </div>
@@ -16,35 +13,29 @@
     <span class="tituloCaixaBemVindo">Cadastro</span>
     <span class="tituloCaixaBemVindo">Administrador</span>
     <div>
-      <br>
       <div class="icones">
         <img src="https://cdn-icons-png.flaticon.com/512/74/74472.png" alt="" class="icone">
       </div>
-      <input type="text" placeholder="Nome" class="inputNome" [(ngModel)]="nome"> <br />
+      <input type="text" placeholder="Nome" class="inputNome" [(ngModel)]="nome">
     </div>
     <div>
-      <br>
       <div class="icones">
         <img src="https://cdn-icons-png.flaticon.com/512/126/126341.png" alt="" class="icone">
       </div>
-      <input type="text" placeholder="Telefone" class="inputNome" [(ngModel)]="telefone"> <br />
+      <input type="text" placeholder="Telefone" class="inputNome" [(ngModel)]="telefone">
     </div>
     <div>
-      <br>
       <div class="icones">
         <img src="http://www.sesduem.com.br/wp-content/uploads/2017/12/email.png" alt="" class="icone">
       </div>
-      <input type="text" placeholder="Email" class="inputNome" [(ngModel)]="email"> <br />
+      <input type="text" placeholder="Email" class="inputNome" [(ngModel)]="email">
     </div>
     <div>
-      <br>
       <div class="icones">
         <img src="https://cdn-icons-png.flaticon.com/512/2089/2089795.png" alt="" class="icone">
       </div>
-      <input type="password" placeholder="Senha" class="inputNome" [(ngModel)]="senha"> <br />
+      <input type="password" placeholder="Senha" class="inputNome" [(ngModel)]="senha">
     </div>
-    <br>
     <button (click)="cadastrar()" class="botaoEntrar">Cadastrar</button>
   </div>
-
 </div>

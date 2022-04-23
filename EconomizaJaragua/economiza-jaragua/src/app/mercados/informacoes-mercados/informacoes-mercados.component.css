@@ -112,13 +112,44 @@ footer{
     background-color: #d22538;
 }
 
+.parteCima{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .divMercados{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 98vw;
+}
+
+.tituloPagina{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.textoTitulo{
+    font-size: 35px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.divisaoTitulo{
+    width: 340px;
+    height: 2px;
+    background-color: #d22538;
 }
 
 .campoMercado{
@@ -205,21 +236,15 @@ footer{
 
 }
 
-.contatosMercado{
-    width: 250px;
-    height: 40px;
-    background-color: #d22538;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-}
-
 .tituloContato{
     font-size: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #f5f2ee;
+}
+
+.linhaContato{
+    width: 200px;
+    height: 2px;
+    background-color: #d22538;
 }
 
 .campoContatos{

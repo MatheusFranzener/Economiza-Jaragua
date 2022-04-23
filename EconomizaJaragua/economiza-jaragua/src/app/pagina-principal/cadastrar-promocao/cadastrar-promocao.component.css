@@ -14,6 +14,38 @@
     flex-direction: column;
 }
 
+.parteCima{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloPagina{
+    width: 61vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.divisaoTitulo{
+    width: 250px;
+    height: 2px;
+    background-color: #d22538;
+}
+
+.titulo{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.textoTitulo{
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 .logo{
     display: flex;
     justify-content: center;
@@ -90,7 +122,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 20px;
     border-radius: 10px;
 }
 
@@ -131,6 +163,12 @@
     color: #f5f2ee;
     font-size: 45px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.cadastroPromocoes{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
 }
 
 .promocao{
@@ -228,6 +266,7 @@ label{
 
 footer{
     background-color: #0064af;
+    margin-top: 100px;
 }
 
 

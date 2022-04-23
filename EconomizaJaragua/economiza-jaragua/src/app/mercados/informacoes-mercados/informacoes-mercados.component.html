@@ -5,8 +5,8 @@
         <img (click)="home()" class="logoEconomiza" src="https://cdn-icons-png.flaticon.com/512/584/584093.png" alt="">
       </div>
       <div class="barraPesquisa">
-        <input type="text" class="pesquisa" placeholder="Pesquise por Ofertas: ">
-        <img class="imgLupa" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png" alt="">
+        <input [(ngModel)]="barraPesquisa" type="text" class="pesquisa" placeholder="Pesquise por Mercados: ">
+        <img (click)="filtroMercado()" class="imgLupa" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png" alt="">
       </div>
       <div class="ajuda">
         <button (click)="contato()" class="botaoAjuda">Precisa de Ajuda?</button>
@@ -40,12 +40,16 @@
   </div>
 </nav>
 
-  <div class="linhaMercados">
-    <div class="mercadosCadastrados">
-      <span class="textoMercados">MERCADOS CADASTRADOS</span>
+<div class="parteCima">
+  <div class="tituloPagina">
+    <div class="titulo">
+      <span class="textoTitulo">
+        Mercados Cadastrados
+      </span>
+      <div class="divisaoTitulo"></div>
     </div>
   </div>
-
+</div>
   <div class="divMercados1">
     <div class="divMercados">
       <div *ngFor='let mercado of listaMercados'>
@@ -66,9 +70,8 @@
           </div>
         </div>
         <div class="footerMercado">
-          <div class="contatosMercado">
-            <span class="tituloContato">Contatos</span>
-          </div>
+          <span class="tituloContato">Contatos</span>
+          <div class="linhaContato"></div>
           <div class="campoContatos">
             <span class="textoContatos">{{mercado.TELEFONE}}</span>
             <span class="textoContatos">{{mercado.EMAIL}}</span>

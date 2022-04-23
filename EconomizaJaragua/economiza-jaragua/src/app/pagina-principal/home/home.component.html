@@ -5,8 +5,8 @@
         <img (click)="home()" class="logoEconomiza" src="https://cdn-icons-png.flaticon.com/512/584/584093.png" alt="">
       </div>
       <div class="barraPesquisa">
-        <input type="text" class="pesquisa" placeholder="Pesquise por Ofertas: ">
-        <img class="imgLupa" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png" alt="">
+        <input  [(ngModel)]="barraPesquisa"type="text" class="pesquisa" placeholder="Pesquise por Ofertas: ">
+        <img (click)="filtroPromocao()" class="imgLupa" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png" alt="">
       </div>
       <div class="ajuda">
         <button (click)="contato()" class="botaoAjuda">Precisa de Ajuda?</button>

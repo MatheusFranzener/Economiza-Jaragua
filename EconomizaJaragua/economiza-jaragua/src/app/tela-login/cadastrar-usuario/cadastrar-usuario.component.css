@@ -27,7 +27,7 @@
     justify-content: center;
     flex-direction: column;
     width: 480px;
-    height: 550px;
+    height: 530px;
     background-color: #0064af;
     border: 1px solid white;
     border-radius: 5px;
@@ -35,16 +35,17 @@
 }
 
 .inputNome{
-    width: 250px;
+    width: 300px;
     height: 40px;
     border-radius: 5px;
     border: solid 0.5px black;
+    margin: 10px;
 }
 
 .icone{
     position: absolute;
-    margin-top: 8px;
-    margin-left: 220px;
+    margin-top: 1.4%;
+    margin-left: 20%;
     width: 25px;
     height: 23px;
 }
@@ -52,14 +53,14 @@
 .botaoEntrar{
     background-color: #2ac196;
     color: #f5f2ee;
-    border: none;
+    border: solid 1px white;
     border-radius: 5px;
     width: 140px;
     height: 30px;
+    margin: 10px;
 }
 
 .botaoUser{
-    margin-right: 5px;
     border: solid white 0.5px;
     background-color: #2ac196;
     color: #f5f2ee;
@@ -67,18 +68,17 @@
     width: 140px;
     height: 30px;
     opacity: 0.99;
+    margin: 5px;
 }
 
 .tituloCaixaBemVindo{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 50px;
     color: #f5f2ee;
+    margin: 5px;
 }
 
 .textoCadastro{
     color: #f5f2ee;
-}
-
-.tituloCaixaCadastro{
-    margin-left: 80px;
+    margin: 10px;
 }

@@ -32,8 +32,10 @@ export class EntreEmContatoComponent implements OnInit {
     this.router.navigate(['home'])
   }
 
-  voltarContato() {
+  voltarHome() {
     this.router.navigate(['home'])
   }
+
+
 
 }

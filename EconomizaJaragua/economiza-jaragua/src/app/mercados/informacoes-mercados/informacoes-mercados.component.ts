@@ -11,11 +11,12 @@ export class InformacoesMercadosComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit() {
-    this.pegarUser();
     this.buscarMercados();
+    this.pegarUser();
   }
 
-  listaMercados = [ ]
+  listaMercados = []
+  listaMercadosBackup = []
   barraPesquisa ="";
   user="";
   password="";
@@ -81,38 +82,24 @@ export class InformacoesMercadosComponent implements OnInit {
     fetch('http://localhost:3000/api/buscar_mercado', { method: 'POST' }).then(function (e) {
 
       e.json().then(function (dados) {
-        self.listaMercados = dados
+        self.listaMercados = dados;
+        self.listaMercadosBackup = dados;
       })
     })
   }
 
-
-  criarDivFiltro(filtro){
-    let divMercados1 = document.querySelector(".divMercados1")
-    let divMercados =  document.querySelector(".divMercados")
-
-    if(divMercados){
-      divMercados.remove()
-    }
-    
-    let divNova = document.createElement("div")
-    divMercados1.appendChild(divNova)
-    filtro.forEach(e => {
-      let div = document.createElement("div")
-      divNova.appendChild(div)
-      let divNome = document.createElement("div")
-      div.appendChild(divNome)
-      divNome.innerText = e.NOME_MERCADO
-    });
-  }
-
-
-  filtroPromocao() {
+  filtroMercado() {
     var self = this;
-    let filtro = this.listaMercados.filter(function (element) {
+    console.log(self.barraPesquisa);
+    let filtro = self.listaMercadosBackup.filter(function (element) {
       return element.NOME_MERCADO.startsWith(self.barraPesquisa);
     });
-    this.criarDivFiltro(filtro);
+    if(self.barraPesquisa == ""){
+      self.listaMercados = self.listaMercadosBackup
+    } else {
+      self.listaMercados = filtro;
+    }
+    console.log("Teste do filtro:",filtro);
   }
 
 }

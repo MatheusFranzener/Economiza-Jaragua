@@ -15,6 +15,226 @@
     align-items: center;
 }
 
+.parteCima{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloPagina{
+    width: 67vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.divisaoTitulo{
+    width: 230px;
+    height: 2px;
+    background-color: #d22538;
+}
+
+.titulo{
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.textoTitulo{
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.ofertaEspecifica{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divOfertaProduto{
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nomeOferta{
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.textoPorcentagem{
+    color: white;
+    font-size: 18px;
+}
+
+.off{
+    color: white;
+    font-size: 18px; 
+}
+
+.textoDescricao{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #0064af;
+}
+
+.precos{
+    margin-top: 10px;
+}
+
+.preco1{
+    font-size: 18px;
+    color: #6C7B8B;
+}
+
+.preco2{
+    font-size: 30px;
+    color: #d22538;
+}
+
+.imgOferta{
+    width: 450px;
+    height: 500px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.imgPromocao{
+    width: 150px;
+    height: 100px;
+}
+
+.infoOferta{
+    width: 380px;
+    height: 450px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.headerOferta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.campoNome{
+    text-align: center;
+    width: 99%;
+    margin-top: 5%;
+}
+
+.porcentagem{
+    position: absolute;
+    right: 1%;
+    width: 20%;
+}
+
+.quadroPorcentagem{
+    width: 80px;
+    height: 50px;
+    margin: 10px;
+    background-color: #d22538;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.mainOferta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainOferta2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.campoDescricao{
+    width: 250px;
+    height: 80px;
+    overflow-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.textoDescricao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.novoPreco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linhaDivisao{
+    width: 250px;
+    height: 2px;
+    background-color: black;
+    margin-top: 10px;
+}
+
+.tempoOferta{
+    margin-top: 10px;
+}
+
+.textoTempo{
+    font-size: 18px;
+}
+
+.cronometro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.quadros{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 30px;
+    color: white;
+    background-color: #d22538;
+}
+
+.logoMercado{
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.imgMercado{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 150px;
+    height: 100px;
+    margin-top: 15px;
+}
+
 .textoFooter{
     color: white;
 }
@@ -30,6 +250,7 @@
 
 footer{
     background-color: #0064af;
+    margin-top: 100px;
 }
 
 .logo{
