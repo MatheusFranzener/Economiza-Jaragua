@@ -1,397 +1,415 @@
-<div class="divNavBar">
-  <div class="barraTarefa">
-    <div class="logo">
-      <img (click)="home()" class="logoEconomiza" src="https://cdn-icons-png.flaticon.com/512/584/584093.png" alt="">
-    </div>
-    <div class="barraPesquisa">
-      <input [(ngModel)]="barraPesquisa" type="text" class="pesquisa" placeholder="Pesquise por categorias: ">
-      <img (click)="filtroPromocao()" class="imgLupa"
-        src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png" alt="">
-    </div>
-    <div class="ajuda">
-      <button (click)="contato()" class="botaoAjuda">Precisa de Ajuda?</button>
-    </div>
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-        aria-expanded="false">
-        Opções Administrador
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" (click)="cadastrarMercados()">Cadastrar Mercado</a></li>
-        <li><a class="dropdown-item" (click)="cadastrarPromocao()">Cadastrar Promoção</a></li>
-      </ul>
-    </div>
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown"
-        aria-expanded="false">
-        Bem vindo, {{nome}}
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-        <li><a class="dropdown-item" (click)="mercados()">Mercados</a></li>
-        <li><a class="dropdown-item" (click)="sobre()">Sobre-Economiza</a></li>
-        <li><a class="dropdown-item" (click)="contato()">Entre em Contato</a></li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-        <li><a class="dropdown-item" (click)="deslogar()">Deslogar</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://forum.muaway.net/uploads/profile/photo-159799.gif" class="d-block w-80" alt="...">
+<nav class="navbar">
+  <div class="container-fluid">
+    <span class="navbar-text">
+      <div class="logo">
+        <img (click)="home()" class="logoEconomiza" src="https://cdn-icons-png.flaticon.com/512/584/584093.png" alt="">
       </div>
-      <div class="carousel-item">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAMAAAAL34HQAAAAGFBMVEUjHjj////Tpa/iyc6jc4xmRGYAAAA1MEiKImhGAAACdElEQVR4nO3c0W7CMAwF0NCy8f9/vG5VI9eOHSd2C5quhSZRnNwTZnXshfL4yCrvBrTr37G+HQXWZ7Jq5Jejpn1gXcTyazQfWG9kRUBzOLByWSkghgPrTpZhevYqIgMriyVNXYqfaMvASmFRkyemWfZCQwZWnFVN2o7aDBmI5nVNBlaQtZvkFk5Kl8iuNGVgRVhbE1sW1Gg++lTKwJpmVZMHtDjKiZMysCIsG+RPdTbXOLBSWOzmrgUYwYbD9kkZWNMsj8amdImaj90jwJpgGaaIRvM1ZU8yXmAFWdOgUkoQB1YKi7b6QaMsGQFWkMVMzKeFrecqR9UrThnL3WVgzbHqa2zlHtakyDZPJ1tFQ8GKsGyTNjRysGqb7JE4eowaDVaE5THJJGaiem0J25nJwJpmNf8ws0gJqg1ra7w0XBFVE9X7FlgOVtMkt5B5WpKGk2dYzp8GwMpiGWEyzwOSOCYDK5dlmGSGk97tByuRRRd3cVrGUGd9FawU1r7FonwaHo2kx+t2WrMF1iDLY1pJGe6hTrBSWP6pqpGeHk8blYE1x9pllOXcKKWW41+sagJrmkVNKTj/mNbJBivIWs81FEyXrK3ysLYCK8JisgmTzbK3Xc+DBVaQNaFhkaOmugqsOKsr0/ImWPI6NYEVZ3W309zGYbonBCuL1ZQNIYasmgmsIIvKrgBJmTSBFWftsktNtZomsFJY98g0E1hZrKtlhgmsRNZ1MtsEVi7rClnXBFY663F8vU4KyGMC6wpWHOcH5bJeW/39/CxWeR2Pu1kUJ337G/VqaYZAuawN9ftovklvZFm/uztY0mfU9OZg3cO6tMAaqR8NK6j1ZugaWAAAAABJRU5ErkJggg==" class="d-block w-80" alt="...">
+      <div class="barraPesquisa">
+        <input type="text" class="pesquisa" placeholder="Pesquise por Ofertas: ">
+        <img class="imgLupa" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png" alt="">
       </div>
-      <div class="carousel-item">
-        <img src="data:image/jpeg;base64,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" class="d-block w-80" alt="...">
+      <div class="ajuda">
+        <button (click)="contato()" class="botaoAjuda">Precisa de Ajuda?</button>
       </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
-  <div class="alinhamento">
-    <div class="linhaCategoria">
-      <div class="quadradoCategoria">
-        <span class="categoria">CARNES</span>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Opções Administrador
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" (click)="cadastrarMercados()">Cadastrar Mercado</a></li>
+          <li><a class="dropdown-item" (click)="cadastrarPromocao()">Cadastrar Promoção</a></li>
+        </ul>
       </div>
-    </div>
-  </div>
-  <div class="carnes">
-    <div class="divOfertas1">
-      <div class="divOfertas">
-        <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
-          <div *ngIf="promocao.CODIGO_CATEGORIA == 1">
-            <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
-              <div class="headerOferta">
-                <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
-                <div class="precoOferta">
-                  <span>R$</span> {{promocao.VALOR}} <span>KG</span>
-                </div>
-              </div>
-              <div class="mainOferta">
-                <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
-                <div class="descricaoOferta">
-                  <div class="campoDescricao">
-                    {{promocao.DESCRICAO}}
-                  </div>
-                </div>
-                <div class="dataOferta">
-                  <div class="relogio">
-                    <img
-                      src="https://images.vexels.com/media/users/3/155826/isolated/lists/71b6db7185dfc25bb9fab870a37863a0-icone-de-cronometro.png"
-                      alt="" class="imgRelogio">
-                  </div>
-                  <div class="campoData">
-                    <div class="data">
-                      {{promocao.DATA_VALIDA}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Bem vindo, {{nome}}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+          <li><a class="dropdown-item" (click)="mercados()">Mercados</a></li>
+          <li><a class="dropdown-item" (click)="sobre()">Sobre-Economiza</a></li>
+          <li><a class="dropdown-item" (click)="contato()">Entre em Contato</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" (click)="deslogar()">Deslogar</a></li>
+        </ul>
       </div>
-    </div>
-  </div>
-
-  <div class="alinhamento">
-    <div class="linhaCategoria">
-      <div class="quadradoCategoria">
-        <span class="categoria">FRUTAS</span>
-      </div>
-    </div>
-  </div>
-  <div class="frutas">
-    <div class="divOfertas1">
-      <div class="divOfertas">
-        <div *ngFor='let promocao of listaPromocoes'>
-          <div *ngIf="promocao.CODIGO_CATEGORIA == 2">
-            <div class="campoOferta">
-              <div class="headerOferta">
-                <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
-                <div class="precoOferta">
-                  <b> <span>R$</span>{{promocao.VALOR}} <span>KG</span></b>
-                </div>
-              </div>
-              <div class="mainOferta">
-                <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
-                <div class="descricaoOferta">
-                  <div class="campoDescricao">
-                    {{promocao.DESCRICAO}}
-                  </div>
-                </div>
-                <div class="dataOferta">
-                  <div class="relogio">
-                    <img
-                      src="https://images.vexels.com/media/users/3/155826/isolated/lists/71b6db7185dfc25bb9fab870a37863a0-icone-de-cronometro.png"
-                      alt="" class="imgRelogio">
-                  </div>
-                  <div class="campoData">
-                    <div class="data">
-                      {{promocao.DATA_VALIDA}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="alinhamento">
-    <div class="linhaCategoria">
-      <div class="quadradoCategoria">
-        <span class="categoria">VERDURAS</span>
-      </div>
-    </div>
-  </div>
-  <div class="verduras">
-    <div class="divOfertas1">
-      <div class="divOfertas">
-        <div *ngFor='let promocao of listaPromocoes'>
-          <div *ngIf="promocao.CODIGO_CATEGORIA == 3">
-            <div class="campoOferta">
-              <div class="headerOferta">
-                <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
-                <div class="precoOferta">
-                  <b> <span>R$</span>{{promocao.VALOR}} <span>KG</span></b>
-                </div>
-              </div>
-              <div class="mainOferta">
-                <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
-                <div class="descricaoOferta">
-                  <div class="campoDescricao">
-                    {{promocao.DESCRICAO}}
-                  </div>
-                </div>
-                <div class="dataOferta">
-                  <div class="relogio">
-                    <img
-                      src="https://images.vexels.com/media/users/3/155826/isolated/lists/71b6db7185dfc25bb9fab870a37863a0-icone-de-cronometro.png"
-                      alt="" class="imgRelogio">
-                  </div>
-                  <div class="campoData">
-                    <div class="data">
-                      {{promocao.DATA_VALIDA}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="alinhamento">
-    <div class="linhaCategoria">
-      <div class="quadradoCategoria">
-        <span class="categoria">BEBIDAS</span>
-      </div>
-    </div>
-  </div>
-  <div class="bebidas">
-    <div class="divOfertas1">
-      <div class="divOfertas">
-        <div *ngFor='let promocao of listaPromocoes'>
-          <div *ngIf="promocao.CODIGO_CATEGORIA == 4">
-            <div class="campoOferta">
-              <div class="headerOferta">
-                <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
-                <div class="precoOferta">
-                  <b> <span>R$</span>{{promocao.VALOR}} <span>KG</span></b>
-                </div>
-              </div>
-              <div class="mainOferta">
-                <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
-                <div class="descricaoOferta">
-                  <div class="campoDescricao">
-                    {{promocao.DESCRICAO}}
-                  </div>
-                </div>
-                <div class="dataOferta">
-                  <div class="relogio">
-                    <img
-                      src="https://images.vexels.com/media/users/3/155826/isolated/lists/71b6db7185dfc25bb9fab870a37863a0-icone-de-cronometro.png"
-                      alt="" class="imgRelogio">
-                  </div>
-                  <div class="campoData">
-                    <div class="data">
-                      {{promocao.DATA_VALIDA}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="alinhamento">
-    <div class="linhaCategoria">
-      <div class="quadradoCategoria">
-        <span class="categoria">PADARIA</span>
-      </div>
-    </div>
-  </div>
-  <div class="padaria">
-    <div class="divOfertas1">
-      <div class="divOfertas">
-        <div *ngFor='let promocao of listaPromocoes'>
-          <div *ngIf="promocao.CODIGO_CATEGORIA == 5">
-            <div class="campoOferta">
-              <div class="headerOferta">
-                <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
-                <div class="precoOferta">
-                  <b> <span>R$</span>{{promocao.VALOR}} <span>KG</span></b>
-                </div>
-              </div>
-              <div class="mainOferta">
-                <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
-                <div class="descricaoOferta">
-                  <div class="campoDescricao">
-                    {{promocao.DESCRICAO}}
-                  </div>
-                </div>
-                <div class="dataOferta">
-                  <div class="relogio">
-                    <img
-                      src="https://images.vexels.com/media/users/3/155826/isolated/lists/71b6db7185dfc25bb9fab870a37863a0-icone-de-cronometro.png"
-                      alt="" class="imgRelogio">
-                  </div>
-                  <div class="campoData">
-                    <div class="data">
-                      {{promocao.DATA_VALIDA}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="alinhamento">
-    <div class="linhaCategoria">
-      <div class="quadradoCategoria">
-        <span class="categoria">FRIOS</span>
-      </div> 
-    </div>
-  </div>
-  <div class="frios">
-    <div class="divOfertas1">
-      <div class="divOfertas">
-        <div *ngFor='let promocao of listaPromocoes'>
-          <div *ngIf="promocao.CODIGO_CATEGORIA == 6">
-            <div class="campoOferta">
-              <div class="headerOferta">
-                <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
-                <div class="precoOferta">
-                  <b> <span>R$</span>{{promocao.VALOR}} <span>KG</span></b>
-                </div>
-              </div>
-              <div class="mainOferta">
-                <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
-                <div class="descricaoOferta">
-                  <div class="campoDescricao">
-                    {{promocao.DESCRICAO}}
-                  </div>
-                </div>
-                <div class="dataOferta">
-                  <div class="relogio">
-                    <img
-                      src="https://images.vexels.com/media/users/3/155826/isolated/lists/71b6db7185dfc25bb9fab870a37863a0-icone-de-cronometro.png"
-                      alt="" class="imgRelogio">
-                  </div>
-                  <div class="campoData">
-                    <div class="data">
-                      {{promocao.DATA_VALIDA}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">
-    <span class="tema">
-      Institucional
     </span>
-    <span class="tema">
-      Políticas
-    </span>
-    <span class="tema">
-      Baixe nosso App!
-    </span>
-    <span class="tema">
-      Social
-    </span>
-    <div class="divisor">
-      <div class="linha"></div>
+  </div>
+</nav>
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img id="imgCarrosel" src="https://www.ranchobom.com.br/uploads/catalogo/P_gina_1.jpg" class="d-block w-80"
+        alt="...">
     </div>
-    <div class="footer2">
-      <div class="institucional">
-        <span class="tema2">
-          Sobre
-        </span>
-        <span class="tema2">
-          Fale Conosco
-        </span>
-        <span class="tema2">
-          Trabalhe Conosco
-        </span>
-      </div>
-      <div class="politicas">
-        <span class="tema2">
-          Preços
-        </span>
-        <span class="tema2">
-          Privacidade
-        </span>
-        <span class="tema2">
-          Segurança
-        </span>
-      </div>
-      <div class="app">
-        <img class="imgFooter"
-          src="https://logodownload.org/wp-content/uploads/2017/04/disponivel-google-play-badge-1.png" alt="">
-        <img class="imgFooter"
-          src="https://logodownload.org/wp-content/uploads/2017/05/disponivel-na-app-store-botao.png" alt="">
-      </div>
-      <div class="social">
-        <img class="logos" src="https://cdn-icons-png.flaticon.com/512/39/39552.png" alt="">
-        <img class="logos" src="https://www.mktvirtual.com.br/wp-content/uploads/2016/12/instagram-logo-preto.png"
-          alt="">
-        <img class="logos" src="https://cdn-icons-png.flaticon.com/512/59/59439.png" alt="">
-      </div>
+    <div class="carousel-item">
+      <img id="imgCarrosel2"
+        src="https://pegapromocao.com.br/wp-content/uploads/2021/11/promocao-fort-atacadista-natal-do-minhao.jpg"
+        class="d-block w-80" alt="...">
     </div>
-    <div class="divisor">
-      <div class="linha2"></div>
-    </div>
-    <div class="copy">
-      <span class="textoCopy">©Copyright 2021 - Economiza-Jaraguá - Todos os direitos reservados Economiza</span>
+    <div class="carousel-item">
+      <img id="imgCarrosel3"
+        src="https://www.abcdacomunicacao.com.br/wp-content/uploads/Condor-Promoc%CC%A7a%CC%83o.jpeg"
+        class="d-block w-80" alt="...">
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden ">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<div class="categorias">
+  <div class="campoCategoria">
+    <span class="categoria">CARNES</span>
+  </div>
+  <div class="divisaoCategoria"></div>
+</div>
+<div class="carnes">
+  <div class="divOfertas1">
+    <div class="divOfertas">
+      <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
+        <div *ngIf="promocao.CODIGO_CATEGORIA == 1">
+          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+            <div class="headerOferta">
+              <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+              <div class="precoOferta">
+                <s class="textoPrecoAntigo">R$ {{promocao.VALOR_ANTIGO}}</s>
+                <span class="textoPreco">R$ {{promocao.VALOR}} KG</span>
+              </div>
+            </div>
+            <div class="mainOferta">
+              <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+              <div class="descricaoOferta">
+                <div class="campoDescricao">
+                  <span class="textoDescricao">{{promocao.DESCRICAO}} </span>
+                </div>
+              </div>
+              <div class="dataOferta">
+                <div class="campoData">
+                  <button class="botaoOferta">Ver oferta</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="categorias">
+  <div class="campoCategoria">
+    <span class="categoria">FRUTAS</span>
+  </div>
+  <div class="divisaoCategoria"></div>
+</div>
+<div class="carnes">
+  <div class="divOfertas1">
+    <div class="divOfertas">
+      <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
+        <div *ngIf="promocao.CODIGO_CATEGORIA == 2">
+          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+            <div class="headerOferta">
+              <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+              <div class="precoOferta">
+                <s class="textoPrecoAntigo">R$ {{promocao.VALOR_ANTIGO}}</s>
+                <span class="textoPreco">R$ {{promocao.VALOR}} KG</span>
+              </div>
+            </div>
+            <div class="mainOferta">
+              <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+              <div class="descricaoOferta">
+                <div class="campoDescricao">
+                  <span class="textoDescricao">{{promocao.DESCRICAO}} </span>
+                </div>
+              </div>
+              <div class="dataOferta">
+                <div class="campoData">
+                  <button class="botaoOferta">Ver oferta</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="categorias">
+  <div class="campoCategoria">
+    <span class="categoria">VERDURAS</span>
+  </div>
+  <div class="divisaoCategoria"></div>
+</div>
+<div class="carnes">
+  <div class="divOfertas1">
+    <div class="divOfertas">
+      <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
+        <div *ngIf="promocao.CODIGO_CATEGORIA == 3">
+          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+            <div class="headerOferta">
+              <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+              <div class="precoOferta">
+                <s class="textoPrecoAntigo">R$ {{promocao.VALOR_ANTIGO}}</s>
+                <span class="textoPreco">R$ {{promocao.VALOR}} KG</span>
+              </div>
+            </div>
+            <div class="mainOferta">
+              <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+              <div class="descricaoOferta">
+                <div class="campoDescricao">
+                  <span class="textoDescricao">{{promocao.DESCRICAO}} </span>
+                </div>
+              </div>
+              <div class="dataOferta">
+                <div class="campoData">
+                  <button class="botaoOferta">Ver oferta</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="categorias">
+  <div class="campoCategoria">
+    <span class="categoria">BEBIDAS</span>
+  </div>
+  <div class="divisaoCategoria"></div>
+</div>
+<div class="carnes">
+  <div class="divOfertas1">
+    <div class="divOfertas">
+      <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
+        <div *ngIf="promocao.CODIGO_CATEGORIA == 4">
+          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+            <div class="headerOferta">
+              <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+              <div class="precoOferta">
+                <s class="textoPrecoAntigo">R$ {{promocao.VALOR_ANTIGO}}</s>
+                <span class="textoPreco">R$ {{promocao.VALOR}} KG</span>
+              </div>
+            </div>
+            <div class="mainOferta">
+              <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+              <div class="descricaoOferta">
+                <div class="campoDescricao">
+                  <span class="textoDescricao">{{promocao.DESCRICAO}} </span>
+                </div>
+              </div>
+              <div class="dataOferta">
+                <div class="campoData">
+                  <button class="botaoOferta">Ver oferta</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="categorias">
+  <div class="campoCategoria">
+    <span class="categoria">PADARIA</span>
+  </div>
+  <div class="divisaoCategoria"></div>
+</div>
+<div class="carnes">
+  <div class="divOfertas1">
+    <div class="divOfertas">
+      <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
+        <div *ngIf="promocao.CODIGO_CATEGORIA == 5">
+          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+            <div class="headerOferta">
+              <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+              <div class="precoOferta">
+                <s class="textoPrecoAntigo">R$ {{promocao.VALOR_ANTIGO}}</s>
+                <span class="textoPreco">R$ {{promocao.VALOR}} KG</span>
+              </div>
+            </div>
+            <div class="mainOferta">
+              <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+              <div class="descricaoOferta">
+                <div class="campoDescricao">
+                  <span class="textoDescricao">{{promocao.DESCRICAO}} </span>
+                </div>
+              </div>
+              <div class="dataOferta">
+                <div class="campoData">
+                  <button class="botaoOferta">Ver oferta</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="categorias">
+  <div class="campoCategoria">
+    <span class="categoria">FRIOS</span>
+  </div>
+  <div class="divisaoCategoria"></div>
+</div>
+<div class="carnes">
+  <div class="divOfertas1">
+    <div class="divOfertas">
+      <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
+        <div *ngIf="promocao.CODIGO_CATEGORIA == 6">
+          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+            <div class="headerOferta">
+              <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+              <div class="precoOferta">
+                <s class="textoPrecoAntigo">R$ {{promocao.VALOR_ANTIGO}}</s>
+                <span class="textoPreco">R$ {{promocao.VALOR}} KG</span>
+              </div>
+            </div>
+            <div class="mainOferta">
+              <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+              <div class="descricaoOferta">
+                <div class="campoDescricao">
+                  <span class="textoDescricao">{{promocao.DESCRICAO}} </span>
+                </div>
+              </div>
+              <div class="dataOferta">
+                <div class="campoData">
+                  <button class="botaoOferta">Ver oferta</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class=" text-center ">
+  <div class="container p-4">
+    <section class="">
+      <form action="">
+        <div class="row d-flex justify-content-center">
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong class="textoFooter">Receba promoções</strong>
+            </p>
+          </div>
+          <div class="col-md-5 col-12">
+            <div class="form-outline mb-4">
+              <input type="email" id="form5Example2" class="form-control" placeholder="Envie seu email" />
+            </div>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-4">
+              Enviar
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section class="mb-4">
+      <p class="textoFooter">
+        Olá, é muito bom ter sua parceria! Espero que tenha gostado de nosso sistema, qualquer dúvida estamos a sua
+        Disposição. Fique ligado para receber as novas ofertas todos os dias.
+      </p>
+    </section>
+    <section class="">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="textoFooter">INÍCIO</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <span class="textoFooter"> Home</span>
+            </li>
+            <li>
+              <span class="textoFooter">Promoções</span>
+            </li>
+            <li>
+              <span class="textoFooter">Mercados</span>
+            </li>
+            <li>
+              <span class="textoFooter">Oferta da Semana</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="textoFooter">SOBRE-NÓS</h5>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <span class="textoFooter">Sobre</span>
+            </li>
+            <li>
+              <span class="textoFooter">Fale Conosco</span>
+            </li>
+            <li>
+              <span class="textoFooter">Trabalhe Conosco</span>
+            </li>
+            <li>
+              <span class="textoFooter">Ações</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="textoFooter">SUPORTE</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <span class="textoFooter">Chat</span>
+            </li>
+            <li>
+              <span class="textoFooter">Email</span>
+            </li>
+            <li>
+              <span class="textoFooter">Telefone</span>
+            </li>
+            <li>
+              <span class="textoFooter">Escritório</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <ul class="list-unstyled mb-0">
+            <li>
+              <img
+                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABkklEQVRoge2ZPUvEMBjHf76AIvi2CMqpk9zkKriqo5/DwfG+kascIs4iLuLm6OAiOIggh7YgKnhXh/TgKGlp0iRNID94OJqmz//507yUHEQikYjPbAJ9IAUyx5ECF0C3SfGDFgovxgDo6Bjoe1D8OM7LipyqMJACi4qmbZECy7IbVQYyhb42qKU/7aAQqwRvYNax3jZwmP/OAd/AF2KM3wJPJsWKK0ET1hAryVCSdxynOvou3sAGcA9s2UjuYg6cYal4sG9gDziyKWB7CB2XtP8Cl8ALMMrbHkyLm5jEZZ8jBy70TRi4keR5N6lvew7MSNo+TQoEvxMHb8DkKrQL7Bfa1iX9loATSfsV8DZxndHwC1h1Evckz6jEjo6+L0NohNgTlPHFwCtic1PGFwPPug8Gb6AK1Uk8D6wW4k6S51HSb0GSb1RH3+Qy+pPHJH+SfkPgo0a+WkuoL0NIm2igbaKBtgneQCiHuwmwIrtR9Qau7dSihVYtXfz5g6P4qV2bDuJIMGmh8ARxqqFdfCQSidjnHx09GaMNNPE3AAAAAElFTkSuQmCC"
+                alt="">
+            </li>
+            <li>
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAACIklEQVRoge2YuU7DUBBFj5CShvAlFCwFgT8AIbEJ0cD/sFVsX0DIz0DNTsPaEwrSBIr3kKKJicczNgmSr/Sk2PG7d8aJ7h0bSpQoUeI/oQpsAE3gGvgAvpzrI3I1I3e1qOLXgIccCk5b98BqnoWPAHt/ULhcu1Hbjf0BFP+zdrzFryWQfgIHQB0Y9QpEjjpwBLQT9FasxFV6//PPwISv3r6YjBrdmndAxUK2Qe+dL6L4RULRT8ACMEXvL7FuIW4KkoMcik3CU5fGYzx3LLQbFuIbQTKj2JOUE2k+n9TArNC+tjTwLkhqKddrc0L6/EJs4hGYj+fGxJ53SwNS+DdYcyLN57X6bgJPTvTz+T9pQJMTVp8vvAFLTmTx+cIbsOaE1ucLb8CTExqfL7wBS078QOPzhTfQEt+n5UQ3amJvy6AP5DRvGyB1O3kRZcGrOB7PsFde+2YtwtPAhTjezLB3SxyfO+r4FRYbnVTwTjMkNlolDGYyyPo1MQ28iD23DCjIIEyV8ro2YWyYI7hNLX4+offOd4Alh767AfC9sdjOQd9NMEIYjbMU3iFMooWO01kfaFYIg1la8bfAcgpXLg80clSoK/ZUCI7SAK4ICdsCLoHT+J3mDcOc0DY9Up4JkkMLiREnQvvUQmL1eS+0OZEKi897kSUnVND4vBfWnFBjEG+mNTmhhsXnvUuTE5mh9Xnv0uSEGUk+7y3YkhMlSpQoMST4Bnazbl8qs0Q8AAAAAElFTkSuQmCC"
+                alt="">
+            </li>
+            <li>
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAACQElEQVRoge3Zu2sUURjG4SdBDQhe8EJQo6AYA9ZqEVERBK38A8RCEBErC8HK1tTWNpZCCBJBFC/YaCysRBBELQQtFBMhm0oxicVJ4rrMzp49szubYn5wmpkz3/e+8x3OZYaKioqK1cxuTKCGxZJbDfcwUkT8TA+EN7YZDKUYmFgF4pfbeDORfTkGatjQpuluUcOmrBt5Bhbb6NsNovL3lyCkq1QGes2aEnNtxWUcxQDe4Q7e1PXZj0+dStg4ldWzFhfbiDWKHxkx53ED1zCFC5H5o8gLcHbp2vWIOIPiFsQxHMSuMgxcrbt+C+tz4tyMED+Lz7jr33TZVQPnG+59wPEmcV5GGFhcEr8uMn9hA4P4ldHnOc5hY13f15EGdrSRv7AB8ofGH7zFpDA0WolfEGam0gycwSW8ihAX0362mX+F1HWgH7cTn83ifeqDqSvxE2GIdIrHHYy1QqsSHta5A8+RjPgLLfIXNgDDwmEja0aKbVNNYkcZKLqZO419+F0gxlhBDU2JqcBmYRFLffv3NT8olTKEYA9eJIj/im05cUszsMwoHkSKn8ahFvFKM9CHU3gUKf6LsOtsRZSBlIVsi7CZ24m9OCHsjWKYxBV8S8jbNnkVGBK20dMZ/RrbPB7iZJv5oypQ9LPKAI4Jx8QD2C5UdQ4fhePiU3yPVV3HQkPOTK3Vd6FeUxnoNXnT6Jz/P+4mLSYdYrbZjbwKPOuCkFSStIxYPT84hlMMEBascaGEZQufFX6yJIuvqKio6D5/ARd0/JNVkRUrAAAAAElFTkSuQmCC"
+                alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(36, 46, 143, 0.2)">
+    <span class="textoCopy"> © 2022 Copyright: Economiza - Jaraguá </span>
+  </div>
+</footer>

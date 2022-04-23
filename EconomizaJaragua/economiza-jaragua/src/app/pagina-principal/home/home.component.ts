@@ -30,6 +30,8 @@ export class HomeComponent implements OnInit {
 
     this.pegarUser();
 
+    
+
     this.usuarioService.buscarNotificacao()
       .then(resultado => {
         console.log('NOTIFICACAO:', resultado)
@@ -201,6 +203,15 @@ export class HomeComponent implements OnInit {
     console.log(codigo)
     this.router.navigate(['/home/'+codigo])
   }
+
+  days:number = 0;
+  hours:number = 0;
+  mins:number = 0;
+  secs:number = 0;
+
+  
+  
+ 
 
   // colocarPromocao(){
   //   var self = this

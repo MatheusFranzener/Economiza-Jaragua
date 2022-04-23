@@ -1,3 +1,36 @@
+.navbar{
+    background-color: #0064af;
+    height: 95px;
+}
+
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoFooter{
+    color: white;
+}
+
+.textoCopy{
+    color: white;
+}
+
+.logoFooter{
+    width: 50px;
+    height: 30px;
+}
+
+footer{
+    background-color: #0064af;
+}
 
 .barraTarefa{
     display: flex;
@@ -57,15 +90,18 @@
     justify-content: center;
     background-color: #d22538;
     margin: 15px;
+    border-radius: 5px;
 }
 
 #dropdownMenuButton1{
     background-color: #d22538;
+    border-radius: 5px;
 }
 
 .ofertasBotao{
     border: none;
     background-color: #d22538;
+    border-radius: 5px;
 }
 
 .classe{
@@ -203,99 +239,3 @@
     font-size: 18px;
 }
 
-.footer{
-    width: 100%;   
-    height: 280px;
-    background-color: #0064af;
-}
-
-.footer2{
-    display: flex;
-    flex-direction: row;
-}
-
-.tema{
-    color: #f5f2ee;
-    font-size: 23px;
-    margin: 100px;
-}
-
-.divisor{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.linha{
-    width: 95vw;
-    border: solid 1px #f5f2ee;
-    margin-top: 15px;
-}
-
-.institucional{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 80px;
-}
-
-.politicas{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 185px;
-}
-
-.app{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 215px;
-}
-
-.social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin-left: 130px;
-}
-
-.tema2{
-    color: #f5f2ee;
-    font-size: 18px;
-    margin: 5px;
-}
-
-.imgFooter{
-    margin: 10px;
-    width: 150px;
-    height: 45px;
-}
-
-.logos{
-    width: 80px;
-    height: 60px;
-    margin: 5px;
-}
-
-.linha2{
-    width: 85vw;
-    border: solid 1px #f5f2ee;
-    margin-top: 30px;
-}
-
-.copy{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.textoCopy{
-    color: #f5f2ee;
-    font-size: 16px;
-    margin-top: 15px;
-}

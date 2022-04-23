@@ -1,3 +1,20 @@
+.navbar{
+    background-color: #0064af;
+    height: 95px;
+}
+
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .barraTarefa{
     display: flex;
     justify-content: center;
@@ -56,14 +73,17 @@
     justify-content: center;
     background-color: #d22538;
     margin: 15px;
+    border-radius: 5px;
 }
 
 #dropdownMenuButton1{
     background-color: #d22538;
+    border-radius: 5px;
 }
 
 #dropdownMenu{
     background-color: #d22538;
+    border-radius: 5px;
 }
 
 .ofertasBotao{
@@ -87,102 +107,24 @@
     margin-top: 30px;
 }
 
-.footer{
-    width: 100%;   
-    height: 280px;
-    background-color: #0064af;
-}
-
-.footer2{
-    display: flex;
-    flex-direction: row;
-}
-
-.tema{
-    color: #f5f2ee;
-    font-size: 23px;
-    margin: 100px;
-}
-
-.divisor{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.linha{
-    width: 95vw;
-    border: solid 1px #f5f2ee;
-    margin-top: 15px;
-}
-
-.institucional{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 80px;
-}
-
-.politicas{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 185px;
-}
-
-.app{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 215px;
-}
-
-.social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin-left: 130px;
-}
-
-.tema2{
-    color: #f5f2ee;
-    font-size: 18px;
-    margin: 5px;
-}
-
-.imgFooter{
-    margin: 10px;
-    width: 150px;
-    height: 45px;
-}
-
-.logos{
-    width: 80px;
-    height: 60px;
-    margin: 5px;
-}
-
-.linha2{
-    width: 85vw;
-    border: solid 1px #f5f2ee;
-    margin-top: 30px;
-}
-
-.copy{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.textoFooter{
+    color: white;
 }
 
 .textoCopy{
-    color: #f5f2ee;
-    font-size: 16px;
-    margin-top: 15px;
+    color: white;
 }
+
+.logoFooter{
+    width: 50px;
+    height: 30px;
+}
+
+footer{
+    background-color: #0064af;
+}
+
+
 
 .divOfertas{
     display: flex;
@@ -190,7 +132,7 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 98vw;
+    width: 100%;
    
 }
 
@@ -238,12 +180,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #d22538;
-    font-size: 25px;
+    flex-direction: column;
     width: 180px;
-    height: 60px;
+    height: 70px;
     border: solid 1px black;
     border-radius: 5px;
+}
+
+.textoDescricao{
+    color: #0064af;
+}
+
+.textoPrecoAntigo{
+    color: grey;
+    font-size: 18px;
+}
+
+.textoPreco{
+    color: #d22538;
+    font-size: 23px;
 }
 
 .descricaoOferta{
@@ -251,8 +206,17 @@
     justify-content: center;
     align-items: center;
     width: 330px;
-    height: 50px;
-    border: solid 2px;
+    height: 60px;
+    border: solid 2px grey;
+    border-radius: 5px;
+}
+
+.botaoOferta{
+    width: 150px;
+    height: 30px;
+    background-color: #d22538;
+    color: #f5f2ee;
+    border: none;
     border-radius: 5px;
 }
 
@@ -303,12 +267,29 @@
     font-size: 25px;
 }
 
-.alinhamento{
-    width: 28vw;
-    margin-top: 10px;
+.categorias{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.campoCategoria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 5px;
+    width: 150px;
+    height: 40px;
+    background-color: #d22538;
+}
+
+.divisaoCategoria{
+    width: 200px;
+    height: 2px;
+    background-color:#d22538;
 }
 
 .quadradoCategoria{
@@ -332,6 +313,30 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.ofertaEspecial{
+    width: 50px;
+    height: 50px;
+}
+
+#imgCarrosel{
+    width: 950px;
+    height: 400px;
+    border-radius: 5px;
+}
+
+#imgCarrosel2{
+    width: 950px;
+    height: 400px;
+    border-radius: 5px;
+}
+
+#imgCarrosel3{
+    width: 950px;
+    height: 400px;
+    border-radius: 5px;
+}
+
 
 
 
