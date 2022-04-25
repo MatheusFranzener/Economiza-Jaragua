@@ -39,9 +39,7 @@ export class LoginComponent implements OnInit {
     fetch('http://localhost:3000/api/login', { method: 'POST', body: JSON.stringify({ nome: this.user, senha: this.password }), headers: { "Content-Type": "application/json" } }).then(function (e) {
       console.log(e)
 
-      e.json().then(function (data) {
-
-  
+      e.json().then(function (data) {  
         if (data.user) {
           localStorage.setItem('administrador', data.user.NOME)
           localStorage.setItem('administrador_senha', self.password)

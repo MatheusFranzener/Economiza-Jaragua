@@ -110,8 +110,12 @@ export class CadastrarPromocaoComponent implements OnInit {
 
   cadastrarPromocao() {
     var self = this;
-    fetch('http://localhost:3000/api/cadastrar_promocao', { method: 'POST', body: JSON.stringify({ nome_produto: this.nome_produto, valor_antigo: this.valor_antigo, valor: this.valor, data_valida: this.data_valida, descricao: this.descricao, nome_imagem: this.nome_imagem, cnpj_mercado:this.cnpj_mercado, categoria_mercado:this.categoria_mercado, logo64:self.logo64}), headers: {"Content-Type": "application/json"}});
-    this.router.navigate(['home'])
+    if(this.nome_produto == "" || this.valor_antigo == "" || this.valor == "" || this.data_valida == "" || this.descricao == "" || this.cnpj_mercado == "" || this.categoria_mercado ){
+      alert("Preencha todos os dados!")
+    } else {
+      fetch('http://localhost:3000/api/cadastrar_promocao', { method: 'POST', body: JSON.stringify({ nome_produto: this.nome_produto, valor_antigo: this.valor_antigo, valor: this.valor, data_valida: this.data_valida, descricao: this.descricao, nome_imagem: this.nome_imagem, cnpj_mercado:this.cnpj_mercado, categoria_mercado:this.categoria_mercado, logo64:self.logo64}), headers: {"Content-Type": "application/json"}});
+      this.router.navigate(['home'])
+    }
   }
 
   mudanca(file) {
