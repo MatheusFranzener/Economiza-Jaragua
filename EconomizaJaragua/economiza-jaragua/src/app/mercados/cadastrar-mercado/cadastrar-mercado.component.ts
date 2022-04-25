@@ -132,13 +132,17 @@ export class CadastrarMercadoComponent implements OnInit {
 
   cadastrarMercado(codigo) {
     var self = this;
-    fetch('http://localhost:3000/api/cadastrar_mercado', {
+    if(this.cnpj == ""||this.nome_mercado == ""||this.telefone == ""||this.email == ""){
+      alert("Preencha todos os dados!")
+    } else {
+      fetch('http://localhost:3000/api/cadastrar_mercado', {
       method: 'POST', body: JSON.stringify({
 
         cnpj: self.cnpj, nome_mercado: self.nome_mercado, telefone: self.telefone, email: self.email, codigo: codigo, logo64: self.logo64
       }), headers: { "Content-Type": "application/json" }
     });
     self.router.navigate(['home'])
+    }
   }
 
   mudanca(file) {
