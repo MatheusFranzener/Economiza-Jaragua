@@ -311,11 +311,12 @@ label{
 
 .botaoCancelar{
     width: 130px;
+    height: 30px;
     border: none;
     color: #f5f2ee;
     background-color: #d22538;
-    margin: 5px;
     border-radius: 5px;
+    margin: 5px;
 }
 
 .botaoConfirmar{
@@ -323,8 +324,9 @@ label{
     background-color: #2ac196;
     color: #f5f2ee;
     width: 200px;
-    margin: 5px;
+    height: 30px;
     border-radius: 5px;
+    margin: 5px;
 }
 
 

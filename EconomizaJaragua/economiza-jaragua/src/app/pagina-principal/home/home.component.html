@@ -43,7 +43,7 @@
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img id="imgCarrosel" src="https://www.ranchobom.com.br/uploads/catalogo/P_gina_1.jpg" class="d-block w-80"
+      <img id="imgCarrosel" src="https://cdn.ocp.news/2019/11/29f3fed6-65e2-4c8c-8517-f4722fae6007.jpg" class="d-block w-80"
         alt="...">
     </div>
     <div class="carousel-item">
@@ -54,6 +54,11 @@
     <div class="carousel-item">
       <img id="imgCarrosel3"
         src="https://www.abcdacomunicacao.com.br/wp-content/uploads/Condor-Promoc%CC%A7a%CC%83o.jpeg"
+        class="d-block w-80" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img id="imgCarrosel3"
+        src="https://www.ranchobom.com.br/uploads/catalogo/P_gina_1.jpg"
         class="d-block w-80" alt="...">
     </div>
   </div>
@@ -302,6 +307,106 @@
     </div>
   </div>
 </div>
+
+<div class="categorias">
+  <div class="campoCategoria">
+    <span class="categoria">MERCEARIA</span>
+  </div>
+  <div class="divisaoCategoria"></div>
+</div>
+<div class="carnes">
+  <div class="divOfertas1">
+    <div class="divOfertas">
+      <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
+        <div *ngIf="promocao.CODIGO_CATEGORIA == 7">
+          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+            <div class="headerOferta">
+              <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+              <div class="precoOferta">
+                <s class="textoPrecoAntigo">R$ {{promocao.VALOR_ANTIGO}}</s>
+                <span class="textoPreco">R$ {{promocao.VALOR}} KG</span>
+              </div>
+            </div>
+            <div class="mainOferta">
+              <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+              <div class="descricaoOferta">
+                <div class="campoDescricao">
+                  <span class="textoDescricao">{{promocao.DESCRICAO}} </span>
+                </div>
+              </div>
+              <div class="dataOferta">
+                <div class="campoData">
+                  <button class="botaoOferta">Ver oferta</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="categorias">
+  <div class="campoCategoria">
+    <span class="categoria">HIGIENE</span>
+  </div>
+  <div class="divisaoCategoria"></div>
+</div>
+<div class="carnes">
+  <div class="divOfertas1">
+    <div class="divOfertas">
+      <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
+        <div *ngIf="promocao.CODIGO_CATEGORIA == 8">
+          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+            <div class="headerOferta">
+              <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
+              <div class="precoOferta">
+                <s class="textoPrecoAntigo">R$ {{promocao.VALOR_ANTIGO}}</s>
+                <span class="textoPreco">R$ {{promocao.VALOR}} KG</span>
+              </div>
+            </div>
+            <div class="mainOferta">
+              <img src="{{promocao.NOME_IMAGEM}}" alt="" class="imgOferta">
+              <div class="descricaoOferta">
+                <div class="campoDescricao">
+                  <span class="textoDescricao">{{promocao.DESCRICAO}} </span>
+                </div>
+              </div>
+              <div class="dataOferta">
+                <div class="campoData">
+                  <button class="botaoOferta">Ver oferta</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="marcas">
+  <div class="textoPatrocinadores">
+    Marcas Patrocinadoras
+  </div>
+  <div class="divisaoCategoria"></div>
+  <div class="divMarcas">
+    <div class="quadroMarca">
+      <img class="logoMarca" src="http://grupomaisfood.com.br/wp-content/uploads/2018/03/frimesa.jpg" alt="">
+    </div>
+    <div class="quadroMarca">
+      <img class="logoMarca" src="https://i.pinimg.com/originals/36/ce/19/36ce19b13aaec7a95457a0206de84698.jpg" alt="">
+    </div>
+    <div class="quadroMarca">
+      <img class="logoMarca" src="https://www.auroraalimentos.com.br/img/aurora_facebook.png?v=2" alt="">
+    </div>
+    <div class="quadroMarca">
+      <img class="logoMarca" src="https://yt3.ggpht.com/ytc/AKedOLST05pbWjnkYHwRYBzxuTufgsYQZq2jpmjENFqoeg=s900-c-k-c0x00ffffff-no-rj" alt="">
+    </div>
+  </div>
+</div>
+
 
 <footer class=" text-center ">
   <div class="container p-4">

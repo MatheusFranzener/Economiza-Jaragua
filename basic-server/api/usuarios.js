@@ -283,7 +283,7 @@ function (dados, resposta) {
 
 inserirRota('/cadastro_categoria',
 function (dados, resposta) {
-    database('INSERT INTO CATEGORIA VALUES (NULL,"Carnes","Todos os mais variados tipos de carnes!"),(NULL,"Frutas","Todos os mais variados tipos de frutas!"),(NULL,"Verduras","Todos os mais variados tipos de verduras!"),(NULL,"Bebidas","Todos os mais variados tipos de bebidas!"),(NULL,"Padaria","Todos os mais variados tipos de produto da padaria!"),(NULL,"Frios e Laticínios","Todos os mais variados tipos de frios e laticínios!")').then(result => {
+    database('INSERT INTO CATEGORIA VALUES (NULL,"Carnes","Todos os mais variados tipos de carnes!"),(NULL,"Frutas","Todos os mais variados tipos de frutas!"),(NULL,"Verduras","Todos os mais variados tipos de verduras!"),(NULL,"Bebidas","Todos os mais variados tipos de bebidas!"),(NULL,"Padaria","Todos os mais variados tipos de produto da padaria!"),(NULL,"Frios e Laticínios","Todos os mais variados tipos de frios e laticínios!"),(NULL,"Mercearia","Todos os mais variados tipos de produtos da Mercecaria!"),(NULL,"Higiene","Todos os mais variados tipos de produtos de higiene!"),(NULL,"Limpeza","Todos os mais variados tipos de produtos de limpeza!")').then(result => {
         resposta( result );
     }).catch(erro => {
         resposta({ erro: "Erro ao inserir promoções!" });
@@ -299,8 +299,3 @@ inserirRota('/buscar_categoria',
             resposta({ erro: "Erro ao buscar categoria!" });
         });
     });
-
-
-
-
-

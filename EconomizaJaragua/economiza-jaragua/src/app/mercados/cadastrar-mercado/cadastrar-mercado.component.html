@@ -65,7 +65,6 @@
         <textarea  [(ngModel)]="complemento" name="text" rows="20" cols="30" wrap="soft" maxlength="500" class="inputComplemento"
         placeholder="Complemento">
         </textarea>
-        <!-- <input [(ngModel)]="complemento" type="text" class="inputComplemento" placeholder="Complemento"> -->
       </div>
       
       <div class="cadastro3">
@@ -74,7 +73,6 @@
           <input [(ngModel)]="logo" id="arquivo" type="file" placeholder="Escolha a logo do mercado"
             (change)="mudanca($event.target.files[0])">
         </div>
-        <!-- <input [(ngModel)]="logo" type="file" placeholder="Escolha a logo do mercado" (change)="mudanca($event.target.files[0])"> -->
         <input [(ngModel)]="cnpj" class="inputCnpj" type="text" placeholder="CNPJ" >
         <input [(ngModel)]="nome_mercado" class="inputCadastro" type="text" placeholder="Nome institucional">
         <input [(ngModel)]="email"  type="text" class="inputCadastro" placeholder="Email">
