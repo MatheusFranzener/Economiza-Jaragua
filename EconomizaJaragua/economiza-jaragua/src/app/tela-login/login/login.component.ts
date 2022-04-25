@@ -41,15 +41,14 @@ export class LoginComponent implements OnInit {
 
       e.json().then(function (data) {
 
-        console.log("teste2: ", data)
-
-        console.log(data.user.NOME)
-
+  
         if (data.user) {
           localStorage.setItem('administrador', data.user.NOME)
           localStorage.setItem('administrador_senha', self.password)
           self.router.navigate(['/home/'])
           localStorage.setItem('user', '')
+        } else {
+          alert("Login ou Senha Incorretos!");
         }
       })
     })
