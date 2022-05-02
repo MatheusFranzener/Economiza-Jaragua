@@ -109,6 +109,17 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  excluirPromocao(codigo){
+    if(localStorage.getItem("administrador")){
+      fetch('http://localhost:3000/api/excluir_promocao', { method: 'POST',body: JSON.stringify({ codigo : codigo }),headers: { "Content-Type": "application/json" } }).then(function (e) {
+    });
+    alert("Promoção excluída com sucesso!")
+    location.reload();
+    } else {
+      alert("Você não possui permissão!")
+    }
+  }
+
   filtroPromocao() {
     var self = this;
     console.log(self.barraPesquisa);

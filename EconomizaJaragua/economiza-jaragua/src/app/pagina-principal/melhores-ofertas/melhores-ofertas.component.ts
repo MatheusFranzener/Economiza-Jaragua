@@ -49,10 +49,10 @@ export class MelhoresOfertasComponent implements OnInit {
   }
 
 
-  days:number = 0;
-  hours:number = 0;
-  mins:number = 0;
-  secs:number = 0;
+  days:any = 0;
+  hours:any = 0;
+  mins:any = 0;
+  secs:any = 0;
   
   x = setInterval(()=>{
     var futureDate = new Date(`${this.produto[0].DATA_VALIDA} 00:00:00`).getTime();
@@ -62,7 +62,14 @@ export class MelhoresOfertasComponent implements OnInit {
     this.hours = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     this.mins = Math.floor((distancia % (1000 * 60 * 60 )) / (1000 * 60));
     this.secs = Math.floor((distancia % (1000 * 60 )) / (1000 ));
-  },1000)
+    if(distancia < 0){
+      clearInterval(this.x);
+      alert("A promoção expirou!");
+      this.deletarPromocao();
+      this.router.navigate(['home']);
+
+    }
+  },1000);
 
   user = "";
   password = "";
@@ -87,6 +94,11 @@ export class MelhoresOfertasComponent implements OnInit {
           self.nome = "Usuário";
         }
       })
+    })
+  }
+
+  deletarPromocao() {
+    fetch('http://localhost:3000/api/excluir_promocao', { method: 'POST',body: JSON.stringify({ codigo : this.codigo }),headers: { "Content-Type": "application/json" } }).then(function (e) {
     })
   }
 

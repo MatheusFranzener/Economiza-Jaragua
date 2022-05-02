@@ -84,7 +84,7 @@
     <div class="divOfertas">
       <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
         <div *ngIf="promocao.CODIGO_CATEGORIA == 1">
-          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+          <div class="campoOferta">
             <div class="headerOferta">
               <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
               <div class="precoOferta">
@@ -101,7 +101,8 @@
               </div>
               <div class="dataOferta">
                 <div class="campoData">
-                  <button class="botaoOferta">Ver oferta</button>
+                  <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
                 </div>
               </div>
             </div>
@@ -111,7 +112,6 @@
     </div>
   </div>
 </div>
-
 
 <div class="categorias">
   <div class="campoCategoria">
@@ -124,7 +124,7 @@
     <div class="divOfertas">
       <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
         <div *ngIf="promocao.CODIGO_CATEGORIA == 2">
-          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+          <div class="campoOferta">
             <div class="headerOferta">
               <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
               <div class="precoOferta">
@@ -141,7 +141,8 @@
               </div>
               <div class="dataOferta">
                 <div class="campoData">
-                  <button class="botaoOferta">Ver oferta</button>
+                  <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
                 </div>
               </div>
             </div>
@@ -163,7 +164,7 @@
     <div class="divOfertas">
       <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
         <div *ngIf="promocao.CODIGO_CATEGORIA == 3">
-          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+          <div class="campoOferta">
             <div class="headerOferta">
               <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
               <div class="precoOferta">
@@ -180,7 +181,8 @@
               </div>
               <div class="dataOferta">
                 <div class="campoData">
-                  <button class="botaoOferta">Ver oferta</button>
+                  <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
                 </div>
               </div>
             </div>
@@ -202,7 +204,7 @@
     <div class="divOfertas">
       <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
         <div *ngIf="promocao.CODIGO_CATEGORIA == 4">
-          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+          <div class="campoOferta">
             <div class="headerOferta">
               <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
               <div class="precoOferta">
@@ -219,7 +221,8 @@
               </div>
               <div class="dataOferta">
                 <div class="campoData">
-                  <button class="botaoOferta">Ver oferta</button>
+                  <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
                 </div>
               </div>
             </div>
@@ -241,7 +244,7 @@
     <div class="divOfertas">
       <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
         <div *ngIf="promocao.CODIGO_CATEGORIA == 5">
-          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+          <div class="campoOferta">
             <div class="headerOferta">
               <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
               <div class="precoOferta">
@@ -258,7 +261,8 @@
               </div>
               <div class="dataOferta">
                 <div class="campoData">
-                  <button class="botaoOferta">Ver oferta</button>
+                  <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
                 </div>
               </div>
             </div>
@@ -280,7 +284,7 @@
     <div class="divOfertas">
       <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
         <div *ngIf="promocao.CODIGO_CATEGORIA == 6">
-          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+          <div  class="campoOferta">
             <div class="headerOferta">
               <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
               <div class="precoOferta">
@@ -297,7 +301,8 @@
               </div>
               <div class="dataOferta">
                 <div class="campoData">
-                  <button class="botaoOferta">Ver oferta</button>
+                  <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
                 </div>
               </div>
             </div>
@@ -319,7 +324,7 @@
     <div class="divOfertas">
       <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
         <div *ngIf="promocao.CODIGO_CATEGORIA == 7">
-          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+          <div  class="campoOferta">
             <div class="headerOferta">
               <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
               <div class="precoOferta">
@@ -336,7 +341,8 @@
               </div>
               <div class="dataOferta">
                 <div class="campoData">
-                  <button class="botaoOferta">Ver oferta</button>
+                  <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
                 </div>
               </div>
             </div>
@@ -358,7 +364,7 @@
     <div class="divOfertas">
       <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
         <div *ngIf="promocao.CODIGO_CATEGORIA == 8">
-          <div (click)="redirecionar(promocao.CODIGO)" class="campoOferta">
+          <div class="campoOferta">
             <div class="headerOferta">
               <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
               <div class="precoOferta">
@@ -375,7 +381,8 @@
               </div>
               <div class="dataOferta">
                 <div class="campoData">
-                  <button class="botaoOferta">Ver oferta</button>
+                  <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
                 </div>
               </div>
             </div>
@@ -399,7 +406,7 @@
       <img class="logoMarca" src="https://i.pinimg.com/originals/36/ce/19/36ce19b13aaec7a95457a0206de84698.jpg" alt="">
     </div>
     <div class="quadroMarca">
-      <img class="logoMarca" src="https://www.auroraalimentos.com.br/img/aurora_facebook.png?v=2" alt="">
+      <img class="logoMarca" src="https://faleconosco.net.br/wp-content/uploads/2018/05/Lacta-Contato.png" alt="">
     </div>
     <div class="quadroMarca">
       <img class="logoMarca" src="https://yt3.ggpht.com/ytc/AKedOLST05pbWjnkYHwRYBzxuTufgsYQZq2jpmjENFqoeg=s900-c-k-c0x00ffffff-no-rj" alt="">

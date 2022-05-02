@@ -221,6 +221,16 @@ function(dados,resposta){
     })
 })
 
+inserirRota('/excluir_promocao',
+    function (dados, resposta) {
+        console.log(dados);
+        database(`DELETE FROM PROMOCAO WHERE CODIGO = ${dados.codigo}`).then(result => {
+            resposta( result );
+        }).catch(erro => {
+            resposta({ erro: "Erro ao buscar mercado!" });
+        });
+    });
+
 inserirRota('/buscar_mercado',
     function (dados, resposta) {
         console.log(dados);
