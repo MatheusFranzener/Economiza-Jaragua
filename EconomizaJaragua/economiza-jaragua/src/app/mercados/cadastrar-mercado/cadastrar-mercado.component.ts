@@ -29,7 +29,7 @@ export class CadastrarMercadoComponent implements OnInit {
         console.log('ERRO AO BUSCAR USUARIOS: ', erro)
       })
 
-      this.pegarUser();
+    this.pegarUser();
   }
 
   cnpj = ""
@@ -47,65 +47,65 @@ export class CadastrarMercadoComponent implements OnInit {
   complemento = ""
   codigo: number
 
-  user="";
-  password="";
-  usuario="Usuário!";
-  nome="";
+  user = "";
+  password = "";
+  usuario = "Usuário!";
+  nome = "";
 
   local_nome = localStorage.getItem('administrador')
   local_senha = localStorage.getItem('administrador_senha')
 
-  pegarUser(){
+  pegarUser() {
     var self = this
-    fetch('http://localhost:3000/api/login', { method: 'POST', body: JSON.stringify({ nome: this.local_nome, senha: this.local_senha}), headers: {"Content-Type": "application/json"}}).then(function (e) {
+    fetch('http://localhost:3000/api/login', { method: 'POST', body: JSON.stringify({ nome: this.local_nome, senha: this.local_senha }), headers: { "Content-Type": "application/json" } }).then(function (e) {
 
       e.json().then(function (data) {
 
-      console.log("teste2: ",data)
+        console.log("teste2: ", data)
 
-      if(localStorage.getItem('administrador')){
-        self.nome = data.user.NOME;
-      } else {
-        self.nome = "Usuário";
-      }
+        if (localStorage.getItem('administrador')) {
+          self.nome = data.user.NOME;
+        } else {
+          self.nome = "Usuário";
+        }
       })
     })
   }
 
-  deslogar(){
+  deslogar() {
     this.router.navigate(['/login'])
     localStorage.clear()
   }
 
-  ofertas(){
+  ofertas() {
     this.router.navigate(['home/melhores-ofertas'])
   }
 
-  sobre(){
+  sobre() {
     this.router.navigate(['economiza-jaragua/sobre'])
   }
 
-  mercados(){
+  mercados() {
     this.router.navigate(['mercados/informacoes'])
   }
 
-  contato(){
+  contato() {
     this.router.navigate(['economiza-jaragua/entre-em-contato'])
   }
 
-  cadastrarMercados(){
+  cadastrarMercados() {
     this.router.navigate(['/mercados/cadastrar'])
   }
 
-  cadastrarPromocao(){
+  cadastrarPromocao() {
     this.router.navigate(['/home/cadastrar-promocao'])
   }
 
-  cancelarCadastro(){
+  cancelarCadastro() {
     this.router.navigate(['/home'])
   }
 
-  home(){
+  home() {
     this.router.navigate(['home'])
   }
 
@@ -137,7 +137,7 @@ export class CadastrarMercadoComponent implements OnInit {
         cnpj: self.cnpj, nome_mercado: self.nome_mercado, telefone: self.telefone, email: self.email, codigo: codigo, logo64: self.logo64
       }), headers: { "Content-Type": "application/json" }
     });
-    self.router.navigate(['home'])  
+    self.router.navigate(['home'])
   }
 
   mudanca(file) {

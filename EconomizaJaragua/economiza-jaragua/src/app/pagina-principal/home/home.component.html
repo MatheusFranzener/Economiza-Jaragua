@@ -5,15 +5,16 @@
         <img (click)="home()" class="logoEconomiza" src="https://cdn-icons-png.flaticon.com/512/584/584093.png" alt="">
       </div>
       <div class="barraPesquisa">
-        <input  [(ngModel)]="barraPesquisa"type="text" class="pesquisa" placeholder="Pesquise por Ofertas: ">
-        <img (click)="filtroPromocao()" class="imgLupa" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png" alt="">
+        <input [(ngModel)]="barraPesquisa" type="text" class="pesquisa" placeholder="Pesquise por Ofertas: ">
+        <img (click)="filtroPromocao()" class="imgLupa"
+          src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png" alt="">
       </div>
       <div class="ajuda">
         <button (click)="contato()" class="botaoAjuda">Precisa de Ajuda?</button>
       </div>
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-          aria-expanded="false">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+          data-bs-toggle="dropdown" aria-expanded="false">
           Opções Administrador
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -43,8 +44,8 @@
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img id="imgCarrosel" src="https://cdn.ocp.news/2019/11/29f3fed6-65e2-4c8c-8517-f4722fae6007.jpg" class="d-block w-80"
-        alt="...">
+      <img id="imgCarrosel" src="https://cdn.ocp.news/2019/11/29f3fed6-65e2-4c8c-8517-f4722fae6007.jpg"
+        class="d-block w-80" alt="...">
     </div>
     <div class="carousel-item">
       <img id="imgCarrosel2"
@@ -57,9 +58,8 @@
         class="d-block w-80" alt="...">
     </div>
     <div class="carousel-item">
-      <img id="imgCarrosel3"
-        src="https://www.ranchobom.com.br/uploads/catalogo/P_gina_1.jpg"
-        class="d-block w-80" alt="...">
+      <img id="imgCarrosel3" src="https://www.ranchobom.com.br/uploads/catalogo/P_gina_1.jpg" class="d-block w-80"
+        alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -102,7 +102,9 @@
               <div class="dataOferta">
                 <div class="campoData">
                   <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
-                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg=="
+                    alt="">
                 </div>
               </div>
             </div>
@@ -142,7 +144,9 @@
               <div class="dataOferta">
                 <div class="campoData">
                   <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
-                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg=="
+                    alt="">
                 </div>
               </div>
             </div>
@@ -182,7 +186,9 @@
               <div class="dataOferta">
                 <div class="campoData">
                   <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
-                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg=="
+                    alt="">
                 </div>
               </div>
             </div>
@@ -222,7 +228,9 @@
               <div class="dataOferta">
                 <div class="campoData">
                   <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
-                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg=="
+                    alt="">
                 </div>
               </div>
             </div>
@@ -262,7 +270,9 @@
               <div class="dataOferta">
                 <div class="campoData">
                   <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
-                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg=="
+                    alt="">
                 </div>
               </div>
             </div>
@@ -284,7 +294,7 @@
     <div class="divOfertas">
       <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
         <div *ngIf="promocao.CODIGO_CATEGORIA == 6">
-          <div  class="campoOferta">
+          <div class="campoOferta">
             <div class="headerOferta">
               <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
               <div class="precoOferta">
@@ -302,7 +312,9 @@
               <div class="dataOferta">
                 <div class="campoData">
                   <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
-                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg=="
+                    alt="">
                 </div>
               </div>
             </div>
@@ -324,7 +336,7 @@
     <div class="divOfertas">
       <div class="ofertas" *ngFor='let promocao of listaPromocoes'>
         <div *ngIf="promocao.CODIGO_CATEGORIA == 7">
-          <div  class="campoOferta">
+          <div class="campoOferta">
             <div class="headerOferta">
               <img src="{{promocao.IMAGEM_MERCADO}}" alt="" class="imgMercado">
               <div class="precoOferta">
@@ -342,7 +354,9 @@
               <div class="dataOferta">
                 <div class="campoData">
                   <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
-                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg=="
+                    alt="">
                 </div>
               </div>
             </div>
@@ -382,7 +396,9 @@
               <div class="dataOferta">
                 <div class="campoData">
                   <button (click)="redirecionar(promocao.CODIGO)" class="botaoOferta">Ver oferta</button>
-                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg==" alt="">
+                  <img class="imgLixeira" (click)="excluirPromocao(promocao.CODIGO)"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAB4UlEQVRoge2YsUoDQRCGv9iIBLHSVqONCBbaKIitha8QUCvblD6LnYivoU9gJQQrFVEfwJAogkGL3GGckNvZzc7lovfBNMll5/8zs3N7ByUlhWItiYnkAGgDb0BjzFq8mAFOgS8R50B1jLpUrAI3DIpP4xZY77t+DjgGrimAwSOgw3DxaXSAE+ACeBffNRnDnqkCZ0PENpNwmeqPNnCYl/islklbYtiecIVJS20HCIkdW1kCpxwG7vVezcjUUFEs0AJm42jxpu3K7aoAwEMcLUHcuS7QGJAlrNOrnEXUHbmjGFhW/CaUFUfuAUJaqKaW449cO4oB2YeWFZBrT1wLeRvQMA10+bmxdJPPYhOUR1OBD+BF/GYxQKCLJaHnOcmdicYA5NNG3hMIimUgqP+1BuQotTDgPUJBbyCPUWpagcK2kJYFfp/RWzEXT2iJHPOTlCD4D9K2ENhu5KARCn4GLPeBXMv5HJBSVAMmFbBsIXkPUD8F+hiwvBfkUgHLFgrexD5YHatHWtenAlbH6prQ8YTiGN0vwgeLNhrpCPHvDFi8oQgeoeBvQI5SOT1CMD2FSjaxfxu9YWmgQm9KWIl/RPfCeST2gE8D8V1g31p8yi5wxeAzQki8ApfATl7iS0r+Et9aDBr2dFfGhQAAAABJRU5ErkJggg=="
+                    alt="">
                 </div>
               </div>
             </div>
@@ -409,7 +425,9 @@
       <img class="logoMarca" src="https://faleconosco.net.br/wp-content/uploads/2018/05/Lacta-Contato.png" alt="">
     </div>
     <div class="quadroMarca">
-      <img class="logoMarca" src="https://yt3.ggpht.com/ytc/AKedOLST05pbWjnkYHwRYBzxuTufgsYQZq2jpmjENFqoeg=s900-c-k-c0x00ffffff-no-rj" alt="">
+      <img class="logoMarca"
+        src="https://yt3.ggpht.com/ytc/AKedOLST05pbWjnkYHwRYBzxuTufgsYQZq2jpmjENFqoeg=s900-c-k-c0x00ffffff-no-rj"
+        alt="">
     </div>
   </div>
 </div>
@@ -503,7 +521,7 @@
           <ul class="list-unstyled mb-0">
             <li>
               <img
-                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABkklEQVRoge2ZPUvEMBjHf76AIvi2CMqpk9zkKriqo5/DwfG+kascIs4iLuLm6OAiOIggh7YgKnhXh/TgKGlp0iRNID94OJqmz//507yUHEQikYjPbAJ9IAUyx5ECF0C3SfGDFgovxgDo6Bjoe1D8OM7LipyqMJACi4qmbZECy7IbVQYyhb42qKU/7aAQqwRvYNax3jZwmP/OAd/AF2KM3wJPJsWKK0ET1hAryVCSdxynOvou3sAGcA9s2UjuYg6cYal4sG9gDziyKWB7CB2XtP8Cl8ALMMrbHkyLm5jEZZ8jBy70TRi4keR5N6lvew7MSNo+TQoEvxMHb8DkKrQL7Bfa1iX9loATSfsV8DZxndHwC1h1Evckz6jEjo6+L0NohNgTlPHFwCtic1PGFwPPug8Gb6AK1Uk8D6wW4k6S51HSb0GSb1RH3+Qy+pPHJH+SfkPgo0a+WkuoL0NIm2igbaKBtgneQCiHuwmwIrtR9Qau7dSihVYtXfz5g6P4qV2bDuJIMGmh8ARxqqFdfCQSidjnHx09GaMNNPE3AAAAAElFTkSuQmCC"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABkklEQVRoge2ZPUvEMBjHf76AIvi2CMqpk9zkKriqo5/DwfG+kascIs4iLuLm6OAiOIggh7YgKnhXh/TgKGlp0iRNID94OJqmz//507yUHEQikYjPbAJ9IAUyx5ECF0C3SfGDFgovxgDo6Bjoe1D8OM7LipyqMJACi4qmbZECy7IbVQYyhb42qKU/7aAQqwRvYNax3jZwmP/OAd/AF2KM3wJPJsWKK0ET1hAryVCSdxynOvou3sAGcA9s2UjuYg6cYal4sG9gDziyKWB7CB2XtP8Cl8ALMMrbHkyLm5jEZZ8jBy70TRi4keR5N6lvew7MSNo+TQoEvxMHb8DkKrQL7Bfa1iX9loATSfsV8DZxndHwC1h1Evckz6jEjo6+L0NohNgTlPHFwCtic1PGFwPPug8Gb6AK1Uk8D6wW4k6S51HSb0GSb1RH3+Qy+pPHJH+SfkPgo0a+WkuoL0NIm2igbaKBtgneQCiHuwmwIrtR9Qau7dSihVYtXfz5g6P4qV2bDuJIMGmh8ARxqqFdfCQSidjnHx09GaMNNPE3AAAAAElFTkSuQmCC"
                 alt="">
             </li>
             <li>

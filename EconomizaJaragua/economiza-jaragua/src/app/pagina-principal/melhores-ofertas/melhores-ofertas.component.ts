@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Data, Router } from '@angular/router';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
@@ -10,22 +10,25 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class MelhoresOfertasComponent implements OnInit {
 
-  codigo
-  produto = [{CODIGO:0,CODIGO_CATEGORIA: 0,
+  codigo;
+
+  produto = [{
+    CODIGO: 0, CODIGO_CATEGORIA: 0,
     DATA_VALIDA: "",
     DESCRICAO: "",
     IMAGEM_MERCADO: "",
     NOME_IMAGEM: "",
     NOME_PRODUTO: "",
     VALOR: 0,
-    VALOR_ANTIGO:0}]
+    VALOR_ANTIGO: 0
+  }];
 
-  constructor(private route: ActivatedRoute,private usuarioService: UsuarioService,
-    private router: Router) { 
+  constructor(private route: ActivatedRoute, private usuarioService: UsuarioService,
+    private router: Router) {
     var self = this
     this.codigo = this.route.snapshot.paramMap.get('codigo');
-    console.log("Codigo: ",this.codigo)
-    fetch('/api/buscar_promocao_especifica', { method: 'POST', body: JSON.stringify({ codigo: this.codigo}), headers: { "Content-Type": "application/json" } }).then(function (result) {
+    console.log("Codigo: ", this.codigo)
+    fetch('/api/buscar_promocao_especifica', { method: 'POST', body: JSON.stringify({ codigo: this.codigo }), headers: { "Content-Type": "application/json" } }).then(function (result) {
 
       result.json().then(function (data) {
         self.produto = data
@@ -36,7 +39,7 @@ export class MelhoresOfertasComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getRandomIntInclusive(10,100);
+    this.getRandomIntInclusive(10, 100);
     this.pegarUser();
   }
 
@@ -45,31 +48,31 @@ export class MelhoresOfertasComponent implements OnInit {
   getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    this.desconto =  Math.floor(Math.random() * (max - min + 1)) + min;
+    this.desconto = Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
 
-  days:any = 0;
-  hours:any = 0;
-  mins:any = 0;
-  secs:any = 0;
-  
-  x = setInterval(()=>{
+  days: any = 0;
+  hours: any = 0;
+  mins: any = 0;
+  secs: any = 0;
+
+  x = setInterval(() => {
     var futureDate = new Date(`${this.produto[0].DATA_VALIDA} 00:00:00`).getTime();
     var today = new Date().getTime();
     var distancia = futureDate - today;
-    this.days = Math.floor(distancia/(1000 * 60 * 60 * 24));
+    this.days = Math.floor(distancia / (1000 * 60 * 60 * 24));
     this.hours = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    this.mins = Math.floor((distancia % (1000 * 60 * 60 )) / (1000 * 60));
-    this.secs = Math.floor((distancia % (1000 * 60 )) / (1000 ));
-    if(distancia < 0){
+    this.mins = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+    this.secs = Math.floor((distancia % (1000 * 60)) / (1000));
+    if (distancia < 0) {
       clearInterval(this.x);
       alert("A promoção expirou!");
       this.deletarPromocao();
       this.router.navigate(['home']);
 
     }
-  },1000);
+  }, 1000);
 
   user = "";
   password = "";
@@ -98,11 +101,11 @@ export class MelhoresOfertasComponent implements OnInit {
   }
 
   deletarPromocao() {
-    fetch('http://localhost:3000/api/excluir_promocao', { method: 'POST',body: JSON.stringify({ codigo : this.codigo }),headers: { "Content-Type": "application/json" } }).then(function (e) {
+    fetch('http://localhost:3000/api/excluir_promocao', { method: 'POST', body: JSON.stringify({ codigo: this.codigo }), headers: { "Content-Type": "application/json" } }).then(function (e) {
     })
   }
 
-  home(){
+  home() {
     this.router.navigate(['home'])
   }
 
@@ -130,7 +133,4 @@ export class MelhoresOfertasComponent implements OnInit {
     this.router.navigate(['/login'])
     localStorage.clear()
   }
-
-
-
 }
